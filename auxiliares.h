@@ -11,3 +11,8 @@
 
 bool esCoordenadaValida(tablero& t, pos p);
 bool posEnJugadas(jugadas& j, pos p);
+bool posEnBanderitas(banderitas& b, pos p);
+bool esPermutacionJugada(jugadas& j1, jugadas& j2);
+bool es121Vertical(jugadas& j, jugada jug);
+bool es121Horizontal(jugadas& j, jugada jug);
+bool puedeJugarse(tablero& t, banderitas& b, jugadas& j, pos p);
