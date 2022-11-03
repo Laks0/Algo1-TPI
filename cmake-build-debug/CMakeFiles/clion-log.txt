@@ -1,0 +1,5 @@
+/opt/clion/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/opt/clion/bin/ninja/linux/ninja -G Ninja -S /home/lakso/Documents/Facultad/Algo/tpi -B /home/lakso/Documents/Facultad/Algo/tpi/cmake-build-debug
+-- Found Python: /usr/bin/python3.10 (found version "3.10.8") found components: Interpreter 
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/lakso/Documents/Facultad/Algo/tpi/cmake-build-debug
