@@ -47,6 +47,7 @@ int cantidadDeAparicionesJugadas(jugadas& j, jugada jugada) {
     return cantidad;
 }
 
+// Función para testing
 bool esPermutacionJugada(jugadas& j1, jugadas& j2) {
     if (j1.size() != j2.size()) {
         return false;

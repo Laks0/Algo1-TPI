@@ -86,21 +86,23 @@ bool gano(tablero& t, jugadas& j) {
 }
 
 /******++++**************************** EJERCICIO jugarPlus ***********+++***********************/
+// Función recursiva, una pasada es O(n + m) siendo n = |j| y m = |b|
+// Como máximo, la función se va a ejecutar una vez por cada posición en el tablero
 void jugarPlus(tablero& t, banderitas& b, pos p, jugadas& j) {
     jugada nuevaJugada = {p, minasAdyacentes(t,p)};
     j.push_back(nuevaJugada);
-    if (minasAdyacentes(t, p) > 0 || t[p.first][p.second] == cMINA) {
+    if (minasAdyacentes(t, p) > 0 || t[p.first][p.second] == cMINA) { // O(1)
         return;
     }
     for (int x = -1; x <= 1; x++) {
         for (int y = -1; y <= 1; y++) {
             pos posAdyacente = {p.first + x, p.second + y};
-            if (!esCoordenadaValida(t, posAdyacente) || posEnJugadas(j, posAdyacente)) {
+            if (!esCoordenadaValida(t, posAdyacente) || posEnJugadas(j, posAdyacente)) { // O(n)
                 continue;
             }
 
-            if (posEnBanderitas(b, posAdyacente)) {
-                cambiarBanderita(t, j ,posAdyacente, b);
+            if (posEnBanderitas(b, posAdyacente)) {  // O(m)
+                cambiarBanderita(t, j ,posAdyacente, b); // O(m)
             }
 
             jugarPlus(t, b, posAdyacente, j);
@@ -109,30 +111,32 @@ void jugarPlus(tablero& t, banderitas& b, pos p, jugadas& j) {
 }
 
 /******++++**************************** EJERCICIO sugerirAutomatico121 ***********+++***********************/
+// O(n*m) siendo m = |j| y n = |t| + |b| + |j|
+// Porque por cada jugada, se ejecutan funciones lineales sobre t b y j
 bool sugerirAutomatico121(tablero& t, banderitas& b, jugadas& j, pos& p) {
-    for (int i = 0; i < j.size(); i++) {
-        if (es121Horizontal(j, j[i])) {
+    for (int i = 0; i < j.size(); i++) { // Se ejecuta m veces
+        if (es121Horizontal(j, j[i])) { // O(m)
             pos posJugada = j[i].first;
             pos arriba = {posJugada.first, posJugada.second-1};
             pos abajo = {posJugada.first, posJugada.second+1};
-            if (puedeJugarse(t, b, j, arriba)) {
+            if (puedeJugarse(t, b, j, arriba)) { // O(n)
                 p = arriba;
                 return true;
             }
-            if (puedeJugarse(t, b, j, abajo)) {
+            if (puedeJugarse(t, b, j, abajo)) { // O(n)
                 p = abajo;
                 return true;
             }
         }
-        if (es121Vertical(j, j[i])) {
+        if (es121Vertical(j, j[i])) { // O(m)
             pos posJugada = j[i].first;
             pos izquierda = {posJugada.first-1, posJugada.second};
             pos derecha = {posJugada.first+1, posJugada.second};
-            if (puedeJugarse(t, b, j, derecha)) {
+            if (puedeJugarse(t, b, j, derecha)) { // O(n)
                 p = derecha;
                 return true;
             }
-            if (puedeJugarse(t, b, j, izquierda)) {
+            if (puedeJugarse(t, b, j, izquierda)) { // O(n)
                 p = izquierda;
                 return true;
             }
