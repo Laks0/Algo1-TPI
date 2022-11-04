@@ -1,0 +1,440 @@
+        -:    0:Source:/home/lakso/Documents/Facultad/Algo/tpi/tests/cambiarBanderitaTEST.cpp
+        -:    0:Graph:/home/lakso/Documents/Facultad/Algo/tpi/cmake-build-debug/CMakeFiles/tpi.dir/tests/cambiarBanderitaTEST.gcno
+        -:    0:Data:/home/lakso/Documents/Facultad/Algo/tpi/cmake-build-debug/CMakeFiles/tpi.dir/tests/cambiarBanderitaTEST.gcda
+        -:    0:Runs:1
+        -:    1:// Tests para la función cambiarBanderita.
+        -:    2:// Ver el archovo README.md para ayuda
+        -:    3:
+        -:    4:
+        -:    5:#include "../ejercicios.h"
+        -:    6:#include "../auxiliares.h"
+        -:    7:#include "gtest/gtest.h"
+        -:    8:
+        -:    9:using namespace std;
+        -:   10:
+        4:   11:TEST(CambiarBanderita, esta) {
+        1:   12:    pos b1 = {0,0};
+        1:   13:    pos b2 = {1, 1};
+        1:   14:    pos b3 = {2, 2};
+        -:   15:
+        1:   16:    banderitas b = {b1, b2, b3};
+        1:   17:    tablero t;
+        1:   18:    jugadas j;
+        1:   19:    cambiarBanderita(t, j, b2, b);
+        -:   20:
+        1:   21:    banderitas expected = {b1, b3};
+       1*:   22:    ASSERT_EQ(b, expected);
+        1:   23:}
+------------------
+_ZN26CambiarBanderita_esta_TestC2Ev:
+function _ZN26CambiarBanderita_esta_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:   11:TEST(CambiarBanderita, esta) {
+        1:   11-block  0
+call    0 returned 1
+------------------
+_ZN26CambiarBanderita_esta_TestD0Ev:
+function _ZN26CambiarBanderita_esta_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   11:TEST(CambiarBanderita, esta) {
+        1:   11-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN26CambiarBanderita_esta_TestD2Ev:
+function _ZN26CambiarBanderita_esta_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:   11:TEST(CambiarBanderita, esta) {
+        1:   11-block  0
+call    0 returned 1
+------------------
+_ZN26CambiarBanderita_esta_Test8TestBodyEv:
+function _ZN26CambiarBanderita_esta_Test8TestBodyEv called 1 returned 100% blocks executed 46%
+        1:   11:TEST(CambiarBanderita, esta) {
+        1:   12:    pos b1 = {0,0};
+        1:   13:    pos b2 = {1, 1};
+        1:   14:    pos b3 = {2, 2};
+        -:   15:
+        1:   16:    banderitas b = {b1, b2, b3};
+        1:   16-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   16-block  1
+call    4 returned 1
+    $$$$$:   16-block  2
+call    5 never executed
+    $$$$$:   16-block  3
+    $$$$$:   16-block  4
+        1:   17:    tablero t;
+call    0 returned 1
+        1:   18:    jugadas j;
+call    0 returned 1
+        1:   19:    cambiarBanderita(t, j, b2, b);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   20:
+        1:   21:    banderitas expected = {b1, b3};
+        1:   21-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   21-block  1
+call    4 returned 1
+    $$$$$:   21-block  2
+call    5 never executed
+    $$$$$:   21-block  3
+    $$$$$:   21-block  4
+       1*:   22:    ASSERT_EQ(b, expected);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   22-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   22-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:   22-block  2
+call    9 never executed
+call   10 never executed
+branch 11 never executed
+branch 12 never executed
+    %%%%%:   22-block  3
+call   13 never executed
+branch 14 never executed
+branch 15 never executed
+    %%%%%:   22-block  4
+call   16 never executed
+call   17 never executed
+        1:   22-block  5
+        1:   22-block  6
+call   18 returned 1
+branch 19 taken 1 (fallthrough)
+branch 20 taken 0
+    $$$$$:   22-block  7
+call   21 never executed
+    $$$$$:   22-block  8
+    $$$$$:   22-block  9
+call   22 never executed
+    $$$$$:   22-block 10
+    $$$$$:   22-block 11
+call   23 never executed
+        1:   23:}
+        1:   23-block  0
+        1:   23-block  1
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+        1:   23-block  2
+        1:   23-block  3
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0
+        1:   23-block  4
+        1:   23-block  5
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0
+        1:   23-block  6
+        1:   23-block  7
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+    $$$$$:   23-block  8
+call   12 never executed
+    $$$$$:   23-block  9
+call   13 never executed
+    $$$$$:   23-block 10
+call   14 never executed
+    $$$$$:   23-block 11
+call   15 never executed
+------------------
+        -:   24:
+        4:   25:TEST(CambiarBanderita, estaAlFinal) {
+        1:   26:    pos b1 = {0,0};
+        1:   27:    pos b2 = {1, 1};
+        1:   28:    pos b3 = {2, 2};
+        -:   29:
+        1:   30:    banderitas b = {b1, b3, b2};
+        -:   31:
+        1:   32:    tablero t;
+        1:   33:    jugadas j;
+        1:   34:    cambiarBanderita(t, j, b2, b);
+        -:   35:
+        1:   36:    banderitas expected = {b1, b3};
+       1*:   37:    ASSERT_EQ(b, expected);
+        1:   38:}
+------------------
+_ZN33CambiarBanderita_estaAlFinal_TestC2Ev:
+function _ZN33CambiarBanderita_estaAlFinal_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:   25:TEST(CambiarBanderita, estaAlFinal) {
+        1:   25-block  0
+call    0 returned 1
+------------------
+_ZN33CambiarBanderita_estaAlFinal_TestD0Ev:
+function _ZN33CambiarBanderita_estaAlFinal_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   25:TEST(CambiarBanderita, estaAlFinal) {
+        1:   25-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN33CambiarBanderita_estaAlFinal_TestD2Ev:
+function _ZN33CambiarBanderita_estaAlFinal_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:   25:TEST(CambiarBanderita, estaAlFinal) {
+        1:   25-block  0
+call    0 returned 1
+------------------
+_ZN33CambiarBanderita_estaAlFinal_Test8TestBodyEv:
+function _ZN33CambiarBanderita_estaAlFinal_Test8TestBodyEv called 1 returned 100% blocks executed 46%
+        1:   25:TEST(CambiarBanderita, estaAlFinal) {
+        1:   26:    pos b1 = {0,0};
+        1:   27:    pos b2 = {1, 1};
+        1:   28:    pos b3 = {2, 2};
+        -:   29:
+        1:   30:    banderitas b = {b1, b3, b2};
+        1:   30-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   30-block  1
+call    4 returned 1
+    $$$$$:   30-block  2
+call    5 never executed
+    $$$$$:   30-block  3
+    $$$$$:   30-block  4
+        -:   31:
+        1:   32:    tablero t;
+call    0 returned 1
+        1:   33:    jugadas j;
+call    0 returned 1
+        1:   34:    cambiarBanderita(t, j, b2, b);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   35:
+        1:   36:    banderitas expected = {b1, b3};
+        1:   36-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   36-block  1
+call    4 returned 1
+    $$$$$:   36-block  2
+call    5 never executed
+    $$$$$:   36-block  3
+    $$$$$:   36-block  4
+       1*:   37:    ASSERT_EQ(b, expected);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   37-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   37-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:   37-block  2
+call    9 never executed
+call   10 never executed
+branch 11 never executed
+branch 12 never executed
+    %%%%%:   37-block  3
+call   13 never executed
+branch 14 never executed
+branch 15 never executed
+    %%%%%:   37-block  4
+call   16 never executed
+call   17 never executed
+        1:   37-block  5
+        1:   37-block  6
+call   18 returned 1
+branch 19 taken 1 (fallthrough)
+branch 20 taken 0
+    $$$$$:   37-block  7
+call   21 never executed
+    $$$$$:   37-block  8
+    $$$$$:   37-block  9
+call   22 never executed
+    $$$$$:   37-block 10
+    $$$$$:   37-block 11
+call   23 never executed
+        1:   38:}
+        1:   38-block  0
+        1:   38-block  1
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+        1:   38-block  2
+        1:   38-block  3
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0
+        1:   38-block  4
+        1:   38-block  5
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0
+        1:   38-block  6
+        1:   38-block  7
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+    $$$$$:   38-block  8
+call   12 never executed
+    $$$$$:   38-block  9
+call   13 never executed
+    $$$$$:   38-block 10
+call   14 never executed
+    $$$$$:   38-block 11
+call   15 never executed
+------------------
+        -:   39:
+        4:   40:TEST(CambiarBanderita, noEsta) {
+        1:   41:    pos b1 = {0,0};
+        1:   42:    pos b2 = {1, 1};
+        1:   43:    pos b3 = {2, 2};
+        -:   44:
+        1:   45:    banderitas b = {b1, b3};
+        -:   46:
+        1:   47:    tablero t;
+        1:   48:    jugadas j;
+        1:   49:    cambiarBanderita(t, j, b2, b);
+        -:   50:
+        1:   51:    banderitas expected = {b1, b3, b2};
+       1*:   52:    ASSERT_EQ(b, expected);
+        1:   53:}
+------------------
+_ZN28CambiarBanderita_noEsta_TestC2Ev:
+function _ZN28CambiarBanderita_noEsta_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:   40:TEST(CambiarBanderita, noEsta) {
+        1:   40-block  0
+call    0 returned 1
+------------------
+_ZN28CambiarBanderita_noEsta_TestD0Ev:
+function _ZN28CambiarBanderita_noEsta_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   40:TEST(CambiarBanderita, noEsta) {
+        1:   40-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN28CambiarBanderita_noEsta_TestD2Ev:
+function _ZN28CambiarBanderita_noEsta_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:   40:TEST(CambiarBanderita, noEsta) {
+        1:   40-block  0
+call    0 returned 1
+------------------
+_ZN28CambiarBanderita_noEsta_Test8TestBodyEv:
+function _ZN28CambiarBanderita_noEsta_Test8TestBodyEv called 1 returned 100% blocks executed 46%
+        1:   40:TEST(CambiarBanderita, noEsta) {
+        1:   41:    pos b1 = {0,0};
+        1:   42:    pos b2 = {1, 1};
+        1:   43:    pos b3 = {2, 2};
+        -:   44:
+        1:   45:    banderitas b = {b1, b3};
+        1:   45-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   45-block  1
+call    4 returned 1
+    $$$$$:   45-block  2
+call    5 never executed
+    $$$$$:   45-block  3
+    $$$$$:   45-block  4
+        -:   46:
+        1:   47:    tablero t;
+call    0 returned 1
+        1:   48:    jugadas j;
+call    0 returned 1
+        1:   49:    cambiarBanderita(t, j, b2, b);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   50:
+        1:   51:    banderitas expected = {b1, b3, b2};
+        1:   51-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   51-block  1
+call    4 returned 1
+    $$$$$:   51-block  2
+call    5 never executed
+    $$$$$:   51-block  3
+    $$$$$:   51-block  4
+       1*:   52:    ASSERT_EQ(b, expected);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   52-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   52-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:   52-block  2
+call    9 never executed
+call   10 never executed
+branch 11 never executed
+branch 12 never executed
+    %%%%%:   52-block  3
+call   13 never executed
+branch 14 never executed
+branch 15 never executed
+    %%%%%:   52-block  4
+call   16 never executed
+call   17 never executed
+        1:   52-block  5
+        1:   52-block  6
+call   18 returned 1
+branch 19 taken 1 (fallthrough)
+branch 20 taken 0
+    $$$$$:   52-block  7
+call   21 never executed
+    $$$$$:   52-block  8
+    $$$$$:   52-block  9
+call   22 never executed
+    $$$$$:   52-block 10
+    $$$$$:   52-block 11
+call   23 never executed
+        1:   53:}
+        1:   53-block  0
+        1:   53-block  1
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+        1:   53-block  2
+        1:   53-block  3
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0
+        1:   53-block  4
+        1:   53-block  5
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0
+        1:   53-block  6
+        1:   53-block  7
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+    $$$$$:   53-block  8
+call   12 never executed
+    $$$$$:   53-block  9
+call   13 never executed
+    $$$$$:   53-block 10
+call   14 never executed
+    $$$$$:   53-block 11
+call   15 never executed
+------------------

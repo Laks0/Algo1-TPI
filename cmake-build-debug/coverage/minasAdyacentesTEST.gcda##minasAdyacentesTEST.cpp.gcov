@@ -1,0 +1,782 @@
+        -:    0:Source:/home/lakso/Documents/Facultad/Algo/tpi/tests/minasAdyacentesTEST.cpp
+        -:    0:Graph:/home/lakso/Documents/Facultad/Algo/tpi/cmake-build-debug/CMakeFiles/tpi.dir/tests/minasAdyacentesTEST.gcno
+        -:    0:Data:/home/lakso/Documents/Facultad/Algo/tpi/cmake-build-debug/CMakeFiles/tpi.dir/tests/minasAdyacentesTEST.gcda
+        -:    0:Runs:1
+        -:    1:// Tests para la función minasAdyacentes.
+        -:    2:// Ver el archivo README.md para ayuda
+        -:    3:
+        -:    4:#include "../ejercicios.h"
+        -:    5:#include "../auxiliares.h"
+        -:    6:#include "../definiciones.h"
+        -:    7:#include "gtest/gtest.h"
+        -:    8:
+        -:    9:using namespace std;
+        -:   10:
+        -:   11:// ....
+        -:   12:// ....
+        -:   13:// .o..
+        -:   14:// ....
+        4:   15:TEST(minasAdyacentes, sinMinas) {
+        1:   16:    tablero t = vector<vector<bool>>(4, vector<bool>(4, false));
+        1:   17:    pos p = {1, 2};
+        1:   18:    int res = minasAdyacentes(t, p);
+        -:   19:
+       1*:   20:    ASSERT_EQ(res, 0);
+        1:   21:}
+------------------
+_ZN29minasAdyacentes_sinMinas_TestC2Ev:
+function _ZN29minasAdyacentes_sinMinas_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:   15:TEST(minasAdyacentes, sinMinas) {
+        1:   15-block  0
+call    0 returned 1
+------------------
+_ZN29minasAdyacentes_sinMinas_TestD0Ev:
+function _ZN29minasAdyacentes_sinMinas_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   15:TEST(minasAdyacentes, sinMinas) {
+        1:   15-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN29minasAdyacentes_sinMinas_TestD2Ev:
+function _ZN29minasAdyacentes_sinMinas_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:   15:TEST(minasAdyacentes, sinMinas) {
+        1:   15-block  0
+call    0 returned 1
+------------------
+_ZN29minasAdyacentes_sinMinas_Test8TestBodyEv:
+function _ZN29minasAdyacentes_sinMinas_Test8TestBodyEv called 1 returned 100% blocks executed 42%
+        1:   15:TEST(minasAdyacentes, sinMinas) {
+        1:   16:    tablero t = vector<vector<bool>>(4, vector<bool>(4, false));
+        1:   16-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:   16-block  1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   16-block  2
+call    8 returned 1
+call    9 returned 1
+call   10 returned 1
+    $$$$$:   16-block  3
+call   11 never executed
+    $$$$$:   16-block  4
+    $$$$$:   16-block  5
+call   12 never executed
+    $$$$$:   16-block  6
+    $$$$$:   16-block  7
+    $$$$$:   16-block  8
+call   13 never executed
+    $$$$$:   16-block  9
+        1:   17:    pos p = {1, 2};
+        1:   18:    int res = minasAdyacentes(t, p);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   19:
+       1*:   20:    ASSERT_EQ(res, 0);
+        1:   20-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   20-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   20-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:   20-block  3
+call    9 never executed
+call   10 never executed
+branch 11 never executed
+branch 12 never executed
+    %%%%%:   20-block  4
+call   13 never executed
+branch 14 never executed
+branch 15 never executed
+    %%%%%:   20-block  5
+call   16 never executed
+call   17 never executed
+        1:   20-block  6
+        1:   20-block  7
+call   18 returned 1
+branch 19 taken 1 (fallthrough)
+branch 20 taken 0
+    $$$$$:   20-block  8
+    $$$$$:   20-block  9
+call   21 never executed
+    $$$$$:   20-block 10
+    $$$$$:   20-block 11
+call   22 never executed
+    $$$$$:   20-block 12
+    $$$$$:   20-block 13
+call   23 never executed
+        1:   21:}
+        1:   21-block  0
+        1:   21-block  1
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+    $$$$$:   21-block  2
+call    3 never executed
+------------------
+        -:   22:
+        -:   23:// ....
+        -:   24:// ....
+        -:   25:// .3x.
+        -:   26:// x.x.
+        4:   27:TEST(minasAdyacentes, tresMinas) {
+        1:   28:    tablero t = vector<vector<bool>>(4, vector<bool>(4, false));
+        1:   29:    t[2][2] = cMINA;
+        1:   30:    t[2][3] = cMINA;
+        1:   31:    t[0][3] = cMINA;
+        1:   32:    pos p = {1, 2};
+        1:   33:    int res = minasAdyacentes(t, p);
+        -:   34:
+       1*:   35:    ASSERT_EQ(res, 3);
+        1:   36:}
+------------------
+_ZN30minasAdyacentes_tresMinas_TestC2Ev:
+function _ZN30minasAdyacentes_tresMinas_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:   27:TEST(minasAdyacentes, tresMinas) {
+        1:   27-block  0
+call    0 returned 1
+------------------
+_ZN30minasAdyacentes_tresMinas_TestD0Ev:
+function _ZN30minasAdyacentes_tresMinas_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   27:TEST(minasAdyacentes, tresMinas) {
+        1:   27-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN30minasAdyacentes_tresMinas_TestD2Ev:
+function _ZN30minasAdyacentes_tresMinas_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:   27:TEST(minasAdyacentes, tresMinas) {
+        1:   27-block  0
+call    0 returned 1
+------------------
+_ZN30minasAdyacentes_tresMinas_Test8TestBodyEv:
+function _ZN30minasAdyacentes_tresMinas_Test8TestBodyEv called 1 returned 100% blocks executed 48%
+        1:   27:TEST(minasAdyacentes, tresMinas) {
+        1:   28:    tablero t = vector<vector<bool>>(4, vector<bool>(4, false));
+        1:   28-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:   28-block  1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   28-block  2
+call    8 returned 1
+call    9 returned 1
+call   10 returned 1
+    $$$$$:   28-block  3
+call   11 never executed
+    $$$$$:   28-block  4
+    $$$$$:   28-block  5
+call   12 never executed
+    $$$$$:   28-block  6
+    $$$$$:   28-block  7
+    $$$$$:   28-block  8
+call   13 never executed
+    $$$$$:   28-block  9
+        1:   29:    t[2][2] = cMINA;
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   29-block  0
+call    4 returned 1
+    $$$$$:   29-block  1
+        1:   30:    t[2][3] = cMINA;
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   30-block  0
+call    4 returned 1
+    $$$$$:   30-block  1
+        1:   31:    t[0][3] = cMINA;
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   31-block  0
+call    4 returned 1
+    $$$$$:   31-block  1
+        1:   32:    pos p = {1, 2};
+        1:   33:    int res = minasAdyacentes(t, p);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   34:
+       1*:   35:    ASSERT_EQ(res, 3);
+        1:   35-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   35-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   35-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:   35-block  3
+call    9 never executed
+call   10 never executed
+branch 11 never executed
+branch 12 never executed
+    %%%%%:   35-block  4
+call   13 never executed
+branch 14 never executed
+branch 15 never executed
+    %%%%%:   35-block  5
+call   16 never executed
+call   17 never executed
+        1:   35-block  6
+        1:   35-block  7
+call   18 returned 1
+branch 19 taken 1 (fallthrough)
+branch 20 taken 0
+    $$$$$:   35-block  8
+    $$$$$:   35-block  9
+call   21 never executed
+    $$$$$:   35-block 10
+    $$$$$:   35-block 11
+call   22 never executed
+    $$$$$:   35-block 12
+    $$$$$:   35-block 13
+call   23 never executed
+        1:   36:}
+        1:   36-block  0
+        1:   36-block  1
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+    $$$$$:   36-block  2
+call    3 never executed
+------------------
+        -:   37:
+        -:   38:// 2x..
+        -:   39:// x...
+        -:   40:// ....
+        -:   41:// ....
+        4:   42:TEST(minasAdyacentes, esquina) {
+        1:   43:    tablero t = vector<vector<bool>>(4, vector<bool>(4, false));
+        1:   44:    t[1][0] = cMINA;
+        1:   45:    t[0][1] = cMINA;
+        1:   46:    pos p = {0, 0};
+        1:   47:    int res = minasAdyacentes(t, p);
+        -:   48:
+       1*:   49:    ASSERT_EQ(res, 2);
+        1:   50:}
+------------------
+_ZN28minasAdyacentes_esquina_TestC2Ev:
+function _ZN28minasAdyacentes_esquina_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:   42:TEST(minasAdyacentes, esquina) {
+        1:   42-block  0
+call    0 returned 1
+------------------
+_ZN28minasAdyacentes_esquina_TestD0Ev:
+function _ZN28minasAdyacentes_esquina_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   42:TEST(minasAdyacentes, esquina) {
+        1:   42-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN28minasAdyacentes_esquina_TestD2Ev:
+function _ZN28minasAdyacentes_esquina_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:   42:TEST(minasAdyacentes, esquina) {
+        1:   42-block  0
+call    0 returned 1
+------------------
+_ZN28minasAdyacentes_esquina_Test8TestBodyEv:
+function _ZN28minasAdyacentes_esquina_Test8TestBodyEv called 1 returned 100% blocks executed 46%
+        1:   42:TEST(minasAdyacentes, esquina) {
+        1:   43:    tablero t = vector<vector<bool>>(4, vector<bool>(4, false));
+        1:   43-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:   43-block  1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   43-block  2
+call    8 returned 1
+call    9 returned 1
+call   10 returned 1
+    $$$$$:   43-block  3
+call   11 never executed
+    $$$$$:   43-block  4
+    $$$$$:   43-block  5
+call   12 never executed
+    $$$$$:   43-block  6
+    $$$$$:   43-block  7
+    $$$$$:   43-block  8
+call   13 never executed
+    $$$$$:   43-block  9
+        1:   44:    t[1][0] = cMINA;
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   44-block  0
+call    4 returned 1
+    $$$$$:   44-block  1
+        1:   45:    t[0][1] = cMINA;
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   45-block  0
+call    4 returned 1
+    $$$$$:   45-block  1
+        1:   46:    pos p = {0, 0};
+        1:   47:    int res = minasAdyacentes(t, p);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   48:
+       1*:   49:    ASSERT_EQ(res, 2);
+        1:   49-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   49-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   49-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:   49-block  3
+call    9 never executed
+call   10 never executed
+branch 11 never executed
+branch 12 never executed
+    %%%%%:   49-block  4
+call   13 never executed
+branch 14 never executed
+branch 15 never executed
+    %%%%%:   49-block  5
+call   16 never executed
+call   17 never executed
+        1:   49-block  6
+        1:   49-block  7
+call   18 returned 1
+branch 19 taken 1 (fallthrough)
+branch 20 taken 0
+    $$$$$:   49-block  8
+    $$$$$:   49-block  9
+call   21 never executed
+    $$$$$:   49-block 10
+    $$$$$:   49-block 11
+call   22 never executed
+    $$$$$:   49-block 12
+    $$$$$:   49-block 13
+call   23 never executed
+        1:   50:}
+        1:   50-block  0
+        1:   50-block  1
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+    $$$$$:   50-block  2
+call    3 never executed
+------------------
+        -:   51:
+        -:   52:
+        -:   53:// ....
+        -:   54:// xxx.
+        -:   55:// x8x.
+        -:   56:// xxx.
+        4:   57:TEST(minasAdyacentes, ochoMinas) {
+        1:   58:    tablero t = vector<vector<bool>>(4, vector<bool>(4, false));
+        1:   59:    t[0][1] = cMINA;
+        1:   60:    t[0][2] = cMINA;
+        1:   61:    t[0][3] = cMINA;
+        1:   62:    t[1][1] = cMINA;
+        1:   63:    t[2][1] = cMINA;
+        1:   64:    t[2][2] = cMINA;
+        1:   65:    t[2][3] = cMINA;
+        1:   66:    t[1][3] = cMINA;
+        1:   67:    pos p = {1, 2};
+        1:   68:    int res = minasAdyacentes(t, p);
+        -:   69:
+       1*:   70:    ASSERT_EQ(res, 8);
+        1:   71:}
+------------------
+_ZN30minasAdyacentes_ochoMinas_TestC2Ev:
+function _ZN30minasAdyacentes_ochoMinas_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:   57:TEST(minasAdyacentes, ochoMinas) {
+        1:   57-block  0
+call    0 returned 1
+------------------
+_ZN30minasAdyacentes_ochoMinas_TestD0Ev:
+function _ZN30minasAdyacentes_ochoMinas_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   57:TEST(minasAdyacentes, ochoMinas) {
+        1:   57-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN30minasAdyacentes_ochoMinas_TestD2Ev:
+function _ZN30minasAdyacentes_ochoMinas_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:   57:TEST(minasAdyacentes, ochoMinas) {
+        1:   57-block  0
+call    0 returned 1
+------------------
+_ZN30minasAdyacentes_ochoMinas_Test8TestBodyEv:
+function _ZN30minasAdyacentes_ochoMinas_Test8TestBodyEv called 1 returned 100% blocks executed 54%
+        1:   57:TEST(minasAdyacentes, ochoMinas) {
+        1:   58:    tablero t = vector<vector<bool>>(4, vector<bool>(4, false));
+        1:   58-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:   58-block  1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   58-block  2
+call    8 returned 1
+call    9 returned 1
+call   10 returned 1
+    $$$$$:   58-block  3
+call   11 never executed
+    $$$$$:   58-block  4
+    $$$$$:   58-block  5
+call   12 never executed
+    $$$$$:   58-block  6
+    $$$$$:   58-block  7
+    $$$$$:   58-block  8
+call   13 never executed
+    $$$$$:   58-block  9
+        1:   59:    t[0][1] = cMINA;
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   59-block  0
+call    4 returned 1
+    $$$$$:   59-block  1
+        1:   60:    t[0][2] = cMINA;
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   60-block  0
+call    4 returned 1
+    $$$$$:   60-block  1
+        1:   61:    t[0][3] = cMINA;
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   61-block  0
+call    4 returned 1
+    $$$$$:   61-block  1
+        1:   62:    t[1][1] = cMINA;
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   62-block  0
+call    4 returned 1
+    $$$$$:   62-block  1
+        1:   63:    t[2][1] = cMINA;
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   63-block  0
+call    4 returned 1
+    $$$$$:   63-block  1
+        1:   64:    t[2][2] = cMINA;
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   64-block  0
+call    4 returned 1
+    $$$$$:   64-block  1
+        1:   65:    t[2][3] = cMINA;
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   65-block  0
+call    4 returned 1
+    $$$$$:   65-block  1
+        1:   66:    t[1][3] = cMINA;
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   66-block  0
+call    4 returned 1
+    $$$$$:   66-block  1
+        1:   67:    pos p = {1, 2};
+        1:   68:    int res = minasAdyacentes(t, p);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   69:
+       1*:   70:    ASSERT_EQ(res, 8);
+        1:   70-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   70-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   70-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:   70-block  3
+call    9 never executed
+call   10 never executed
+branch 11 never executed
+branch 12 never executed
+    %%%%%:   70-block  4
+call   13 never executed
+branch 14 never executed
+branch 15 never executed
+    %%%%%:   70-block  5
+call   16 never executed
+call   17 never executed
+        1:   70-block  6
+        1:   70-block  7
+call   18 returned 1
+branch 19 taken 1 (fallthrough)
+branch 20 taken 0
+    $$$$$:   70-block  8
+    $$$$$:   70-block  9
+call   21 never executed
+    $$$$$:   70-block 10
+    $$$$$:   70-block 11
+call   22 never executed
+    $$$$$:   70-block 12
+    $$$$$:   70-block 13
+call   23 never executed
+        1:   71:}
+        1:   71-block  0
+        1:   71-block  1
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+    $$$$$:   71-block  2
+call    3 never executed
+------------------
+        -:   72:
+        -:   73:// ....
+        -:   74:// xxx.
+        -:   75:// xxx.
+        -:   76:// xxx.
+        4:   77:TEST(minasAdyacentes, posEsMina) {
+        1:   78:    tablero t = vector<vector<bool>>(4, vector<bool>(4, false));
+        1:   79:    t[0][1] = cMINA;
+        1:   80:    t[0][2] = cMINA;
+        1:   81:    t[0][3] = cMINA;
+        1:   82:    t[1][1] = cMINA;
+        1:   83:    t[2][1] = cMINA;
+        1:   84:    t[2][2] = cMINA;
+        1:   85:    t[2][3] = cMINA;
+        1:   86:    t[1][3] = cMINA;
+        1:   87:    t[1][2] = cMINA;
+        1:   88:    pos p = {1, 2};
+        1:   89:    int res = minasAdyacentes(t, p);
+        -:   90:
+       1*:   91:    ASSERT_EQ(res, 8);
+        1:   92:}
+------------------
+_ZN30minasAdyacentes_posEsMina_TestC2Ev:
+function _ZN30minasAdyacentes_posEsMina_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:   77:TEST(minasAdyacentes, posEsMina) {
+        1:   77-block  0
+call    0 returned 1
+------------------
+_ZN30minasAdyacentes_posEsMina_TestD0Ev:
+function _ZN30minasAdyacentes_posEsMina_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   77:TEST(minasAdyacentes, posEsMina) {
+        1:   77-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN30minasAdyacentes_posEsMina_TestD2Ev:
+function _ZN30minasAdyacentes_posEsMina_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:   77:TEST(minasAdyacentes, posEsMina) {
+        1:   77-block  0
+call    0 returned 1
+------------------
+_ZN30minasAdyacentes_posEsMina_Test8TestBodyEv:
+function _ZN30minasAdyacentes_posEsMina_Test8TestBodyEv called 1 returned 100% blocks executed 55%
+        1:   77:TEST(minasAdyacentes, posEsMina) {
+        1:   78:    tablero t = vector<vector<bool>>(4, vector<bool>(4, false));
+        1:   78-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:   78-block  1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   78-block  2
+call    8 returned 1
+call    9 returned 1
+call   10 returned 1
+    $$$$$:   78-block  3
+call   11 never executed
+    $$$$$:   78-block  4
+    $$$$$:   78-block  5
+call   12 never executed
+    $$$$$:   78-block  6
+    $$$$$:   78-block  7
+    $$$$$:   78-block  8
+call   13 never executed
+    $$$$$:   78-block  9
+        1:   79:    t[0][1] = cMINA;
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   79-block  0
+call    4 returned 1
+    $$$$$:   79-block  1
+        1:   80:    t[0][2] = cMINA;
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   80-block  0
+call    4 returned 1
+    $$$$$:   80-block  1
+        1:   81:    t[0][3] = cMINA;
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   81-block  0
+call    4 returned 1
+    $$$$$:   81-block  1
+        1:   82:    t[1][1] = cMINA;
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   82-block  0
+call    4 returned 1
+    $$$$$:   82-block  1
+        1:   83:    t[2][1] = cMINA;
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   83-block  0
+call    4 returned 1
+    $$$$$:   83-block  1
+        1:   84:    t[2][2] = cMINA;
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   84-block  0
+call    4 returned 1
+    $$$$$:   84-block  1
+        1:   85:    t[2][3] = cMINA;
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   85-block  0
+call    4 returned 1
+    $$$$$:   85-block  1
+        1:   86:    t[1][3] = cMINA;
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   86-block  0
+call    4 returned 1
+    $$$$$:   86-block  1
+        1:   87:    t[1][2] = cMINA;
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   87-block  0
+call    4 returned 1
+    $$$$$:   87-block  1
+        1:   88:    pos p = {1, 2};
+        1:   89:    int res = minasAdyacentes(t, p);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   90:
+       1*:   91:    ASSERT_EQ(res, 8);
+        1:   91-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   91-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   91-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:   91-block  3
+call    9 never executed
+call   10 never executed
+branch 11 never executed
+branch 12 never executed
+    %%%%%:   91-block  4
+call   13 never executed
+branch 14 never executed
+branch 15 never executed
+    %%%%%:   91-block  5
+call   16 never executed
+call   17 never executed
+        1:   91-block  6
+        1:   91-block  7
+call   18 returned 1
+branch 19 taken 1 (fallthrough)
+branch 20 taken 0
+    $$$$$:   91-block  8
+    $$$$$:   91-block  9
+call   21 never executed
+    $$$$$:   91-block 10
+    $$$$$:   91-block 11
+call   22 never executed
+    $$$$$:   91-block 12
+    $$$$$:   91-block 13
+call   23 never executed
+        1:   92:}
+        1:   92-block  0
+        1:   92-block  1
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+    $$$$$:   92-block  2
+call    3 never executed
+------------------
