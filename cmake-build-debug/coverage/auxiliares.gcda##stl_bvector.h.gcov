@@ -170,9 +170,9 @@
         -:  166:    unsigned int _M_offset;
         -:  167:
         -:  168:    _GLIBCXX20_CONSTEXPR
-function _ZNSt18_Bit_iterator_baseC2EPmj called 3305 returned 100% blocks executed 100%
-     3305:  169:    _Bit_iterator_base(_Bit_type * __x, unsigned int __y)
-     3305:  170:    : _M_p(__x), _M_offset(__y) { }
+function _ZNSt18_Bit_iterator_baseC2EPmj called 4121 returned 100% blocks executed 100%
+     4121:  169:    _Bit_iterator_base(_Bit_type * __x, unsigned int __y)
+     4121:  170:    : _M_p(__x), _M_offset(__y) { }
         -:  171:
         -:  172:    _GLIBCXX20_CONSTEXPR
         -:  173:    void
@@ -257,12 +257,12 @@ function _ZNSt18_Bit_iterator_baseC2EPmj called 3305 returned 100% blocks execut
         -:  252:#endif // three-way comparison
         -:  253:
         -:  254:    friend _GLIBCXX20_CONSTEXPR ptrdiff_t
-function _ZStmiRKSt18_Bit_iterator_baseS1_ called 1051 returned 100% blocks executed 100%
-     1051:  255:    operator-(const _Bit_iterator_base& __x, const _Bit_iterator_base& __y)
+function _ZStmiRKSt18_Bit_iterator_baseS1_ called 1278 returned 100% blocks executed 100%
+     1278:  255:    operator-(const _Bit_iterator_base& __x, const _Bit_iterator_base& __y)
         -:  256:    {
-     1051:  257:      return (int(_S_word_bit) * (__x._M_p - __y._M_p)
-     1051:  258:	      + __x._M_offset - __y._M_offset);
-     1051:  258-block  0
+     1278:  257:      return (int(_S_word_bit) * (__x._M_p - __y._M_p)
+     1278:  258:	      + __x._M_offset - __y._M_offset);
+     1278:  258-block  0
         -:  259:    }
         -:  260:  };
         -:  261:#pragma GCC diagnostic pop
@@ -388,18 +388,18 @@ function _ZStmiRKSt18_Bit_iterator_baseS1_ called 1051 returned 100% blocks exec
         -:  381:    _Bit_const_iterator() : _Bit_iterator_base(0, 0) { }
         -:  382:
         -:  383:    _GLIBCXX20_CONSTEXPR
-function _ZNSt19_Bit_const_iteratorC2EPmj called 1112 returned 100% blocks executed 100%
-     1112:  384:    _Bit_const_iterator(_Bit_type * __x, unsigned int __y)
-     1112:  385:    : _Bit_iterator_base(__x, __y) { }
-     1112:  385-block  0
-call    0 returned 1112
+function _ZNSt19_Bit_const_iteratorC2EPmj called 1358 returned 100% blocks executed 100%
+     1358:  384:    _Bit_const_iterator(_Bit_type * __x, unsigned int __y)
+     1358:  385:    : _Bit_iterator_base(__x, __y) { }
+     1358:  385-block  0
+call    0 returned 1358
         -:  386:
         -:  387:    _GLIBCXX20_CONSTEXPR
-function _ZNSt19_Bit_const_iteratorC2ERKSt13_Bit_iterator called 1051 returned 100% blocks executed 100%
-     1051:  388:    _Bit_const_iterator(const _Bit_iterator& __x)
-     1051:  389:    : _Bit_iterator_base(__x._M_p, __x._M_offset) { }
-     1051:  389-block  0
-call    0 returned 1051
+function _ZNSt19_Bit_const_iteratorC2ERKSt13_Bit_iterator called 1278 returned 100% blocks executed 100%
+     1278:  388:    _Bit_const_iterator(const _Bit_iterator& __x)
+     1278:  389:    : _Bit_iterator_base(__x._M_p, __x._M_offset) { }
+     1278:  389-block  0
+call    0 returned 1278
         -:  390:
         -:  391:    _GLIBCXX20_CONSTEXPR
         -:  392:    _Bit_iterator
@@ -959,11 +959,11 @@ call    0 returned 1051
         -:  946:
         -:  947:      _GLIBCXX_NODISCARD _GLIBCXX20_CONSTEXPR
         -:  948:      const_iterator
-function _ZNKSt6vectorIbSaIbEE5beginEv called 1051 returned 100% blocks executed 100%
-     1051:  949:      begin() const _GLIBCXX_NOEXCEPT
-     1051:  950:      { return const_iterator(this->_M_impl._M_start._M_p, 0); }
-     1051:  950-block  0
-call    0 returned 1051
+function _ZNKSt6vectorIbSaIbEE5beginEv called 1278 returned 100% blocks executed 100%
+     1278:  949:      begin() const _GLIBCXX_NOEXCEPT
+     1278:  950:      { return const_iterator(this->_M_impl._M_start._M_p, 0); }
+     1278:  950-block  0
+call    0 returned 1278
         -:  951:
         -:  952:      _GLIBCXX_NODISCARD _GLIBCXX20_CONSTEXPR
         -:  953:      iterator
@@ -972,11 +972,11 @@ call    0 returned 1051
         -:  956:
         -:  957:      _GLIBCXX_NODISCARD _GLIBCXX20_CONSTEXPR
         -:  958:      const_iterator
-function _ZNKSt6vectorIbSaIbEE3endEv called 1051 returned 100% blocks executed 100%
-     1051:  959:      end() const _GLIBCXX_NOEXCEPT
-     1051:  960:      { return this->_M_impl._M_finish; }
-     1051:  960-block  0
-call    0 returned 1051
+function _ZNKSt6vectorIbSaIbEE3endEv called 1278 returned 100% blocks executed 100%
+     1278:  959:      end() const _GLIBCXX_NOEXCEPT
+     1278:  960:      { return this->_M_impl._M_finish; }
+     1278:  960-block  0
+call    0 returned 1278
         -:  961:
         -:  962:      _GLIBCXX_NODISCARD _GLIBCXX20_CONSTEXPR
         -:  963:      reverse_iterator
@@ -1022,13 +1022,13 @@ call    0 returned 1051
         -: 1003:
         -: 1004:      _GLIBCXX_NODISCARD _GLIBCXX20_CONSTEXPR
         -: 1005:      size_type
-function _ZNKSt6vectorIbSaIbEE4sizeEv called 990 returned 100% blocks executed 100%
-      990: 1006:      size() const _GLIBCXX_NOEXCEPT
-      990: 1007:      { return size_type(end() - begin()); }
-      990: 1007-block  0
-call    0 returned 990
-call    1 returned 990
-call    2 returned 990
+function _ZNKSt6vectorIbSaIbEE4sizeEv called 1198 returned 100% blocks executed 100%
+     1198: 1006:      size() const _GLIBCXX_NOEXCEPT
+     1198: 1007:      { return size_type(end() - begin()); }
+     1198: 1007-block  0
+call    0 returned 1198
+call    1 returned 1198
+call    2 returned 1198
         -: 1008:
         -: 1009:      _GLIBCXX_NODISCARD _GLIBCXX20_CONSTEXPR
         -: 1010:      size_type

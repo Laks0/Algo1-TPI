@@ -157,33 +157,33 @@
         -:  153:      // _GLIBCXX_RESOLVE_LIB_DEFECTS
         -:  154:      // 3035. std::allocator's constructors should be constexpr
         -:  155:      _GLIBCXX20_CONSTEXPR
-       47:  156:      allocator() _GLIBCXX_NOTHROW { }
+       61:  156:      allocator() _GLIBCXX_NOTHROW { }
 ------------------
 _ZNSaISt4pairIS_IiiEiEEC2Ev:
-function _ZNSaISt4pairIS_IiiEiEEC2Ev called 16 returned 100% blocks executed 100%
-       16:  156:      allocator() _GLIBCXX_NOTHROW { }
-       16:  156-block  0
-call    0 returned 16
+function _ZNSaISt4pairIS_IiiEiEEC2Ev called 22 returned 100% blocks executed 100%
+       22:  156:      allocator() _GLIBCXX_NOTHROW { }
+       22:  156-block  0
+call    0 returned 22
 ------------------
 _ZNSaISt6vectorIbSaIbEEEC2Ev:
-function _ZNSaISt6vectorIbSaIbEEEC2Ev called 17 returned 100% blocks executed 100%
+function _ZNSaISt6vectorIbSaIbEEEC2Ev called 22 returned 100% blocks executed 100%
+       22:  156:      allocator() _GLIBCXX_NOTHROW { }
+       22:  156-block  0
+call    0 returned 22
+------------------
+_ZNSaISt4pairIiiEEC2Ev:
+function _ZNSaISt4pairIiiEEC2Ev called 17 returned 100% blocks executed 100%
        17:  156:      allocator() _GLIBCXX_NOTHROW { }
        17:  156-block  0
 call    0 returned 17
 ------------------
-_ZNSaISt4pairIiiEEC2Ev:
-function _ZNSaISt4pairIiiEEC2Ev called 14 returned 100% blocks executed 100%
-       14:  156:      allocator() _GLIBCXX_NOTHROW { }
-       14:  156-block  0
-call    0 returned 14
-------------------
         -:  157:
         -:  158:      _GLIBCXX20_CONSTEXPR
-function _ZNSaISt4pairIiiEEC2ERKS1_ called 18 returned 100% blocks executed 100%
-       18:  159:      allocator(const allocator& __a) _GLIBCXX_NOTHROW
-       18:  160:      : __allocator_base<_Tp>(__a) { }
-       18:  160-block  0
-call    0 returned 18
+function _ZNSaISt4pairIiiEEC2ERKS1_ called 22 returned 100% blocks executed 100%
+       22:  159:      allocator(const allocator& __a) _GLIBCXX_NOTHROW
+       22:  160:      : __allocator_base<_Tp>(__a) { }
+       22:  160-block  0
+call    0 returned 22
         -:  161:
         -:  162:#if __cplusplus >= 201103L
         -:  163:      // Avoid implicit deprecation.
@@ -197,31 +197,31 @@ call    0 returned 18
         -:  171:#if __cpp_constexpr_dynamic_alloc
         -:  172:      constexpr
         -:  173:#endif
-      326:  174:      ~allocator() _GLIBCXX_NOTHROW { }
+      435:  174:      ~allocator() _GLIBCXX_NOTHROW { }
 ------------------
 _ZNSaImED2Ev:
-function _ZNSaImED2Ev called 219 returned 100% blocks executed 100%
-      219:  174:      ~allocator() _GLIBCXX_NOTHROW { }
-      219:  174-block  0
-call    0 returned 219
+function _ZNSaImED2Ev called 290 returned 100% blocks executed 100%
+      290:  174:      ~allocator() _GLIBCXX_NOTHROW { }
+      290:  174-block  0
+call    0 returned 290
 ------------------
 _ZNSaISt4pairIS_IiiEiEED2Ev:
-function _ZNSaISt4pairIS_IiiEiEED2Ev called 30 returned 100% blocks executed 100%
-       30:  174:      ~allocator() _GLIBCXX_NOTHROW { }
-       30:  174-block  0
-call    0 returned 30
+function _ZNSaISt4pairIS_IiiEiEED2Ev called 46 returned 100% blocks executed 100%
+       46:  174:      ~allocator() _GLIBCXX_NOTHROW { }
+       46:  174-block  0
+call    0 returned 46
 ------------------
 _ZNSaISt6vectorIbSaIbEEED2Ev:
-function _ZNSaISt6vectorIbSaIbEEED2Ev called 45 returned 100% blocks executed 100%
-       45:  174:      ~allocator() _GLIBCXX_NOTHROW { }
-       45:  174-block  0
-call    0 returned 45
+function _ZNSaISt6vectorIbSaIbEEED2Ev called 60 returned 100% blocks executed 100%
+       60:  174:      ~allocator() _GLIBCXX_NOTHROW { }
+       60:  174-block  0
+call    0 returned 60
 ------------------
 _ZNSaISt4pairIiiEED2Ev:
-function _ZNSaISt4pairIiiEED2Ev called 32 returned 100% blocks executed 100%
-       32:  174:      ~allocator() _GLIBCXX_NOTHROW { }
-       32:  174-block  0
-call    0 returned 32
+function _ZNSaISt4pairIiiEED2Ev called 39 returned 100% blocks executed 100%
+       39:  174:      ~allocator() _GLIBCXX_NOTHROW { }
+       39:  174-block  0
+call    0 returned 39
 ------------------
         -:  175:
         -:  176:#if __cplusplus > 201703L

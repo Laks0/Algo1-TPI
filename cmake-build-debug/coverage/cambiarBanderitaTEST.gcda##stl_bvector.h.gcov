@@ -276,10 +276,10 @@ function _ZNSt18_Bit_iterator_baseC2EPmj called 0 returned 0% blocks executed 0%
         -:  271:    typedef _Bit_iterator   iterator;
         -:  272:
         -:  273:    _GLIBCXX20_CONSTEXPR
-function _ZNSt13_Bit_iteratorC2Ev called 316 returned 100% blocks executed 100%
-      316:  274:    _Bit_iterator() : _Bit_iterator_base(0, 0) { }
-      316:  274-block  0
-call    0 returned 316
+function _ZNSt13_Bit_iteratorC2Ev called 420 returned 100% blocks executed 100%
+      420:  274:    _Bit_iterator() : _Bit_iterator_base(0, 0) { }
+      420:  274-block  0
+call    0 returned 420
         -:  275:
         -:  276:    _GLIBCXX20_CONSTEXPR
         -:  277:    _Bit_iterator(_Bit_type * __x, unsigned int __y)
@@ -511,13 +511,13 @@ call    0 returned 316
         -:  503:	_Bit_pointer	_M_end_of_storage;
         -:  504:
         -:  505:	_GLIBCXX20_CONSTEXPR
-function _ZNSt13_Bvector_baseISaIbEE18_Bvector_impl_dataC2Ev called 158 returned 100% blocks executed 100%
-      158:  506:	_Bvector_impl_data() _GLIBCXX_NOEXCEPT
-      158:  507:	: _M_start(), _M_finish(), _M_end_of_storage()
-      158:  507-block  0
-call    0 returned 158
-call    1 returned 158
-      158:  508:	{ }
+function _ZNSt13_Bvector_baseISaIbEE18_Bvector_impl_dataC2Ev called 210 returned 100% blocks executed 100%
+      210:  506:	_Bvector_impl_data() _GLIBCXX_NOEXCEPT
+      210:  507:	: _M_start(), _M_finish(), _M_end_of_storage()
+      210:  507-block  0
+call    0 returned 210
+call    1 returned 210
+      210:  508:	{ }
         -:  509:
         -:  510:#if __cplusplus >= 201103L
         -:  511:	_Bvector_impl_data(const _Bvector_impl_data&) = default;
@@ -541,11 +541,11 @@ call    1 returned 158
         -:  529:
         -:  530:	_GLIBCXX20_CONSTEXPR
         -:  531:	void
-function _ZNSt13_Bvector_baseISaIbEE18_Bvector_impl_data8_M_resetEv called 79 returned 100% blocks executed 100%
-       79:  532:	_M_reset() _GLIBCXX_NOEXCEPT
-       79:  533:	{ *this = _Bvector_impl_data(); }
-       79:  533-block  0
-call    0 returned 79
+function _ZNSt13_Bvector_baseISaIbEE18_Bvector_impl_data8_M_resetEv called 105 returned 100% blocks executed 100%
+      105:  532:	_M_reset() _GLIBCXX_NOEXCEPT
+      105:  533:	{ *this = _Bvector_impl_data(); }
+      105:  533-block  0
+call    0 returned 105
         -:  534:
         -:  535:	_GLIBCXX20_CONSTEXPR
         -:  536:	void
@@ -587,16 +587,16 @@ call    0 returned 79
         -:  572:
         -:  573:	_GLIBCXX20_CONSTEXPR
         -:  574:	_Bit_type*
-function _ZNKSt13_Bvector_baseISaIbEE13_Bvector_impl11_M_end_addrEv called 92 returned 100% blocks executed 80%
-       92:  575:	_M_end_addr() const _GLIBCXX_NOEXCEPT
+function _ZNKSt13_Bvector_baseISaIbEE13_Bvector_impl11_M_end_addrEv called 121 returned 100% blocks executed 80%
+      121:  575:	_M_end_addr() const _GLIBCXX_NOEXCEPT
         -:  576:	{
-       92:  577:	  if (this->_M_end_of_storage)
-       92:  577-block  0
-branch  0 taken 92 (fallthrough)
+      121:  577:	  if (this->_M_end_of_storage)
+      121:  577-block  0
+branch  0 taken 121 (fallthrough)
 branch  1 taken 0
-       92:  578:	    return std::__addressof(this->_M_end_of_storage[-1]) + 1;
-       92:  578-block  0
-call    0 returned 92
+      121:  578:	    return std::__addressof(this->_M_end_of_storage[-1]) + 1;
+      121:  578-block  0
+call    0 returned 121
     #####:  579:	  return 0;
     %%%%%:  579-block  0
         -:  580:	}
@@ -640,12 +640,12 @@ call    0 returned 92
         -:  618:#endif
         -:  619:
         -:  620:      _GLIBCXX20_CONSTEXPR
-function _ZNSt13_Bvector_baseISaIbEED2Ev called 79 returned 100% blocks executed 100%
-       79:  621:      ~_Bvector_base()
-       79:  622:      { this->_M_deallocate(); }
-       79:  622-block  0
-call    0 returned 79
-call    1 returned 79
+function _ZNSt13_Bvector_baseISaIbEED2Ev called 105 returned 100% blocks executed 100%
+      105:  621:      ~_Bvector_base()
+      105:  622:      { this->_M_deallocate(); }
+      105:  622-block  0
+call    0 returned 105
+call    1 returned 105
         -:  623:
         -:  624:    protected:
         -:  625:      _Bvector_impl _M_impl;
@@ -668,25 +668,25 @@ call    1 returned 79
         -:  642:
         -:  643:      _GLIBCXX20_CONSTEXPR
         -:  644:      void
-function _ZNSt13_Bvector_baseISaIbEE13_M_deallocateEv called 79 returned 100% blocks executed 100%
-       79:  645:      _M_deallocate()
+function _ZNSt13_Bvector_baseISaIbEE13_M_deallocateEv called 105 returned 100% blocks executed 100%
+      105:  645:      _M_deallocate()
         -:  646:      {
-       79:  647:	if (_M_impl._M_start._M_p)
-       79:  647-block  0
-branch  0 taken 79 (fallthrough)
+      105:  647:	if (_M_impl._M_start._M_p)
+      105:  647-block  0
+branch  0 taken 105 (fallthrough)
 branch  1 taken 0
         -:  648:	  {
-       79:  649:	    const size_t __n = _M_impl._M_end_addr() - _M_impl._M_start._M_p;
-       79:  649-block  0
-call    0 returned 79
-       79:  650:	    _Bit_alloc_traits::deallocate(_M_impl,
-       79:  651:					  _M_impl._M_end_of_storage - __n,
-call    0 returned 79
+      105:  649:	    const size_t __n = _M_impl._M_end_addr() - _M_impl._M_start._M_p;
+      105:  649-block  0
+call    0 returned 105
+      105:  650:	    _Bit_alloc_traits::deallocate(_M_impl,
+      105:  651:					  _M_impl._M_end_of_storage - __n,
+call    0 returned 105
         -:  652:					  __n);
-       79:  653:	    _M_impl._M_reset();
-call    0 returned 79
+      105:  653:	    _M_impl._M_reset();
+call    0 returned 105
         -:  654:	  }
-       79:  655:      }
+      105:  655:      }
         -:  656:
         -:  657:#if __cplusplus >= 201103L
         -:  658:      _GLIBCXX20_CONSTEXPR
@@ -870,10 +870,10 @@ call    0 returned 79
         -:  836:#endif
         -:  837:
         -:  838:      _GLIBCXX20_CONSTEXPR
-function _ZNSt6vectorIbSaIbEED2Ev called 79 returned 100% blocks executed 100%
-       79:  839:      ~vector() _GLIBCXX_NOEXCEPT { }
-       79:  839-block  0
-call    0 returned 79
+function _ZNSt6vectorIbSaIbEED2Ev called 105 returned 100% blocks executed 100%
+      105:  839:      ~vector() _GLIBCXX_NOEXCEPT { }
+      105:  839-block  0
+call    0 returned 105
         -:  840:
         -:  841:      _GLIBCXX20_CONSTEXPR
         -:  842:      vector&

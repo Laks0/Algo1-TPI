@@ -72,23 +72,23 @@
         -:   68:
         -:   69:      // Number of elements.
         -:   70:      constexpr size_type
-function _ZNKSt16initializer_listISt4pairIiiEE4sizeEv called 9 returned 100% blocks executed 100%
-        9:   71:      size() const noexcept { return _M_len; }
-        9:   71-block  0
+function _ZNKSt16initializer_listISt4pairIiiEE4sizeEv called 11 returned 100% blocks executed 100%
+       11:   71:      size() const noexcept { return _M_len; }
+       11:   71-block  0
         -:   72:
         -:   73:      // First element.
         -:   74:      constexpr const_iterator
-function _ZNKSt16initializer_listISt4pairIiiEE5beginEv called 18 returned 100% blocks executed 100%
-       18:   75:      begin() const noexcept { return _M_array; }
-       18:   75-block  0
+function _ZNKSt16initializer_listISt4pairIiiEE5beginEv called 22 returned 100% blocks executed 100%
+       22:   75:      begin() const noexcept { return _M_array; }
+       22:   75-block  0
         -:   76:
         -:   77:      // One past the last element.
         -:   78:      constexpr const_iterator
-function _ZNKSt16initializer_listISt4pairIiiEE3endEv called 9 returned 100% blocks executed 100%
-        9:   79:      end() const noexcept { return begin() + size(); }
-        9:   79-block  0
-call    0 returned 9
-call    1 returned 9
+function _ZNKSt16initializer_listISt4pairIiiEE3endEv called 11 returned 100% blocks executed 100%
+       11:   79:      end() const noexcept { return begin() + size(); }
+       11:   79-block  0
+call    0 returned 11
+call    1 returned 11
         -:   80:    };
         -:   81:
         -:   82:  /**

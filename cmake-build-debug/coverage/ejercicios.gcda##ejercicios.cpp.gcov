@@ -18,66 +18,66 @@
         -:   14:
         -:   15:/******++++**************************** EJERCICIO minasAdyacentes ***********+++***********************/
         -:   16:// O(1) porque el loop siempre se ejecuta exáctamente 9 veces (constante)
-function _Z15minasAdyacentesRSt6vectorIS_IbSaIbEESaIS1_EESt4pairIiiE called 101 returned 100% blocks executed 96%
-      101:   17:int minasAdyacentes(tablero& t, pos p) {
-      101:   18:    int adyacentes = 0;
-      404:   19:    for (int i = -1; i <= 1; i++) {
-      101:   19-block  0
-      303:   19-block  1
-      404:   19-block  2
-branch  0 taken 303
-branch  1 taken 101 (fallthrough)
-     1212:   20:        for (int j = -1; j <= 1; j++) {
-      303:   20-block  0
-      909:   20-block  1
-     1212:   20-block  2
-branch  0 taken 909
-branch  1 taken 303 (fallthrough)
-      909:   21:            if (i == 0 && j == 0) {
-      909:   21-block  0
-branch  0 taken 303 (fallthrough)
-branch  1 taken 606
-      303:   21-block  1
-branch  2 taken 101 (fallthrough)
-branch  3 taken 202
-      370:   22:                continue;
-      101:   22-block  0
-      370:   22-block  1
+function _Z15minasAdyacentesRSt6vectorIS_IbSaIbEESaIS1_EESt4pairIiiE called 120 returned 100% blocks executed 96%
+      120:   17:int minasAdyacentes(tablero& t, pos p) {
+      120:   18:    int adyacentes = 0;
+      480:   19:    for (int i = -1; i <= 1; i++) {
+      120:   19-block  0
+      360:   19-block  1
+      480:   19-block  2
+branch  0 taken 360
+branch  1 taken 120 (fallthrough)
+     1440:   20:        for (int j = -1; j <= 1; j++) {
+      360:   20-block  0
+     1080:   20-block  1
+     1440:   20-block  2
+branch  0 taken 1080
+branch  1 taken 360 (fallthrough)
+     1080:   21:            if (i == 0 && j == 0) {
+     1080:   21-block  0
+branch  0 taken 360 (fallthrough)
+branch  1 taken 720
+      360:   21-block  1
+branch  2 taken 120 (fallthrough)
+branch  3 taken 240
+      429:   22:                continue;
+      120:   22-block  0
+      429:   22-block  1
         -:   23:            }
-      808:   24:            pos p2;
-      808:   25:            p2.first = p.first + i;
-      808:   26:            p2.second = p.second + j;
+      960:   24:            pos p2;
+      960:   25:            p2.first = p.first + i;
+      960:   26:            p2.second = p.second + j;
         -:   27:
-      808:   28:            if (!esCoordenadaValida(t, p2)) {
-      808:   28-block  0
-call    0 returned 808
-branch  1 taken 808 (fallthrough)
+      960:   28:            if (!esCoordenadaValida(t, p2)) {
+      960:   28-block  0
+call    0 returned 960
+branch  1 taken 960 (fallthrough)
 branch  2 taken 0 (throw)
-      808:   28-block  1
-branch  3 taken 269 (fallthrough)
-branch  4 taken 539
-      269:   29:                continue;
-      269:   29-block  0
+      960:   28-block  1
+branch  3 taken 309 (fallthrough)
+branch  4 taken 651
+      309:   29:                continue;
+      309:   29-block  0
         -:   30:            }
-      539:   31:            adyacentes += t[p2.first][p2.second] == cMINA ? 1 : 0;
-      539:   31-block  0
-call    0 returned 539
-call    1 returned 539
-branch  2 taken 539 (fallthrough)
+      651:   31:            adyacentes += t[p2.first][p2.second] == cMINA ? 1 : 0;
+      651:   31-block  0
+call    0 returned 651
+call    1 returned 651
+branch  2 taken 651 (fallthrough)
 branch  3 taken 0 (throw)
-      539:   31-block  1
-call    4 returned 539
-branch  5 taken 21 (fallthrough)
-branch  6 taken 518
-       21:   31-block  2
-      518:   31-block  3
-      539:   31-block  4
+      651:   31-block  1
+call    4 returned 651
+branch  5 taken 51 (fallthrough)
+branch  6 taken 600
+       51:   31-block  2
+      600:   31-block  3
+      651:   31-block  4
     $$$$$:   31-block  5
         -:   32:        }
         -:   33:    }
-      101:   34:    return adyacentes;
-      101:   34-block  0
-      101:   34-block  1
+      120:   34:    return adyacentes;
+      120:   34-block  0
+      120:   34-block  1
         -:   35:}
         -:   36:
         -:   37:/******++++**************************** EJERCICIO plantarBanderita ***********+++***********************/
@@ -124,94 +124,94 @@ call    0 returned 1
         -:   54:
         -:   55:/******++++**************************** EJERCICIO perdio ***********+++***********************/
         -:   56:// O(n) siendo n = |j| porque si no perdió (el peor de los casos) recorre toda la lista sin encontrar una mina
-function _Z6perdioRSt6vectorIS_IbSaIbEESaIS1_EERS_ISt4pairIS5_IiiEiESaIS7_EE called 0 returned 0% blocks executed 0%
-    #####:   57:bool perdio(tablero& t, jugadas& j) {
-    #####:   58:    for (int i = 0; i < j.size(); i++) {
-    %%%%%:   58-block  0
-    %%%%%:   58-block  1
-    %%%%%:   58-block  2
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
-    #####:   59:        pos p = j[i].first;
-    %%%%%:   59-block  0
-call    0 never executed
+function _Z6perdioRSt6vectorIS_IbSaIbEESaIS1_EERS_ISt4pairIS5_IiiEiESaIS7_EE called 2 returned 100% blocks executed 93%
+        2:   57:bool perdio(tablero& t, jugadas& j) {
+        4:   58:    for (int i = 0; i < j.size(); i++) {
+        2:   58-block  0
+        2:   58-block  1
+        4:   58-block  2
+call    0 returned 4
+branch  1 taken 3
+branch  2 taken 1 (fallthrough)
+        3:   59:        pos p = j[i].first;
+        3:   59-block  0
+call    0 returned 3
         -:   60:
-    #####:   61:        if (t[p.first][p.second] == cMINA) {
-call    0 never executed
-call    1 never executed
-branch  2 never executed
-branch  3 never executed
-    %%%%%:   61-block  0
-call    4 never executed
-branch  5 never executed
-branch  6 never executed
+        3:   61:        if (t[p.first][p.second] == cMINA) {
+call    0 returned 3
+call    1 returned 3
+branch  2 taken 3 (fallthrough)
+branch  3 taken 0 (throw)
+        3:   61-block  0
+call    4 returned 3
+branch  5 taken 1 (fallthrough)
+branch  6 taken 2
     $$$$$:   61-block  1
-    #####:   62:            return true;
-    %%%%%:   62-block  0
+        1:   62:            return true;
+        1:   62-block  0
         -:   63:        }
         -:   64:    }
-    #####:   65:    return false;
-    %%%%%:   65-block  0
+        1:   65:    return false;
+        1:   65-block  0
         -:   66:}
         -:   67:
         -:   68:/******++++**************************** EJERCICIO gano ***********+++***********************/
         -:   69:// O(n*m) siendo n = #posiciones en el tablero y m= |j| porque en el peor de los casos,
         -:   70:// por cada posición del tablero recorrió todas las jugadas sin encontrar una mina.
-function _Z4ganoRSt6vectorIS_IbSaIbEESaIS1_EERS_ISt4pairIS5_IiiEiESaIS7_EE called 1 returned 100% blocks executed 86%
-        1:   71:bool gano(tablero& t, jugadas& j) {
-       1*:   72:    for (int x = 0; x < t.size(); x++) {
-        1:   72-block  0
-    %%%%%:   72-block  1
-        1:   72-block  2
-call    0 returned 1
-branch  1 taken 1
-branch  2 taken 0 (fallthrough)
-        4:   73:        for (int y = 0; y < t[x].size(); y++) {
-        1:   73-block  0
-        3:   73-block  1
-        4:   73-block  2
-call    0 returned 4
-call    1 returned 4
-branch  2 taken 4
-branch  3 taken 0 (fallthrough)
-        4:   74:            pos p;
-        4:   75:            p.first = x;
-        4:   76:            p.second = y;
-        4:   77:            bool fueJugado = posEnJugadas(j, p); // O(m)
-        4:   77-block  0
-call    0 returned 4
-branch  1 taken 4 (fallthrough)
+function _Z4ganoRSt6vectorIS_IbSaIbEESaIS1_EERS_ISt4pairIS5_IiiEiESaIS7_EE called 2 returned 100% blocks executed 95%
+        2:   71:bool gano(tablero& t, jugadas& j) {
+        7:   72:    for (int x = 0; x < t.size(); x++) {
+        2:   72-block  0
+        5:   72-block  1
+        7:   72-block  2
+call    0 returned 7
+branch  1 taken 6
+branch  2 taken 1 (fallthrough)
+       34:   73:        for (int y = 0; y < t[x].size(); y++) {
+        6:   73-block  0
+       28:   73-block  1
+       34:   73-block  2
+call    0 returned 34
+call    1 returned 34
+branch  2 taken 29
+branch  3 taken 5 (fallthrough)
+       29:   74:            pos p;
+       29:   75:            p.first = x;
+       29:   76:            p.second = y;
+       29:   77:            bool fueJugado = posEnJugadas(j, p); // O(m)
+       29:   77-block  0
+call    0 returned 29
+branch  1 taken 29 (fallthrough)
 branch  2 taken 0 (throw)
-        4:   78:            bool esMina = t[x][y] == cMINA;
-        4:   78-block  0
-call    0 returned 4
-call    1 returned 4
-branch  2 taken 4 (fallthrough)
+       29:   78:            bool esMina = t[x][y] == cMINA;
+       29:   78-block  0
+call    0 returned 29
+call    1 returned 29
+branch  2 taken 29 (fallthrough)
 branch  3 taken 0 (throw)
-        4:   78-block  1
-call    4 returned 4
+       29:   78-block  1
+call    4 returned 29
     $$$$$:   78-block  2
         -:   79:
-        4:   80:            if ((esMina && fueJugado) || (!esMina && !fueJugado)) {
-branch  0 taken 2 (fallthrough)
-branch  1 taken 2
-        2:   80-block  0
-branch  2 taken 2 (fallthrough)
+       29:   80:            if ((esMina && fueJugado) || (!esMina && !fueJugado)) {
+branch  0 taken 8 (fallthrough)
+branch  1 taken 21
+        8:   80-block  0
+branch  2 taken 8 (fallthrough)
 branch  3 taken 0
-        4:   80-block  1
-branch  4 taken 2 (fallthrough)
-branch  5 taken 2
-        2:   80-block  2
+       29:   80-block  1
+branch  4 taken 21 (fallthrough)
+branch  5 taken 8
+       21:   80-block  2
 branch  6 taken 1 (fallthrough)
-branch  7 taken 1
+branch  7 taken 20
         1:   81:                return false;
         1:   81-block  0
         -:   82:            }
         -:   83:        }
         -:   84:    }
-    #####:   85:    return true;
-    %%%%%:   85-block  0
+        1:   85:    return true;
+        1:   85-block  0
         -:   86:}
         -:   87:
         -:   88:/******++++**************************** EJERCICIO jugarPlus ***********+++***********************/
@@ -318,21 +318,21 @@ branch  2 taken 0 (throw)
         -:  109:}
         -:  110:
         -:  111:/******++++**************************** EJERCICIO sugerirAutomatico121 ***********+++***********************/
-function _Z20sugerirAutomatico121RSt6vectorIS_IbSaIbEESaIS1_EERS_ISt4pairIiiESaIS6_EERS_IS5_IS6_iESaISA_EERS6_ called 4 returned 100% blocks executed 65%
-        4:  112:bool sugerirAutomatico121(tablero& t, banderitas& b, jugadas& j, pos& p) {
-       10:  113:    for (int i = 0; i < j.size(); i++) {
-        4:  113-block  0
-        6:  113-block  1
-       10:  113-block  2
-call    0 returned 10
-branch  1 taken 8
-branch  2 taken 2 (fallthrough)
-        8:  114:        if (es121Horizontal(j, j[i])) {
-        8:  114-block  0
-call    0 returned 8
-call    1 returned 8
+function _Z20sugerirAutomatico121RSt6vectorIS_IbSaIbEESaIS1_EERS_ISt4pairIiiESaIS6_EERS_IS5_IS6_iESaISA_EERS6_ called 7 returned 100% blocks executed 98%
+        7:  112:bool sugerirAutomatico121(tablero& t, banderitas& b, jugadas& j, pos& p) {
+       18:  113:    for (int i = 0; i < j.size(); i++) {
+        7:  113-block  0
+       11:  113-block  1
+       18:  113-block  2
+call    0 returned 18
+branch  1 taken 15
 branch  2 taken 3 (fallthrough)
-branch  3 taken 5
+       15:  114:        if (es121Horizontal(j, j[i])) {
+       15:  114-block  0
+call    0 returned 15
+call    1 returned 15
+branch  2 taken 3 (fallthrough)
+branch  3 taken 12
         3:  115:            pos posJugada = j[i].first;
         3:  115-block  0
 call    0 returned 3
@@ -367,47 +367,47 @@ call    0 returned 1
         1:  124:                return true;
         -:  125:            }
         -:  126:        }
-        6:  127:        if (es121Vertical(j, j[i])) {
-        6:  127-block  0
-call    0 returned 6
-call    1 returned 6
-branch  2 taken 0 (fallthrough)
-branch  3 taken 6
-    #####:  128:            pos posJugada = j[i].first;
-    %%%%%:  128-block  0
-call    0 never executed
-    #####:  129:            pos izquierda = {posJugada.first-1, posJugada.second};
-call    0 never executed
-    #####:  130:            pos derecha = {posJugada.first+1, posJugada.second};
-call    0 never executed
-    #####:  131:            if (puedeJugarse(t, b, j, derecha)) {
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
-    %%%%%:  131-block  0
-branch  3 never executed
-branch  4 never executed
-    #####:  132:                p = derecha;
-    %%%%%:  132-block  0
-call    0 never executed
-    #####:  133:                return true;
-    %%%%%:  133-block  0
+       13:  127:        if (es121Vertical(j, j[i])) {
+       13:  127-block  0
+call    0 returned 13
+call    1 returned 13
+branch  2 taken 3 (fallthrough)
+branch  3 taken 10
+        3:  128:            pos posJugada = j[i].first;
+        3:  128-block  0
+call    0 returned 3
+        3:  129:            pos izquierda = {posJugada.first-1, posJugada.second};
+call    0 returned 3
+        3:  130:            pos derecha = {posJugada.first+1, posJugada.second};
+call    0 returned 3
+        3:  131:            if (puedeJugarse(t, b, j, derecha)) {
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:  131-block  0
+branch  3 taken 1 (fallthrough)
+branch  4 taken 2
+        1:  132:                p = derecha;
+        1:  132-block  0
+call    0 returned 1
+        2:  133:                return true;
+        2:  133-block  0
         -:  134:            }
-    #####:  135:            if (puedeJugarse(t, b, j, izquierda)) {
-    %%%%%:  135-block  0
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
-    %%%%%:  135-block  1
-branch  3 never executed
-branch  4 never executed
-    #####:  136:                p = izquierda;
-    %%%%%:  136-block  0
-call    0 never executed
-    #####:  137:                return true;
+        2:  135:            if (puedeJugarse(t, b, j, izquierda)) {
+        2:  135-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:  135-block  1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 1
+        1:  136:                p = izquierda;
+        1:  136-block  0
+call    0 returned 1
+        1:  137:                return true;
         -:  138:            }
         -:  139:        }
         -:  140:    }
-        2:  141:    return false;
-        2:  141-block  0
+        3:  141:    return false;
+        3:  141-block  0
         -:  142:}

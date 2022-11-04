@@ -38,3 +38,16 @@ TEST(ganoTEST, todaviaNoGano){
     jugadas j = jugadasValidas;
     ASSERT_FALSE(gano(t, j));
 }
+
+TEST(ganoTEST, gano) {
+    jugadas j;
+    for (int x = 0; x < t.size(); x++) {
+        for (int y = 0; y < t[x].size(); y++) {
+            if (t[x][y] == cVACIA) {
+                j.push_back(jugada(pos(x, y), minasAdyacentes(t, pos(x, y))));
+            }
+        }
+    }
+
+    ASSERT_TRUE(gano(t, j));
+}

@@ -560,43 +560,47 @@ call   11 never executed
 ------------------
         -:   67:
         -:   68:// .....
-        -:   69:// .....
-        -:   70:// .....
-        -:   71:// .....
+        -:   69:// .x1..
+        -:   70:// ..2..
+        -:   71:// ..1x.
         -:   72:// .....
-        4:   73:TEST(Sugerir121, sin121) {
+        4:   73:TEST(Sugerir121, verticalPosible) {
         1:   74:    tablero t = vector<vector<bool>>(5, vector<bool>(5, false));
-        1:   75:    jugadas j = {};
-        -:   76:
-        1:   77:    banderitas b = {};
+        1:   75:    t[1][1] = cMINA;
+        1:   76:    t[3][3] = cMINA;
+        1:   77:    jugadas j = {{{2,1}, 1}, {{2,2},2}, {{2,3},1}};
         -:   78:
-        1:   79:    pos p;
-        1:   80:    bool hay = sugerirAutomatico121(t, b, j, p);
-       1*:   81:    ASSERT_FALSE(hay);
-        1:   82:}
+        1:   79:    banderitas b;
+        -:   80:
+        1:   81:    pos p;
+        1:   82:    bool hay = sugerirAutomatico121(t, b, j, p);
+        1:   83:    pos posCorrecta = {3, 2};
+       1*:   84:    bool correcto = (p == posCorrecta) && hay;
+       1*:   85:    ASSERT_TRUE(correcto);
+        1:   86:}
 ------------------
-_ZN22Sugerir121_sin121_TestC2Ev:
-function _ZN22Sugerir121_sin121_TestC2Ev called 1 returned 100% blocks executed 100%
-        1:   73:TEST(Sugerir121, sin121) {
+_ZN31Sugerir121_verticalPosible_TestC2Ev:
+function _ZN31Sugerir121_verticalPosible_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:   73:TEST(Sugerir121, verticalPosible) {
         1:   73-block  0
 call    0 returned 1
 ------------------
-_ZN22Sugerir121_sin121_TestD0Ev:
-function _ZN22Sugerir121_sin121_TestD0Ev called 1 returned 100% blocks executed 100%
-        1:   73:TEST(Sugerir121, sin121) {
+_ZN31Sugerir121_verticalPosible_TestD0Ev:
+function _ZN31Sugerir121_verticalPosible_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   73:TEST(Sugerir121, verticalPosible) {
         1:   73-block  0
 call    0 returned 1
 call    1 returned 1
 ------------------
-_ZN22Sugerir121_sin121_TestD2Ev:
-function _ZN22Sugerir121_sin121_TestD2Ev called 1 returned 100% blocks executed 100%
-        1:   73:TEST(Sugerir121, sin121) {
+_ZN31Sugerir121_verticalPosible_TestD2Ev:
+function _ZN31Sugerir121_verticalPosible_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:   73:TEST(Sugerir121, verticalPosible) {
         1:   73-block  0
 call    0 returned 1
 ------------------
-_ZN22Sugerir121_sin121_Test8TestBodyEv:
-function _ZN22Sugerir121_sin121_Test8TestBodyEv called 1 returned 100% blocks executed 42%
-        1:   73:TEST(Sugerir121, sin121) {
+_ZN31Sugerir121_verticalPosible_Test8TestBodyEv:
+function _ZN31Sugerir121_verticalPosible_Test8TestBodyEv called 1 returned 100% blocks executed 47%
+        1:   73:TEST(Sugerir121, verticalPosible) {
         1:   74:    tablero t = vector<vector<bool>>(5, vector<bool>(5, false));
         1:   74-block  0
 call    0 returned 1
@@ -622,80 +626,624 @@ call   12 never executed
     $$$$$:   74-block  8
 call   13 never executed
     $$$$$:   74-block  9
-        1:   75:    jugadas j = {};
+        1:   75:    t[1][1] = cMINA;
 call    0 returned 1
-        -:   76:
-        1:   77:    banderitas b = {};
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   75-block  0
+call    4 returned 1
+    $$$$$:   75-block  1
+        1:   76:    t[3][3] = cMINA;
 call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   76-block  0
+call    4 returned 1
+    $$$$$:   76-block  1
+        1:   77:    jugadas j = {{{2,1}, 1}, {{2,2},2}, {{2,3},1}};
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   77-block  0
+call    4 returned 1
+    $$$$$:   77-block  1
+call    5 never executed
+    $$$$$:   77-block  2
+    $$$$$:   77-block  3
         -:   78:
-        1:   79:    pos p;
-        1:   80:    bool hay = sugerirAutomatico121(t, b, j, p);
+        1:   79:    banderitas b;
+call    0 returned 1
+        -:   80:
+        1:   81:    pos p;
+        1:   82:    bool hay = sugerirAutomatico121(t, b, j, p);
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-       1*:   81:    ASSERT_FALSE(hay);
-        1:   81-block  0
+        1:   83:    pos posCorrecta = {3, 2};
+       1*:   84:    bool correcto = (p == posCorrecta) && hay;
+        1:   84-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+        1:   84-block  1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0
+        1:   84-block  2
+    %%%%%:   84-block  3
+       1*:   85:    ASSERT_TRUE(correcto);
+        1:   85-block  0
 call    0 returned 1
 call    1 returned 1
 branch  2 taken 0 (fallthrough)
 branch  3 taken 1
-    %%%%%:   81-block  1
+    %%%%%:   85-block  1
 call    4 never executed
 branch  5 never executed
 branch  6 never executed
-    %%%%%:   81-block  2
+    %%%%%:   85-block  2
 call    7 never executed
 branch  8 never executed
 branch  9 never executed
-    %%%%%:   81-block  3
+    %%%%%:   85-block  3
 call   10 never executed
 call   11 never executed
 branch 12 never executed
 branch 13 never executed
-    %%%%%:   81-block  4
+    %%%%%:   85-block  4
 call   14 never executed
 branch 15 never executed
 branch 16 never executed
-    %%%%%:   81-block  5
+    %%%%%:   85-block  5
 call   17 never executed
 call   18 never executed
 call   19 never executed
-        1:   81-block  6
-        1:   81-block  7
+        1:   85-block  6
+        1:   85-block  7
 call   20 returned 1
 branch 21 taken 1 (fallthrough)
 branch 22 taken 0
-    $$$$$:   81-block  8
+    $$$$$:   85-block  8
 call   23 never executed
-    $$$$$:   81-block  9
+    $$$$$:   85-block  9
 call   24 never executed
-    $$$$$:   81-block 10
-    $$$$$:   81-block 11
-    $$$$$:   81-block 12
+    $$$$$:   85-block 10
+    $$$$$:   85-block 11
+    $$$$$:   85-block 12
 call   25 never executed
-    $$$$$:   81-block 13
-    $$$$$:   81-block 14
+    $$$$$:   85-block 13
+    $$$$$:   85-block 14
 call   26 never executed
-        1:   82:}
-        1:   82-block  0
-        1:   82-block  1
+        1:   86:}
+        1:   86-block  0
+        1:   86-block  1
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0
-        1:   82-block  2
-        1:   82-block  3
+        1:   86-block  2
+        1:   86-block  3
 call    3 returned 1
 branch  4 taken 1 (fallthrough)
 branch  5 taken 0
-        1:   82-block  4
-        1:   82-block  5
+        1:   86-block  4
+        1:   86-block  5
 call    6 returned 1
 branch  7 taken 1 (fallthrough)
 branch  8 taken 0
-    $$$$$:   82-block  6
+    $$$$$:   86-block  6
 call    9 never executed
-    $$$$$:   82-block  7
+    $$$$$:   86-block  7
 call   10 never executed
-    $$$$$:   82-block  8
+    $$$$$:   86-block  8
+call   11 never executed
+------------------
+        -:   87:
+        -:   88:// .....
+        -:   89:// .x1..
+        -:   90:// ..2b.
+        -:   91:// ..1x.
+        -:   92:// .....
+        4:   93:TEST(Sugerir121, verticalPosibleConBanderita) {
+        1:   94:    tablero t = vector<vector<bool>>(5, vector<bool>(5, false));
+        1:   95:    t[1][1] = cMINA;
+        1:   96:    t[3][3] = cMINA;
+        1:   97:    jugadas j = {{{2,1}, 1}, {{2,2},2}, {{2,3},1}};
+        -:   98:
+        1:   99:    banderitas b = {{3,2}};
+        -:  100:
+        1:  101:    pos p;
+        1:  102:    bool hay = sugerirAutomatico121(t, b, j, p);
+        1:  103:    pos posCorrecta = {1, 2};
+       1*:  104:    bool correcto = (p == posCorrecta) && hay;
+       1*:  105:    ASSERT_TRUE(correcto);
+        1:  106:}
+------------------
+_ZN43Sugerir121_verticalPosibleConBanderita_TestC2Ev:
+function _ZN43Sugerir121_verticalPosibleConBanderita_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:   93:TEST(Sugerir121, verticalPosibleConBanderita) {
+        1:   93-block  0
+call    0 returned 1
+------------------
+_ZN43Sugerir121_verticalPosibleConBanderita_TestD0Ev:
+function _ZN43Sugerir121_verticalPosibleConBanderita_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   93:TEST(Sugerir121, verticalPosibleConBanderita) {
+        1:   93-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN43Sugerir121_verticalPosibleConBanderita_TestD2Ev:
+function _ZN43Sugerir121_verticalPosibleConBanderita_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:   93:TEST(Sugerir121, verticalPosibleConBanderita) {
+        1:   93-block  0
+call    0 returned 1
+------------------
+_ZN43Sugerir121_verticalPosibleConBanderita_Test8TestBodyEv:
+function _ZN43Sugerir121_verticalPosibleConBanderita_Test8TestBodyEv called 1 returned 100% blocks executed 46%
+        1:   93:TEST(Sugerir121, verticalPosibleConBanderita) {
+        1:   94:    tablero t = vector<vector<bool>>(5, vector<bool>(5, false));
+        1:   94-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:   94-block  1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   94-block  2
+call    8 returned 1
+call    9 returned 1
+call   10 returned 1
+    $$$$$:   94-block  3
+call   11 never executed
+    $$$$$:   94-block  4
+    $$$$$:   94-block  5
+call   12 never executed
+    $$$$$:   94-block  6
+    $$$$$:   94-block  7
+    $$$$$:   94-block  8
+call   13 never executed
+    $$$$$:   94-block  9
+        1:   95:    t[1][1] = cMINA;
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   95-block  0
+call    4 returned 1
+    $$$$$:   95-block  1
+        1:   96:    t[3][3] = cMINA;
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   96-block  0
+call    4 returned 1
+    $$$$$:   96-block  1
+        1:   97:    jugadas j = {{{2,1}, 1}, {{2,2},2}, {{2,3},1}};
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   97-block  0
+call    4 returned 1
+    $$$$$:   97-block  1
+call    5 never executed
+    $$$$$:   97-block  2
+    $$$$$:   97-block  3
+        -:   98:
+        1:   99:    banderitas b = {{3,2}};
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   99-block  0
+call    4 returned 1
+    $$$$$:   99-block  1
+call    5 never executed
+    $$$$$:   99-block  2
+    $$$$$:   99-block  3
+        -:  100:
+        1:  101:    pos p;
+        1:  102:    bool hay = sugerirAutomatico121(t, b, j, p);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  103:    pos posCorrecta = {1, 2};
+       1*:  104:    bool correcto = (p == posCorrecta) && hay;
+        1:  104-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+        1:  104-block  1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0
+        1:  104-block  2
+    %%%%%:  104-block  3
+       1*:  105:    ASSERT_TRUE(correcto);
+        1:  105-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 1
+    %%%%%:  105-block  1
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    %%%%%:  105-block  2
+call    7 never executed
+branch  8 never executed
+branch  9 never executed
+    %%%%%:  105-block  3
+call   10 never executed
+call   11 never executed
+branch 12 never executed
+branch 13 never executed
+    %%%%%:  105-block  4
+call   14 never executed
+branch 15 never executed
+branch 16 never executed
+    %%%%%:  105-block  5
+call   17 never executed
+call   18 never executed
+call   19 never executed
+        1:  105-block  6
+        1:  105-block  7
+call   20 returned 1
+branch 21 taken 1 (fallthrough)
+branch 22 taken 0
+    $$$$$:  105-block  8
+call   23 never executed
+    $$$$$:  105-block  9
+call   24 never executed
+    $$$$$:  105-block 10
+    $$$$$:  105-block 11
+    $$$$$:  105-block 12
+call   25 never executed
+    $$$$$:  105-block 13
+    $$$$$:  105-block 14
+call   26 never executed
+        1:  106:}
+        1:  106-block  0
+        1:  106-block  1
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+        1:  106-block  2
+        1:  106-block  3
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0
+        1:  106-block  4
+        1:  106-block  5
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0
+    $$$$$:  106-block  6
+call    9 never executed
+    $$$$$:  106-block  7
+call   10 never executed
+    $$$$$:  106-block  8
+call   11 never executed
+------------------
+        -:  107:
+        -:  108:// .....
+        -:  109:// 1x...
+        -:  110:// 2b...
+        -:  111:// 1x...
+        -:  112:// .....
+        4:  113:TEST(Sugerir121, verticalImposible) {
+        1:  114:    tablero t = vector<vector<bool>>(5, vector<bool>(5, false));
+        1:  115:    t[1][1] = cMINA;
+        1:  116:    t[1][3] = cMINA;
+        1:  117:    jugadas j = {{{0,1}, 1}, {{0,2},2}, {{0,3},1}};
+        -:  118:
+        1:  119:    banderitas b = {{1,2}};
+        -:  120:
+        1:  121:    pos p;
+        1:  122:    bool hay = sugerirAutomatico121(t, b, j, p);
+       1*:  123:    ASSERT_FALSE(hay);
+        1:  124:}
+------------------
+_ZN33Sugerir121_verticalImposible_TestC2Ev:
+function _ZN33Sugerir121_verticalImposible_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:  113:TEST(Sugerir121, verticalImposible) {
+        1:  113-block  0
+call    0 returned 1
+------------------
+_ZN33Sugerir121_verticalImposible_TestD0Ev:
+function _ZN33Sugerir121_verticalImposible_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:  113:TEST(Sugerir121, verticalImposible) {
+        1:  113-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN33Sugerir121_verticalImposible_TestD2Ev:
+function _ZN33Sugerir121_verticalImposible_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:  113:TEST(Sugerir121, verticalImposible) {
+        1:  113-block  0
+call    0 returned 1
+------------------
+_ZN33Sugerir121_verticalImposible_Test8TestBodyEv:
+function _ZN33Sugerir121_verticalImposible_Test8TestBodyEv called 1 returned 100% blocks executed 44%
+        1:  113:TEST(Sugerir121, verticalImposible) {
+        1:  114:    tablero t = vector<vector<bool>>(5, vector<bool>(5, false));
+        1:  114-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:  114-block  1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  114-block  2
+call    8 returned 1
+call    9 returned 1
+call   10 returned 1
+    $$$$$:  114-block  3
+call   11 never executed
+    $$$$$:  114-block  4
+    $$$$$:  114-block  5
+call   12 never executed
+    $$$$$:  114-block  6
+    $$$$$:  114-block  7
+    $$$$$:  114-block  8
+call   13 never executed
+    $$$$$:  114-block  9
+        1:  115:    t[1][1] = cMINA;
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  115-block  0
+call    4 returned 1
+    $$$$$:  115-block  1
+        1:  116:    t[1][3] = cMINA;
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  116-block  0
+call    4 returned 1
+    $$$$$:  116-block  1
+        1:  117:    jugadas j = {{{0,1}, 1}, {{0,2},2}, {{0,3},1}};
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  117-block  0
+call    4 returned 1
+    $$$$$:  117-block  1
+call    5 never executed
+    $$$$$:  117-block  2
+    $$$$$:  117-block  3
+        -:  118:
+        1:  119:    banderitas b = {{1,2}};
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  119-block  0
+call    4 returned 1
+    $$$$$:  119-block  1
+call    5 never executed
+    $$$$$:  119-block  2
+    $$$$$:  119-block  3
+        -:  120:
+        1:  121:    pos p;
+        1:  122:    bool hay = sugerirAutomatico121(t, b, j, p);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  123:    ASSERT_FALSE(hay);
+        1:  123-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 1
+    %%%%%:  123-block  1
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    %%%%%:  123-block  2
+call    7 never executed
+branch  8 never executed
+branch  9 never executed
+    %%%%%:  123-block  3
+call   10 never executed
+call   11 never executed
+branch 12 never executed
+branch 13 never executed
+    %%%%%:  123-block  4
+call   14 never executed
+branch 15 never executed
+branch 16 never executed
+    %%%%%:  123-block  5
+call   17 never executed
+call   18 never executed
+call   19 never executed
+        1:  123-block  6
+        1:  123-block  7
+call   20 returned 1
+branch 21 taken 1 (fallthrough)
+branch 22 taken 0
+    $$$$$:  123-block  8
+call   23 never executed
+    $$$$$:  123-block  9
+call   24 never executed
+    $$$$$:  123-block 10
+    $$$$$:  123-block 11
+    $$$$$:  123-block 12
+call   25 never executed
+    $$$$$:  123-block 13
+    $$$$$:  123-block 14
+call   26 never executed
+        1:  124:}
+        1:  124-block  0
+        1:  124-block  1
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+        1:  124-block  2
+        1:  124-block  3
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0
+        1:  124-block  4
+        1:  124-block  5
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0
+    $$$$$:  124-block  6
+call    9 never executed
+    $$$$$:  124-block  7
+call   10 never executed
+    $$$$$:  124-block  8
+call   11 never executed
+------------------
+        -:  125:
+        -:  126:// .....
+        -:  127:// .....
+        -:  128:// .....
+        -:  129:// .....
+        -:  130:// .....
+        4:  131:TEST(Sugerir121, sin121) {
+        1:  132:    tablero t = vector<vector<bool>>(5, vector<bool>(5, false));
+        1:  133:    jugadas j = {};
+        -:  134:
+        1:  135:    banderitas b = {};
+        -:  136:
+        1:  137:    pos p;
+        1:  138:    bool hay = sugerirAutomatico121(t, b, j, p);
+       1*:  139:    ASSERT_FALSE(hay);
+        1:  140:}
+------------------
+_ZN22Sugerir121_sin121_TestC2Ev:
+function _ZN22Sugerir121_sin121_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:  131:TEST(Sugerir121, sin121) {
+        1:  131-block  0
+call    0 returned 1
+------------------
+_ZN22Sugerir121_sin121_TestD0Ev:
+function _ZN22Sugerir121_sin121_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:  131:TEST(Sugerir121, sin121) {
+        1:  131-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN22Sugerir121_sin121_TestD2Ev:
+function _ZN22Sugerir121_sin121_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:  131:TEST(Sugerir121, sin121) {
+        1:  131-block  0
+call    0 returned 1
+------------------
+_ZN22Sugerir121_sin121_Test8TestBodyEv:
+function _ZN22Sugerir121_sin121_Test8TestBodyEv called 1 returned 100% blocks executed 42%
+        1:  131:TEST(Sugerir121, sin121) {
+        1:  132:    tablero t = vector<vector<bool>>(5, vector<bool>(5, false));
+        1:  132-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:  132-block  1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  132-block  2
+call    8 returned 1
+call    9 returned 1
+call   10 returned 1
+    $$$$$:  132-block  3
+call   11 never executed
+    $$$$$:  132-block  4
+    $$$$$:  132-block  5
+call   12 never executed
+    $$$$$:  132-block  6
+    $$$$$:  132-block  7
+    $$$$$:  132-block  8
+call   13 never executed
+    $$$$$:  132-block  9
+        1:  133:    jugadas j = {};
+call    0 returned 1
+        -:  134:
+        1:  135:    banderitas b = {};
+call    0 returned 1
+        -:  136:
+        1:  137:    pos p;
+        1:  138:    bool hay = sugerirAutomatico121(t, b, j, p);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  139:    ASSERT_FALSE(hay);
+        1:  139-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 1
+    %%%%%:  139-block  1
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    %%%%%:  139-block  2
+call    7 never executed
+branch  8 never executed
+branch  9 never executed
+    %%%%%:  139-block  3
+call   10 never executed
+call   11 never executed
+branch 12 never executed
+branch 13 never executed
+    %%%%%:  139-block  4
+call   14 never executed
+branch 15 never executed
+branch 16 never executed
+    %%%%%:  139-block  5
+call   17 never executed
+call   18 never executed
+call   19 never executed
+        1:  139-block  6
+        1:  139-block  7
+call   20 returned 1
+branch 21 taken 1 (fallthrough)
+branch 22 taken 0
+    $$$$$:  139-block  8
+call   23 never executed
+    $$$$$:  139-block  9
+call   24 never executed
+    $$$$$:  139-block 10
+    $$$$$:  139-block 11
+    $$$$$:  139-block 12
+call   25 never executed
+    $$$$$:  139-block 13
+    $$$$$:  139-block 14
+call   26 never executed
+        1:  140:}
+        1:  140-block  0
+        1:  140-block  1
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+        1:  140-block  2
+        1:  140-block  3
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0
+        1:  140-block  4
+        1:  140-block  5
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0
+    $$$$$:  140-block  6
+call    9 never executed
+    $$$$$:  140-block  7
+call   10 never executed
+    $$$$$:  140-block  8
 call   11 never executed
 ------------------

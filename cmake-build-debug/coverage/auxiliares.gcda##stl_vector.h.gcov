@@ -988,26 +988,26 @@
         -:  984:      /**  Returns the number of elements in the %vector.  */
         -:  985:      _GLIBCXX_NODISCARD _GLIBCXX20_CONSTEXPR
         -:  986:      size_type
-     5544:  987:      size() const _GLIBCXX_NOEXCEPT
-     5544:  988:      { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
+     6142:  987:      size() const _GLIBCXX_NOEXCEPT
+     6142:  988:      { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
 ------------------
 _ZNKSt6vectorISt4pairIiiESaIS1_EE4sizeEv:
-function _ZNKSt6vectorISt4pairIiiESaIS1_EE4sizeEv called 84 returned 100% blocks executed 100%
-       84:  987:      size() const _GLIBCXX_NOEXCEPT
-       84:  988:      { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
-       84:  988-block  0
+function _ZNKSt6vectorISt4pairIiiESaIS1_EE4sizeEv called 89 returned 100% blocks executed 100%
+       89:  987:      size() const _GLIBCXX_NOEXCEPT
+       89:  988:      { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
+       89:  988-block  0
 ------------------
 _ZNKSt6vectorISt4pairIS0_IiiEiESaIS2_EE4sizeEv:
-function _ZNKSt6vectorISt4pairIS0_IiiEiESaIS2_EE4sizeEv called 4334 returned 100% blocks executed 100%
-     4334:  987:      size() const _GLIBCXX_NOEXCEPT
-     4334:  988:      { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
-     4334:  988-block  0
+function _ZNKSt6vectorISt4pairIS0_IiiEiESaIS2_EE4sizeEv called 4768 returned 100% blocks executed 100%
+     4768:  987:      size() const _GLIBCXX_NOEXCEPT
+     4768:  988:      { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
+     4768:  988-block  0
 ------------------
 _ZNKSt6vectorIS_IbSaIbEESaIS1_EE4sizeEv:
-function _ZNKSt6vectorIS_IbSaIbEESaIS1_EE4sizeEv called 1126 returned 100% blocks executed 100%
-     1126:  987:      size() const _GLIBCXX_NOEXCEPT
-     1126:  988:      { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
-     1126:  988-block  0
+function _ZNKSt6vectorIS_IbSaIbEESaIS1_EE4sizeEv called 1285 returned 100% blocks executed 100%
+     1285:  987:      size() const _GLIBCXX_NOEXCEPT
+     1285:  988:      { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
+     1285:  988-block  0
 ------------------
         -:  989:
         -:  990:      /**  Returns the size() of the largest possible %vector.  */
@@ -1141,10 +1141,10 @@ function _ZNKSt6vectorIS_IbSaIbEESaIS1_EE4sizeEv called 1126 returned 100% block
         -: 1118:       */
         -: 1119:      _GLIBCXX_NODISCARD _GLIBCXX20_CONSTEXPR
         -: 1120:      reference
-     5680: 1121:      operator[](size_type __n) _GLIBCXX_NOEXCEPT
+     6442: 1121:      operator[](size_type __n) _GLIBCXX_NOEXCEPT
         -: 1122:      {
         -: 1123:	__glibcxx_requires_subscript(__n);
-     5680: 1124:	return *(this->_M_impl._M_start + __n);
+     6442: 1124:	return *(this->_M_impl._M_start + __n);
         -: 1125:      }
         -: 1126:
         -: 1127:      /**

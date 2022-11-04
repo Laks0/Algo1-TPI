@@ -114,15 +114,15 @@
         -:  110:  template<typename _InputIterator, typename _ForwardIterator>
         -:  111:    _GLIBCXX20_CONSTEXPR
         -:  112:    _ForwardIterator
-        8:  113:    __do_uninit_copy(_InputIterator __first, _InputIterator __last,
+      15*:  113:    __do_uninit_copy(_InputIterator __first, _InputIterator __last,
         -:  114:		     _ForwardIterator __result)
         -:  115:    {
-        8:  116:      _ForwardIterator __cur = __result;
+      15*:  116:      _ForwardIterator __cur = __result;
         -:  117:      __try
         -:  118:	{
-       61:  119:	  for (; __first != __last; ++__first, (void)++__cur)
-       53:  120:	    std::_Construct(std::__addressof(*__cur), *__first);
-        8:  121:	  return __cur;
+      84*:  119:	  for (; __first != __last; ++__first, (void)++__cur)
+      69*:  120:	    std::_Construct(std::__addressof(*__cur), *__first);
+      15*:  121:	  return __cur;
         -:  122:	}
     =====:  123:      __catch(...)
         -:  124:	{
@@ -131,25 +131,69 @@
         -:  127:	}
         -:  128:    }
 ------------------
-_ZSt16__do_uninit_copyIPKSt4pairIS0_IiiEiEPS2_ET0_T_S7_S6_:
-function _ZSt16__do_uninit_copyIPKSt4pairIS0_IiiEiEPS2_ET0_T_S7_S6_ called 6 returned 100% blocks executed 100%
-        6:  113:    __do_uninit_copy(_InputIterator __first, _InputIterator __last,
+_ZSt16__do_uninit_copyISt13move_iteratorIPSt4pairIS1_IiiEiEES4_ET0_T_S7_S6_:
+function _ZSt16__do_uninit_copyISt13move_iteratorIPSt4pairIS1_IiiEiEES4_ET0_T_S7_S6_ called 0 returned 0% blocks executed 0%
+    #####:  113:    __do_uninit_copy(_InputIterator __first, _InputIterator __last,
         -:  114:		     _ForwardIterator __result)
         -:  115:    {
-        6:  116:      _ForwardIterator __cur = __result;
+    #####:  116:      _ForwardIterator __cur = __result;
         -:  117:      __try
         -:  118:	{
-       36:  119:	  for (; __first != __last; ++__first, (void)++__cur)
-        6:  119-block  0
-       36:  119-block  1
-branch  0 taken 30
-branch  1 taken 6 (fallthrough)
-       30:  120:	    std::_Construct(std::__addressof(*__cur), *__first);
-       30:  120-block  0
-call    0 returned 30
-call    1 returned 30
-        6:  121:	  return __cur;
-        6:  121-block  0
+    #####:  119:	  for (; __first != __last; ++__first, (void)++__cur)
+    %%%%%:  119-block  0
+call    0 never executed
+    %%%%%:  119-block  1
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:  119-block  2
+branch  4 never executed
+branch  5 never executed
+    #####:  120:	    std::_Construct(std::__addressof(*__cur), *__first);
+    %%%%%:  120-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+    #####:  121:	  return __cur;
+    %%%%%:  121-block  0
+    %%%%%:  121-block  1
+        -:  122:	}
+    =====:  123:      __catch(...)
+    $$$$$:  123-block  0
+    $$$$$:  123-block  1
+call    0 never executed
+    $$$$$:  123-block  2
+call    1 never executed
+        -:  124:	{
+    =====:  125:	  std::_Destroy(__result, __cur);
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    =====:  126:	  __throw_exception_again;
+    $$$$$:  126-block  0
+call    0 never executed
+        -:  127:	}
+        -:  128:    }
+------------------
+_ZSt16__do_uninit_copyIPKSt4pairIS0_IiiEiEPS2_ET0_T_S7_S6_:
+function _ZSt16__do_uninit_copyIPKSt4pairIS0_IiiEiEPS2_ET0_T_S7_S6_ called 11 returned 100% blocks executed 100%
+       11:  113:    __do_uninit_copy(_InputIterator __first, _InputIterator __last,
+        -:  114:		     _ForwardIterator __result)
+        -:  115:    {
+       11:  116:      _ForwardIterator __cur = __result;
+        -:  117:      __try
+        -:  118:	{
+       53:  119:	  for (; __first != __last; ++__first, (void)++__cur)
+       11:  119-block  0
+       53:  119-block  1
+branch  0 taken 42
+branch  1 taken 11 (fallthrough)
+       42:  120:	    std::_Construct(std::__addressof(*__cur), *__first);
+       42:  120-block  0
+call    0 returned 42
+call    1 returned 42
+       11:  121:	  return __cur;
+       11:  121-block  0
         -:  122:	}
         -:  123:      __catch(...)
         -:  124:	{
@@ -159,28 +203,28 @@ call    1 returned 30
         -:  128:    }
 ------------------
 _ZSt16__do_uninit_copyIPKSt6vectorIbSaIbEEPS2_ET0_T_S7_S6_:
-function _ZSt16__do_uninit_copyIPKSt6vectorIbSaIbEEPS2_ET0_T_S7_S6_ called 1 returned 100% blocks executed 62%
-        1:  113:    __do_uninit_copy(_InputIterator __first, _InputIterator __last,
+function _ZSt16__do_uninit_copyIPKSt6vectorIbSaIbEEPS2_ET0_T_S7_S6_ called 3 returned 100% blocks executed 62%
+        3:  113:    __do_uninit_copy(_InputIterator __first, _InputIterator __last,
         -:  114:		     _ForwardIterator __result)
         -:  115:    {
-        1:  116:      _ForwardIterator __cur = __result;
+        3:  116:      _ForwardIterator __cur = __result;
         -:  117:      __try
         -:  118:	{
-        6:  119:	  for (; __first != __last; ++__first, (void)++__cur)
-        1:  119-block  0
-        5:  119-block  1
-        6:  119-block  2
-branch  0 taken 5
-branch  1 taken 1 (fallthrough)
-        5:  120:	    std::_Construct(std::__addressof(*__cur), *__first);
-        5:  120-block  0
-call    0 returned 5
-call    1 returned 5
-branch  2 taken 5 (fallthrough)
+       12:  119:	  for (; __first != __last; ++__first, (void)++__cur)
+        3:  119-block  0
+        9:  119-block  1
+       12:  119-block  2
+branch  0 taken 9
+branch  1 taken 3 (fallthrough)
+        9:  120:	    std::_Construct(std::__addressof(*__cur), *__first);
+        9:  120-block  0
+call    0 returned 9
+call    1 returned 9
+branch  2 taken 9 (fallthrough)
 branch  3 taken 0 (throw)
-        1:  121:	  return __cur;
-        1:  121-block  0
-        1:  121-block  1
+        3:  121:	  return __cur;
+        3:  121-block  0
+        3:  121-block  1
         -:  122:	}
     =====:  123:      __catch(...)
     $$$$$:  123-block  0
@@ -235,25 +279,33 @@ call    2 returned 18
         -:  132:    {
         -:  133:      template<typename _InputIterator, typename _ForwardIterator>
         -:  134:        static _ForwardIterator
-        8:  135:        __uninit_copy(_InputIterator __first, _InputIterator __last,
+      15*:  135:        __uninit_copy(_InputIterator __first, _InputIterator __last,
         -:  136:		      _ForwardIterator __result)
-        8:  137:	{ return std::__do_uninit_copy(__first, __last, __result); }
+      15*:  137:	{ return std::__do_uninit_copy(__first, __last, __result); }
+------------------
+_ZNSt20__uninitialized_copyILb0EE13__uninit_copyISt13move_iteratorIPSt4pairIS3_IiiEiEES6_EET0_T_S9_S8_:
+function _ZNSt20__uninitialized_copyILb0EE13__uninit_copyISt13move_iteratorIPSt4pairIS3_IiiEiEES6_EET0_T_S9_S8_ called 0 returned 0% blocks executed 0%
+    #####:  135:        __uninit_copy(_InputIterator __first, _InputIterator __last,
+        -:  136:		      _ForwardIterator __result)
+    #####:  137:	{ return std::__do_uninit_copy(__first, __last, __result); }
+    %%%%%:  137-block  0
+call    0 never executed
 ------------------
 _ZNSt20__uninitialized_copyILb0EE13__uninit_copyIPKSt4pairIS2_IiiEiEPS4_EET0_T_S9_S8_:
-function _ZNSt20__uninitialized_copyILb0EE13__uninit_copyIPKSt4pairIS2_IiiEiEPS4_EET0_T_S9_S8_ called 6 returned 100% blocks executed 100%
-        6:  135:        __uninit_copy(_InputIterator __first, _InputIterator __last,
+function _ZNSt20__uninitialized_copyILb0EE13__uninit_copyIPKSt4pairIS2_IiiEiEPS4_EET0_T_S9_S8_ called 11 returned 100% blocks executed 100%
+       11:  135:        __uninit_copy(_InputIterator __first, _InputIterator __last,
         -:  136:		      _ForwardIterator __result)
-        6:  137:	{ return std::__do_uninit_copy(__first, __last, __result); }
-        6:  137-block  0
-call    0 returned 6
+       11:  137:	{ return std::__do_uninit_copy(__first, __last, __result); }
+       11:  137-block  0
+call    0 returned 11
 ------------------
 _ZNSt20__uninitialized_copyILb0EE13__uninit_copyIPKSt6vectorIbSaIbEEPS4_EET0_T_S9_S8_:
-function _ZNSt20__uninitialized_copyILb0EE13__uninit_copyIPKSt6vectorIbSaIbEEPS4_EET0_T_S9_S8_ called 1 returned 100% blocks executed 100%
-        1:  135:        __uninit_copy(_InputIterator __first, _InputIterator __last,
+function _ZNSt20__uninitialized_copyILb0EE13__uninit_copyIPKSt6vectorIbSaIbEEPS4_EET0_T_S9_S8_ called 3 returned 100% blocks executed 100%
+        3:  135:        __uninit_copy(_InputIterator __first, _InputIterator __last,
         -:  136:		      _ForwardIterator __result)
-        1:  137:	{ return std::__do_uninit_copy(__first, __last, __result); }
-        1:  137-block  0
-call    0 returned 1
+        3:  137:	{ return std::__do_uninit_copy(__first, __last, __result); }
+        3:  137-block  0
+call    0 returned 3
 ------------------
 _ZNSt20__uninitialized_copyILb0EE13__uninit_copyIN9__gnu_cxx17__normal_iteratorIPKSt4pairIS4_IiiEiESt6vectorIS6_SaIS6_EEEEPS6_EET0_T_SF_SE_:
 function _ZNSt20__uninitialized_copyILb0EE13__uninit_copyIN9__gnu_cxx17__normal_iteratorIPKSt4pairIS4_IiiEiESt6vectorIS6_SaIS6_EEEEPS6_EET0_T_SF_SE_ called 1 returned 100% blocks executed 100%
@@ -288,7 +340,7 @@ call    0 returned 1
         -:  160:  */
         -:  161:  template<typename _InputIterator, typename _ForwardIterator>
         -:  162:    inline _ForwardIterator
-        8:  163:    uninitialized_copy(_InputIterator __first, _InputIterator __last,
+      15*:  163:    uninitialized_copy(_InputIterator __first, _InputIterator __last,
         -:  164:		       _ForwardIterator __result)
         -:  165:    {
         -:  166:      typedef typename iterator_traits<_InputIterator>::value_type
@@ -299,23 +351,52 @@ call    0 returned 1
         -:  171:      // _ValueType1 must be trivially-copyable to use memmove, so don't
         -:  172:      // bother optimizing to std::copy if it isn't.
         -:  173:      // XXX Unnecessary because std::copy would check it anyway?
-        8:  174:      const bool __can_memmove = __is_trivial(_ValueType1);
+      15*:  174:      const bool __can_memmove = __is_trivial(_ValueType1);
         -:  175:
         -:  176:#if __cplusplus < 201103L
         -:  177:      typedef typename iterator_traits<_InputIterator>::reference _From;
         -:  178:#else
         -:  179:      using _From = decltype(*__first);
         -:  180:#endif
-        8:  181:      const bool __assignable
+      15*:  181:      const bool __assignable
         -:  182:	= _GLIBCXX_USE_ASSIGN_FOR_INIT(_ValueType2, _From);
         -:  183:
         -:  184:      return std::__uninitialized_copy<__can_memmove && __assignable>::
-        8:  185:	__uninit_copy(__first, __last, __result);
+      15*:  185:	__uninit_copy(__first, __last, __result);
+        -:  186:    }
+------------------
+_ZSt18uninitialized_copyISt13move_iteratorIPSt4pairIS1_IiiEiEES4_ET0_T_S7_S6_:
+function _ZSt18uninitialized_copyISt13move_iteratorIPSt4pairIS1_IiiEiEES4_ET0_T_S7_S6_ called 0 returned 0% blocks executed 0%
+    #####:  163:    uninitialized_copy(_InputIterator __first, _InputIterator __last,
+        -:  164:		       _ForwardIterator __result)
+        -:  165:    {
+        -:  166:      typedef typename iterator_traits<_InputIterator>::value_type
+        -:  167:	_ValueType1;
+        -:  168:      typedef typename iterator_traits<_ForwardIterator>::value_type
+        -:  169:	_ValueType2;
+        -:  170:
+        -:  171:      // _ValueType1 must be trivially-copyable to use memmove, so don't
+        -:  172:      // bother optimizing to std::copy if it isn't.
+        -:  173:      // XXX Unnecessary because std::copy would check it anyway?
+    #####:  174:      const bool __can_memmove = __is_trivial(_ValueType1);
+        -:  175:
+        -:  176:#if __cplusplus < 201103L
+        -:  177:      typedef typename iterator_traits<_InputIterator>::reference _From;
+        -:  178:#else
+        -:  179:      using _From = decltype(*__first);
+        -:  180:#endif
+    #####:  181:      const bool __assignable
+        -:  182:	= _GLIBCXX_USE_ASSIGN_FOR_INIT(_ValueType2, _From);
+        -:  183:
+        -:  184:      return std::__uninitialized_copy<__can_memmove && __assignable>::
+    #####:  185:	__uninit_copy(__first, __last, __result);
+    %%%%%:  185-block  0
+call    0 never executed
         -:  186:    }
 ------------------
 _ZSt18uninitialized_copyIPKSt4pairIS0_IiiEiEPS2_ET0_T_S7_S6_:
-function _ZSt18uninitialized_copyIPKSt4pairIS0_IiiEiEPS2_ET0_T_S7_S6_ called 6 returned 100% blocks executed 100%
-        6:  163:    uninitialized_copy(_InputIterator __first, _InputIterator __last,
+function _ZSt18uninitialized_copyIPKSt4pairIS0_IiiEiEPS2_ET0_T_S7_S6_ called 11 returned 100% blocks executed 100%
+       11:  163:    uninitialized_copy(_InputIterator __first, _InputIterator __last,
         -:  164:		       _ForwardIterator __result)
         -:  165:    {
         -:  166:      typedef typename iterator_traits<_InputIterator>::value_type
@@ -326,25 +407,25 @@ function _ZSt18uninitialized_copyIPKSt4pairIS0_IiiEiEPS2_ET0_T_S7_S6_ called 6 r
         -:  171:      // _ValueType1 must be trivially-copyable to use memmove, so don't
         -:  172:      // bother optimizing to std::copy if it isn't.
         -:  173:      // XXX Unnecessary because std::copy would check it anyway?
-        6:  174:      const bool __can_memmove = __is_trivial(_ValueType1);
+       11:  174:      const bool __can_memmove = __is_trivial(_ValueType1);
         -:  175:
         -:  176:#if __cplusplus < 201103L
         -:  177:      typedef typename iterator_traits<_InputIterator>::reference _From;
         -:  178:#else
         -:  179:      using _From = decltype(*__first);
         -:  180:#endif
-        6:  181:      const bool __assignable
+       11:  181:      const bool __assignable
         -:  182:	= _GLIBCXX_USE_ASSIGN_FOR_INIT(_ValueType2, _From);
         -:  183:
         -:  184:      return std::__uninitialized_copy<__can_memmove && __assignable>::
-        6:  185:	__uninit_copy(__first, __last, __result);
-        6:  185-block  0
-call    0 returned 6
+       11:  185:	__uninit_copy(__first, __last, __result);
+       11:  185-block  0
+call    0 returned 11
         -:  186:    }
 ------------------
 _ZSt18uninitialized_copyIPKSt6vectorIbSaIbEEPS2_ET0_T_S7_S6_:
-function _ZSt18uninitialized_copyIPKSt6vectorIbSaIbEEPS2_ET0_T_S7_S6_ called 1 returned 100% blocks executed 100%
-        1:  163:    uninitialized_copy(_InputIterator __first, _InputIterator __last,
+function _ZSt18uninitialized_copyIPKSt6vectorIbSaIbEEPS2_ET0_T_S7_S6_ called 3 returned 100% blocks executed 100%
+        3:  163:    uninitialized_copy(_InputIterator __first, _InputIterator __last,
         -:  164:		       _ForwardIterator __result)
         -:  165:    {
         -:  166:      typedef typename iterator_traits<_InputIterator>::value_type
@@ -355,20 +436,20 @@ function _ZSt18uninitialized_copyIPKSt6vectorIbSaIbEEPS2_ET0_T_S7_S6_ called 1 r
         -:  171:      // _ValueType1 must be trivially-copyable to use memmove, so don't
         -:  172:      // bother optimizing to std::copy if it isn't.
         -:  173:      // XXX Unnecessary because std::copy would check it anyway?
-        1:  174:      const bool __can_memmove = __is_trivial(_ValueType1);
+        3:  174:      const bool __can_memmove = __is_trivial(_ValueType1);
         -:  175:
         -:  176:#if __cplusplus < 201103L
         -:  177:      typedef typename iterator_traits<_InputIterator>::reference _From;
         -:  178:#else
         -:  179:      using _From = decltype(*__first);
         -:  180:#endif
-        1:  181:      const bool __assignable
+        3:  181:      const bool __assignable
         -:  182:	= _GLIBCXX_USE_ASSIGN_FOR_INIT(_ValueType2, _From);
         -:  183:
         -:  184:      return std::__uninitialized_copy<__can_memmove && __assignable>::
-        1:  185:	__uninit_copy(__first, __last, __result);
-        1:  185-block  0
-call    0 returned 1
+        3:  185:	__uninit_copy(__first, __last, __result);
+        3:  185-block  0
+call    0 returned 3
         -:  186:    }
 ------------------
 _ZSt18uninitialized_copyIN9__gnu_cxx17__normal_iteratorIPKSt4pairIS2_IiiEiESt6vectorIS4_SaIS4_EEEEPS4_ET0_T_SD_SC_:
@@ -578,15 +659,72 @@ call    0 returned 1
         -:  362:  template<typename _InputIterator, typename _ForwardIterator, typename _Tp>
         -:  363:    _GLIBCXX20_CONSTEXPR
         -:  364:    inline _ForwardIterator
-        8:  365:    __uninitialized_copy_a(_InputIterator __first, _InputIterator __last,
+      15*:  365:    __uninitialized_copy_a(_InputIterator __first, _InputIterator __last,
         -:  366:			   _ForwardIterator __result, allocator<_Tp>&)
         -:  367:    {
         -:  368:#ifdef __cpp_lib_is_constant_evaluated
         -:  369:      if (std::is_constant_evaluated())
         -:  370:	return std::__do_uninit_copy(__first, __last, __result);
         -:  371:#endif
-        8:  372:      return std::uninitialized_copy(__first, __last, __result);
+      15*:  372:      return std::uninitialized_copy(__first, __last, __result);
         -:  373:    }
+------------------
+_ZSt22__uninitialized_copy_aISt13move_iteratorIPSt4pairIS1_IiiEiEES4_S3_ET0_T_S7_S6_RSaIT1_E:
+function _ZSt22__uninitialized_copy_aISt13move_iteratorIPSt4pairIS1_IiiEiEES4_S3_ET0_T_S7_S6_RSaIT1_E called 0 returned 0% blocks executed 0%
+    #####:  365:    __uninitialized_copy_a(_InputIterator __first, _InputIterator __last,
+        -:  366:			   _ForwardIterator __result, allocator<_Tp>&)
+        -:  367:    {
+        -:  368:#ifdef __cpp_lib_is_constant_evaluated
+        -:  369:      if (std::is_constant_evaluated())
+        -:  370:	return std::__do_uninit_copy(__first, __last, __result);
+        -:  371:#endif
+    #####:  372:      return std::uninitialized_copy(__first, __last, __result);
+    %%%%%:  372-block  0
+call    0 never executed
+        -:  373:    }
+------------------
+_ZSt22__uninitialized_copy_aIPKSt4pairIS0_IiiEiEPS2_S2_ET0_T_S7_S6_RSaIT1_E:
+function _ZSt22__uninitialized_copy_aIPKSt4pairIS0_IiiEiEPS2_S2_ET0_T_S7_S6_RSaIT1_E called 11 returned 100% blocks executed 100%
+       11:  365:    __uninitialized_copy_a(_InputIterator __first, _InputIterator __last,
+        -:  366:			   _ForwardIterator __result, allocator<_Tp>&)
+        -:  367:    {
+        -:  368:#ifdef __cpp_lib_is_constant_evaluated
+        -:  369:      if (std::is_constant_evaluated())
+        -:  370:	return std::__do_uninit_copy(__first, __last, __result);
+        -:  371:#endif
+       11:  372:      return std::uninitialized_copy(__first, __last, __result);
+       11:  372-block  0
+call    0 returned 11
+        -:  373:    }
+------------------
+_ZSt22__uninitialized_copy_aIPKSt6vectorIbSaIbEEPS2_S2_ET0_T_S7_S6_RSaIT1_E:
+function _ZSt22__uninitialized_copy_aIPKSt6vectorIbSaIbEEPS2_S2_ET0_T_S7_S6_RSaIT1_E called 3 returned 100% blocks executed 100%
+        3:  365:    __uninitialized_copy_a(_InputIterator __first, _InputIterator __last,
+        -:  366:			   _ForwardIterator __result, allocator<_Tp>&)
+        -:  367:    {
+        -:  368:#ifdef __cpp_lib_is_constant_evaluated
+        -:  369:      if (std::is_constant_evaluated())
+        -:  370:	return std::__do_uninit_copy(__first, __last, __result);
+        -:  371:#endif
+        3:  372:      return std::uninitialized_copy(__first, __last, __result);
+        3:  372-block  0
+call    0 returned 3
+        -:  373:    }
+------------------
+_ZSt22__uninitialized_copy_aIN9__gnu_cxx17__normal_iteratorIPKSt4pairIS2_IiiEiESt6vectorIS4_SaIS4_EEEEPS4_S4_ET0_T_SD_SC_RSaIT1_E:
+function _ZSt22__uninitialized_copy_aIN9__gnu_cxx17__normal_iteratorIPKSt4pairIS2_IiiEiESt6vectorIS4_SaIS4_EEEEPS4_S4_ET0_T_SD_SC_RSaIT1_E called 1 returned 100% blocks executed 100%
+        1:  365:    __uninitialized_copy_a(_InputIterator __first, _InputIterator __last,
+        -:  366:			   _ForwardIterator __result, allocator<_Tp>&)
+        -:  367:    {
+        -:  368:#ifdef __cpp_lib_is_constant_evaluated
+        -:  369:      if (std::is_constant_evaluated())
+        -:  370:	return std::__do_uninit_copy(__first, __last, __result);
+        -:  371:#endif
+        1:  372:      return std::uninitialized_copy(__first, __last, __result);
+        1:  372-block  0
+call    0 returned 1
+        -:  373:    }
+------------------
         -:  374:
         -:  375:  template<typename _InputIterator, typename _ForwardIterator,
         -:  376:	   typename _Allocator>
@@ -604,14 +742,19 @@ call    0 returned 1
         -:  388:	   typename _Allocator>
         -:  389:    _GLIBCXX20_CONSTEXPR
         -:  390:    inline _ForwardIterator
-        -:  391:    __uninitialized_move_if_noexcept_a(_InputIterator __first,
+function _ZSt34__uninitialized_move_if_noexcept_aIPSt4pairIS0_IiiEiES3_SaIS2_EET0_T_S6_S5_RT1_ called 0 returned 0% blocks executed 0%
+    #####:  391:    __uninitialized_move_if_noexcept_a(_InputIterator __first,
         -:  392:				       _InputIterator __last,
         -:  393:				       _ForwardIterator __result,
         -:  394:				       _Allocator& __alloc)
         -:  395:    {
         -:  396:      return std::__uninitialized_copy_a
-        -:  397:	(_GLIBCXX_MAKE_MOVE_IF_NOEXCEPT_ITERATOR(__first),
-        -:  398:	 _GLIBCXX_MAKE_MOVE_IF_NOEXCEPT_ITERATOR(__last), __result, __alloc);
+    #####:  397:	(_GLIBCXX_MAKE_MOVE_IF_NOEXCEPT_ITERATOR(__first),
+    %%%%%:  397-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+    #####:  398:	 _GLIBCXX_MAKE_MOVE_IF_NOEXCEPT_ITERATOR(__last), __result, __alloc);
         -:  399:    }
         -:  400:
         -:  401:  template<typename _ForwardIterator, typename _Tp, typename _Allocator>
@@ -1269,7 +1412,8 @@ call    0 returned 1
         -: 1053:  template<typename _Tp, typename _Up, typename _Allocator>
         -: 1054:    _GLIBCXX20_CONSTEXPR
         -: 1055:    inline void
-        -: 1056:    __relocate_object_a(_Tp* __restrict __dest, _Up* __restrict __orig,
+function _ZSt19__relocate_object_aISt4pairIS0_IiiEiES2_SaIS2_EEvPT_PT0_RT1_ called 0 returned 0% blocks executed 0%
+    #####: 1056:    __relocate_object_a(_Tp* __restrict __dest, _Up* __restrict __orig,
         -: 1057:			_Allocator& __alloc)
         -: 1058:    noexcept(noexcept(std::allocator_traits<_Allocator>::construct(__alloc,
         -: 1059:			 __dest, std::move(*__orig)))
@@ -1277,9 +1421,14 @@ call    0 returned 1
         -: 1061:			    __alloc, std::__addressof(*__orig))))
         -: 1062:    {
         -: 1063:      typedef std::allocator_traits<_Allocator> __traits;
-        -: 1064:      __traits::construct(__alloc, __dest, std::move(*__orig));
-        -: 1065:      __traits::destroy(__alloc, std::__addressof(*__orig));
-        -: 1066:    }
+    #####: 1064:      __traits::construct(__alloc, __dest, std::move(*__orig));
+    %%%%%: 1064-block  0
+call    0 never executed
+call    1 never executed
+    #####: 1065:      __traits::destroy(__alloc, std::__addressof(*__orig));
+call    0 never executed
+call    1 never executed
+    #####: 1066:    }
         -: 1067:
         -: 1068:  // This class may be specialized for specific types.
         -: 1069:  // Also known as is_trivially_relocatable.
@@ -1291,7 +1440,8 @@ call    0 returned 1
         -: 1075:	    typename _Allocator>
         -: 1076:    _GLIBCXX20_CONSTEXPR
         -: 1077:    inline _ForwardIterator
-        -: 1078:    __relocate_a_1(_InputIterator __first, _InputIterator __last,
+function _ZSt14__relocate_a_1IPSt4pairIS0_IiiEiES3_SaIS2_EET0_T_S6_S5_RT1_ called 0 returned 0% blocks executed 0%
+    #####: 1078:    __relocate_a_1(_InputIterator __first, _InputIterator __last,
         -: 1079:		   _ForwardIterator __result, _Allocator& __alloc)
         -: 1080:    noexcept(noexcept(std::__relocate_object_a(std::addressof(*__result),
         -: 1081:					       std::addressof(*__first),
@@ -1303,11 +1453,20 @@ call    0 returned 1
         -: 1087:	_ValueType2;
         -: 1088:      static_assert(std::is_same<_ValueType, _ValueType2>::value,
         -: 1089:	  "relocation is only possible for values of the same type");
-        -: 1090:      _ForwardIterator __cur = __result;
-        -: 1091:      for (; __first != __last; ++__first, (void)++__cur)
-        -: 1092:	std::__relocate_object_a(std::__addressof(*__cur),
+    #####: 1090:      _ForwardIterator __cur = __result;
+    #####: 1091:      for (; __first != __last; ++__first, (void)++__cur)
+    %%%%%: 1091-block  0
+    %%%%%: 1091-block  1
+branch  0 never executed
+branch  1 never executed
+    #####: 1092:	std::__relocate_object_a(std::__addressof(*__cur),
+    %%%%%: 1092-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
         -: 1093:				 std::__addressof(*__first), __alloc);
-        -: 1094:      return __cur;
+    #####: 1094:      return __cur;
+    %%%%%: 1094-block  0
         -: 1095:    }
         -: 1096:
         -: 1097:  template <typename _Tp, typename _Up>
@@ -1340,15 +1499,21 @@ call    0 returned 1
         -: 1124:	    typename _Allocator>
         -: 1125:    _GLIBCXX20_CONSTEXPR
         -: 1126:    inline _ForwardIterator
-        -: 1127:    __relocate_a(_InputIterator __first, _InputIterator __last,
+function _ZSt12__relocate_aIPSt4pairIS0_IiiEiES3_SaIS2_EET0_T_S6_S5_RT1_ called 0 returned 0% blocks executed 0%
+    #####: 1127:    __relocate_a(_InputIterator __first, _InputIterator __last,
         -: 1128:		 _ForwardIterator __result, _Allocator& __alloc)
         -: 1129:    noexcept(noexcept(__relocate_a_1(std::__niter_base(__first),
         -: 1130:				     std::__niter_base(__last),
         -: 1131:				     std::__niter_base(__result), __alloc)))
         -: 1132:    {
-        -: 1133:      return std::__relocate_a_1(std::__niter_base(__first),
+    #####: 1133:      return std::__relocate_a_1(std::__niter_base(__first),
+    %%%%%: 1133-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
         -: 1134:				 std::__niter_base(__last),
-        -: 1135:				 std::__niter_base(__result), __alloc);
+    #####: 1135:				 std::__niter_base(__result), __alloc);
         -: 1136:    }
         -: 1137:
         -: 1138:  /// @endcond

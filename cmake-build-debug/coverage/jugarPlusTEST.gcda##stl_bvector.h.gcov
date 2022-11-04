@@ -847,26 +847,26 @@ function _ZNSt13_Bvector_baseISaIbEE8_S_nwordEm called 0 returned 0% blocks exec
         -:  742:      { }
         -:  743:
         -:  744:      _GLIBCXX20_CONSTEXPR
-function _ZNSt6vectorIbSaIbEEC2EmRKbRKS0_ called 13 returned 100% blocks executed 83%
-       13:  745:      vector(size_type __n, const bool& __value,
+function _ZNSt6vectorIbSaIbEEC2EmRKbRKS0_ called 16 returned 100% blocks executed 83%
+       16:  745:      vector(size_type __n, const bool& __value,
         -:  746:	     const allocator_type& __a = allocator_type())
         -:  747:#else
         -:  748:      explicit
         -:  749:      vector(size_type __n, const bool& __value = bool(),
         -:  750:	     const allocator_type& __a = allocator_type())
         -:  751:#endif
-       13:  752:      : _Base(__a)
-       13:  752-block  0
-call    0 returned 13
+       16:  752:      : _Base(__a)
+       16:  752-block  0
+call    0 returned 16
         -:  753:      {
-       13:  754:	_M_initialize(__n);
-call    0 returned 13
-branch  1 taken 13 (fallthrough)
+       16:  754:	_M_initialize(__n);
+call    0 returned 16
+branch  1 taken 16 (fallthrough)
 branch  2 taken 0 (throw)
-       13:  755:	_M_initialize_value(__value);
-       13:  755-block  0
-call    0 returned 13
-       13:  756:      }
+       16:  755:	_M_initialize_value(__value);
+       16:  755-block  0
+call    0 returned 16
+       16:  756:      }
     $$$$$:  756-block  0
 call    0 never executed
         -:  757:
@@ -1504,18 +1504,18 @@ call    0 never executed
         -: 1309:
         -: 1310:      _GLIBCXX20_CONSTEXPR
         -: 1311:      void
-function _ZNSt6vectorIbSaIbEE19_M_initialize_valueEb called 13 returned 100% blocks executed 100%
-       13: 1312:      _M_initialize_value(bool __x) _GLIBCXX_NOEXCEPT
+function _ZNSt6vectorIbSaIbEE19_M_initialize_valueEb called 16 returned 100% blocks executed 100%
+       16: 1312:      _M_initialize_value(bool __x) _GLIBCXX_NOEXCEPT
         -: 1313:      {
-       13: 1314:	if (_Bit_type* __p = this->_M_impl._M_start._M_p)
-       13: 1314-block  0
-branch  0 taken 13 (fallthrough)
+       16: 1314:	if (_Bit_type* __p = this->_M_impl._M_start._M_p)
+       16: 1314-block  0
+branch  0 taken 16 (fallthrough)
 branch  1 taken 0
-       13: 1315:	  __fill_bvector_n(__p, this->_M_impl._M_end_addr() - __p, __x);
-       13: 1315-block  0
-call    0 returned 13
-call    1 returned 13
-       13: 1316:      }
+       16: 1315:	  __fill_bvector_n(__p, this->_M_impl._M_end_addr() - __p, __x);
+       16: 1315-block  0
+call    0 returned 16
+call    1 returned 16
+       16: 1316:      }
         -: 1317:
         -: 1318:      _GLIBCXX20_CONSTEXPR
         -: 1319:      void
@@ -1735,8 +1735,8 @@ call    1 returned 13
         -: 1533:  __attribute__((__nonnull__))
         -: 1534:  _GLIBCXX20_CONSTEXPR
         -: 1535:  inline void
-function _ZSt16__fill_bvector_nPmmb called 13 returned 100% blocks executed 75%
-       13: 1536:  __fill_bvector_n(_Bit_type* __p, size_t __n, bool __x) _GLIBCXX_NOEXCEPT
+function _ZSt16__fill_bvector_nPmmb called 16 returned 100% blocks executed 75%
+       16: 1536:  __fill_bvector_n(_Bit_type* __p, size_t __n, bool __x) _GLIBCXX_NOEXCEPT
         -: 1537:  {
         -: 1538:#if __cpp_lib_is_constant_evaluated
         -: 1539:    if (std::is_constant_evaluated())
@@ -1746,13 +1746,13 @@ function _ZSt16__fill_bvector_nPmmb called 13 returned 100% blocks executed 75%
         -: 1543:      return;
         -: 1544:    }
         -: 1545:#endif
-      13*: 1546:    __builtin_memset(__p, __x ? ~0 : 0, __n * sizeof(_Bit_type));
-       13: 1546-block  0
+      16*: 1546:    __builtin_memset(__p, __x ? ~0 : 0, __n * sizeof(_Bit_type));
+       16: 1546-block  0
 branch  0 taken 0 (fallthrough)
-branch  1 taken 13
+branch  1 taken 16
     %%%%%: 1546-block  1
-       13: 1546-block  2
-       13: 1547:  }
+       16: 1546-block  2
+       16: 1547:  }
         -: 1548:
         -: 1549:
         -: 1550:  _GLIBCXX20_CONSTEXPR

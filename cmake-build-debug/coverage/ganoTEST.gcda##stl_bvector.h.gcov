@@ -104,20 +104,20 @@ function _ZNKSt14_Bit_referencecvbEv called 0 returned 0% blocks executed 0%
         -:   97:
         -:   98:    _GLIBCXX20_CONSTEXPR
         -:   99:    _Bit_reference&
-function _ZNSt14_Bit_referenceaSEb called 323 returned 100% blocks executed 100%
-      323:  100:    operator=(bool __x) _GLIBCXX_NOEXCEPT
+function _ZNSt14_Bit_referenceaSEb called 420 returned 100% blocks executed 100%
+      420:  100:    operator=(bool __x) _GLIBCXX_NOEXCEPT
         -:  101:    {
-      323:  102:      if (__x)
-      323:  102-block  0
-branch  0 taken 41 (fallthrough)
-branch  1 taken 282
-       41:  103:	*_M_p |= _M_mask;
-       41:  103-block  0
+      420:  102:      if (__x)
+      420:  102-block  0
+branch  0 taken 51 (fallthrough)
+branch  1 taken 369
+       51:  103:	*_M_p |= _M_mask;
+       51:  103-block  0
         -:  104:      else
-      282:  105:	*_M_p &= ~_M_mask;
-      282:  105-block  0
-      323:  106:      return *this;
-      323:  106-block  0
+      369:  105:	*_M_p &= ~_M_mask;
+      369:  105-block  0
+      420:  106:      return *this;
+      420:  106-block  0
         -:  107:    }
         -:  108:
         -:  109:    _GLIBCXX20_CONSTEXPR
@@ -186,19 +186,19 @@ function _ZNSt18_Bit_iterator_baseC2EPmj called 0 returned 0% blocks executed 0%
         -:  171:
         -:  172:    _GLIBCXX20_CONSTEXPR
         -:  173:    void
-function _ZNSt18_Bit_iterator_base10_M_bump_upEv called 563 returned 100% blocks executed 67%
-      563:  174:    _M_bump_up()
+function _ZNSt18_Bit_iterator_base10_M_bump_upEv called 737 returned 100% blocks executed 67%
+      737:  174:    _M_bump_up()
         -:  175:    {
-      563:  176:      if (_M_offset++ == int(_S_word_bit) - 1)
-      563:  176-block  0
+      737:  176:      if (_M_offset++ == int(_S_word_bit) - 1)
+      737:  176-block  0
 branch  0 taken 0 (fallthrough)
-branch  1 taken 563
+branch  1 taken 737
         -:  177:	{
     #####:  178:	  _M_offset = 0;
     #####:  179:	  ++_M_p;
     %%%%%:  179-block  0
         -:  180:	}
-      563:  181:    }
+      737:  181:    }
         -:  182:
         -:  183:    _GLIBCXX20_CONSTEXPR
         -:  184:    void
@@ -325,13 +325,13 @@ call    0 never executed
         -:  289:
         -:  290:    _GLIBCXX20_CONSTEXPR
         -:  291:    iterator&
-function _ZNSt13_Bit_iteratorppEv called 294 returned 100% blocks executed 100%
-      294:  292:    operator++()
+function _ZNSt13_Bit_iteratorppEv called 385 returned 100% blocks executed 100%
+      385:  292:    operator++()
         -:  293:    {
-      294:  294:      _M_bump_up();
-      294:  294-block  0
-call    0 returned 294
-      294:  295:      return *this;
+      385:  294:      _M_bump_up();
+      385:  294-block  0
+call    0 returned 385
+      385:  295:      return *this;
         -:  296:    }
         -:  297:
         -:  298:    _GLIBCXX20_CONSTEXPR
@@ -381,8 +381,12 @@ call    0 never executed
         -:  339:
         -:  340:    _GLIBCXX_NODISCARD _GLIBCXX20_CONSTEXPR
         -:  341:    reference
-        -:  342:    operator[](difference_type __i) const
-        -:  343:    { return *(*this + __i); }
+function _ZNKSt13_Bit_iteratorixEl called 0 returned 0% blocks executed 0%
+    #####:  342:    operator[](difference_type __i) const
+    #####:  343:    { return *(*this + __i); }
+    %%%%%:  343-block  0
+call    0 never executed
+call    1 never executed
         -:  344:
         -:  345:    _GLIBCXX_NODISCARD
         -:  346:    friend _GLIBCXX20_CONSTEXPR iterator
@@ -446,22 +450,22 @@ call    0 never executed
         -:  395:
         -:  396:    _GLIBCXX_NODISCARD _GLIBCXX20_CONSTEXPR
         -:  397:    const_reference
-function _ZNKSt19_Bit_const_iteratordeEv called 269 returned 100% blocks executed 100%
-      269:  398:    operator*() const
-      269:  399:    { return _Bit_reference(_M_p, 1UL << _M_offset); }
-      269:  399-block  0
-call    0 returned 269
-call    1 returned 269
+function _ZNKSt19_Bit_const_iteratordeEv called 352 returned 100% blocks executed 100%
+      352:  398:    operator*() const
+      352:  399:    { return _Bit_reference(_M_p, 1UL << _M_offset); }
+      352:  399-block  0
+call    0 returned 352
+call    1 returned 352
         -:  400:
         -:  401:    _GLIBCXX20_CONSTEXPR
         -:  402:    const_iterator&
-function _ZNSt19_Bit_const_iteratorppEv called 269 returned 100% blocks executed 100%
-      269:  403:    operator++()
+function _ZNSt19_Bit_const_iteratorppEv called 352 returned 100% blocks executed 100%
+      352:  403:    operator++()
         -:  404:    {
-      269:  405:      _M_bump_up();
-      269:  405-block  0
-call    0 returned 269
-      269:  406:      return *this;
+      352:  405:      _M_bump_up();
+      352:  405-block  0
+call    0 returned 352
+      352:  406:      return *this;
         -:  407:    }
         -:  408:
         -:  409:    _GLIBCXX20_CONSTEXPR
@@ -617,13 +621,13 @@ call    0 never executed
         -:  552:	{ }
         -:  553:
         -:  554:	_GLIBCXX20_CONSTEXPR
-function _ZNSt13_Bvector_baseISaIbEE13_Bvector_implC2ERKSaImE called 79 returned 100% blocks executed 100%
-       79:  555:	_Bvector_impl(const _Bit_alloc_type& __a) _GLIBCXX_NOEXCEPT
-       79:  556:	: _Bit_alloc_type(__a)
-       79:  556-block  0
-call    0 returned 79
-call    1 returned 79
-       79:  557:	{ }
+function _ZNSt13_Bvector_baseISaIbEE13_Bvector_implC2ERKSaImE called 105 returned 100% blocks executed 100%
+      105:  555:	_Bvector_impl(const _Bit_alloc_type& __a) _GLIBCXX_NOEXCEPT
+      105:  556:	: _Bit_alloc_type(__a)
+      105:  556-block  0
+call    0 returned 105
+call    1 returned 105
+      105:  557:	{ }
         -:  558:
         -:  559:#if __cplusplus >= 201103L
         -:  560:	// Not defaulted, to enforce noexcept(true) even when
@@ -666,10 +670,10 @@ call    0 never executed
         -:  590:
         -:  591:      _GLIBCXX20_CONSTEXPR
         -:  592:      const _Bit_alloc_type&
-function _ZNKSt13_Bvector_baseISaIbEE20_M_get_Bit_allocatorEv called 61 returned 100% blocks executed 100%
-       61:  593:      _M_get_Bit_allocator() const _GLIBCXX_NOEXCEPT
-       61:  594:      { return this->_M_impl; }
-       61:  594-block  0
+function _ZNKSt13_Bvector_baseISaIbEE20_M_get_Bit_allocatorEv called 80 returned 100% blocks executed 100%
+       80:  593:      _M_get_Bit_allocator() const _GLIBCXX_NOEXCEPT
+       80:  594:      { return this->_M_impl; }
+       80:  594-block  0
         -:  595:
         -:  596:      _GLIBCXX20_CONSTEXPR
         -:  597:      allocator_type
@@ -683,13 +687,13 @@ function _ZNKSt13_Bvector_baseISaIbEE20_M_get_Bit_allocatorEv called 61 returned
         -:  605:#endif
         -:  606:
         -:  607:      _GLIBCXX20_CONSTEXPR
-function _ZNSt13_Bvector_baseISaIbEEC2ERKS0_ called 79 returned 100% blocks executed 100%
-       79:  608:      _Bvector_base(const allocator_type& __a)
-       79:  609:      : _M_impl(__a) { }
-       79:  609-block  0
-call    0 returned 79
-call    1 returned 79
-call    2 returned 79
+function _ZNSt13_Bvector_baseISaIbEEC2ERKS0_ called 105 returned 100% blocks executed 100%
+      105:  608:      _Bvector_base(const allocator_type& __a)
+      105:  609:      : _M_impl(__a) { }
+      105:  609-block  0
+call    0 returned 105
+call    1 returned 105
+call    2 returned 105
         -:  610:
         -:  611:#if __cplusplus >= 201103L
         -:  612:      _Bvector_base(_Bvector_base&&) = default;
@@ -713,13 +717,13 @@ call    1 never executed
         -:  626:
         -:  627:      _GLIBCXX20_CONSTEXPR
         -:  628:      _Bit_pointer
-function _ZNSt13_Bvector_baseISaIbEE11_M_allocateEm called 79 returned 100% blocks executed 100%
-       79:  629:      _M_allocate(size_t __n)
+function _ZNSt13_Bvector_baseISaIbEE11_M_allocateEm called 105 returned 100% blocks executed 100%
+      105:  629:      _M_allocate(size_t __n)
         -:  630:      {
-       79:  631:	_Bit_pointer __p = _Bit_alloc_traits::allocate(_M_impl, _S_nword(__n));
-       79:  631-block  0
-call    0 returned 79
-call    1 returned 79
+      105:  631:	_Bit_pointer __p = _Bit_alloc_traits::allocate(_M_impl, _S_nword(__n));
+      105:  631-block  0
+call    0 returned 105
+call    1 returned 105
         -:  632:#if __cpp_lib_is_constant_evaluated
         -:  633:	if (std::is_constant_evaluated())
         -:  634:	{
@@ -728,7 +732,7 @@ call    1 returned 79
         -:  637:	    __p[__i] = 0ul;
         -:  638:	}
         -:  639:#endif
-       79:  640:	return __p;
+      105:  640:	return __p;
         -:  641:      }
         -:  642:
         -:  643:      _GLIBCXX20_CONSTEXPR
@@ -762,10 +766,10 @@ call    0 never executed
         -:  663:
         -:  664:      _GLIBCXX_CONSTEXPR
         -:  665:      static size_t
-function _ZNSt13_Bvector_baseISaIbEE8_S_nwordEm called 158 returned 100% blocks executed 100%
-      158:  666:      _S_nword(size_t __n)
-      158:  667:      { return (__n + int(_S_word_bit) - 1) / int(_S_word_bit); }
-      158:  667-block  0
+function _ZNSt13_Bvector_baseISaIbEE8_S_nwordEm called 210 returned 100% blocks executed 100%
+      210:  666:      _S_nword(size_t __n)
+      210:  667:      { return (__n + int(_S_word_bit) - 1) / int(_S_word_bit); }
+      210:  667-block  0
         -:  668:    };
         -:  669:
         -:  670:  /**
@@ -857,38 +861,38 @@ function _ZNSt13_Bvector_baseISaIbEE8_S_nwordEm called 158 returned 100% blocks 
         -:  756:      }
         -:  757:
         -:  758:      _GLIBCXX20_CONSTEXPR
-function _ZNSt6vectorIbSaIbEEC2ERKS1_ called 61 returned 100% blocks executed 82%
-       61:  759:      vector(const vector& __x)
-       61:  760:      : _Base(_Bit_alloc_traits::_S_select_on_copy(__x._M_get_Bit_allocator()))
-       61:  760-block  0
-call    0 returned 61
-call    1 returned 61
-branch  2 taken 61 (fallthrough)
+function _ZNSt6vectorIbSaIbEEC2ERKS1_ called 80 returned 100% blocks executed 82%
+       80:  759:      vector(const vector& __x)
+       80:  760:      : _Base(_Bit_alloc_traits::_S_select_on_copy(__x._M_get_Bit_allocator()))
+       80:  760-block  0
+call    0 returned 80
+call    1 returned 80
+branch  2 taken 80 (fallthrough)
 branch  3 taken 0 (throw)
-       61:  760-block  1
-call    4 returned 61
-call    5 returned 61
-call    6 returned 61
-call    7 returned 61
+       80:  760-block  1
+call    4 returned 80
+call    5 returned 80
+call    6 returned 80
+call    7 returned 80
     $$$$$:  760-block  2
     $$$$$:  760-block  3
 call    8 never executed
         -:  761:      {
-       61:  762:	_M_initialize(__x.size());
-call    0 returned 61
-call    1 returned 61
-branch  2 taken 61 (fallthrough)
+       80:  762:	_M_initialize(__x.size());
+call    0 returned 80
+call    1 returned 80
+branch  2 taken 80 (fallthrough)
 branch  3 taken 0 (throw)
-       61:  763:	_M_copy_aligned(__x.begin(), __x.end(), begin());
-       61:  763-block  0
-call    0 returned 61
-call    1 returned 61
-call    2 returned 61
-call    3 returned 61
-branch  4 taken 61 (fallthrough)
+       80:  763:	_M_copy_aligned(__x.begin(), __x.end(), begin());
+       80:  763-block  0
+call    0 returned 80
+call    1 returned 80
+call    2 returned 80
+call    3 returned 80
+branch  4 taken 80 (fallthrough)
 branch  5 taken 0 (throw)
-       61:  764:      }
-       61:  764-block  0
+       80:  764:      }
+       80:  764-block  0
     $$$$$:  764-block  1
 call    0 never executed
         -:  765:
@@ -932,23 +936,23 @@ call    0 never executed
         -:  803:      }
         -:  804:
         -:  805:      _GLIBCXX20_CONSTEXPR
-function _ZNSt6vectorIbSaIbEEC2ESt16initializer_listIbERKS0_ called 5 returned 100% blocks executed 75%
-        5:  806:      vector(initializer_list<bool> __l,
+function _ZNSt6vectorIbSaIbEEC2ESt16initializer_listIbERKS0_ called 9 returned 100% blocks executed 75%
+        9:  806:      vector(initializer_list<bool> __l,
         -:  807:	     const allocator_type& __a = allocator_type())
-        5:  808:      : _Base(__a)
-        5:  808-block  0
-call    0 returned 5
+        9:  808:      : _Base(__a)
+        9:  808-block  0
+call    0 returned 9
         -:  809:      {
-        5:  810:	_M_initialize_range(__l.begin(), __l.end(),
-call    0 returned 5
-call    1 returned 5
-branch  2 taken 5 (fallthrough)
+        9:  810:	_M_initialize_range(__l.begin(), __l.end(),
+call    0 returned 9
+call    1 returned 9
+branch  2 taken 9 (fallthrough)
 branch  3 taken 0 (throw)
-        5:  811:			    random_access_iterator_tag());
-call    0 returned 5
+        9:  811:			    random_access_iterator_tag());
+call    0 returned 9
     $$$$$:  811-block  0
-        5:  812:      }
-        5:  812-block  0
+        9:  812:      }
+        9:  812-block  0
     $$$$$:  812-block  1
 call    0 never executed
         -:  813:#endif
@@ -1190,8 +1194,17 @@ call    2 never executed
         -: 1032:
         -: 1033:      _GLIBCXX_NODISCARD _GLIBCXX20_CONSTEXPR
         -: 1034:      reference
-        -: 1035:      operator[](size_type __n)
-        -: 1036:      { return begin()[__n]; }
+function _ZNSt6vectorIbSaIbEEixEm called 0 returned 0% blocks executed 0%
+    #####: 1035:      operator[](size_type __n)
+    #####: 1036:      { return begin()[__n]; }
+    %%%%%: 1036-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%: 1036-block  1
+    %%%%%: 1036-block  2
+    %%%%%: 1036-block  3
         -: 1037:
         -: 1038:      _GLIBCXX_NODISCARD _GLIBCXX20_CONSTEXPR
         -: 1039:      const_reference
@@ -1443,53 +1456,53 @@ call    2 never executed
         -: 1285:      // Precondition: __first._M_offset == 0 && __result._M_offset == 0.
         -: 1286:      _GLIBCXX20_CONSTEXPR
         -: 1287:      iterator
-function _ZNSt6vectorIbSaIbEE15_M_copy_alignedESt19_Bit_const_iteratorS2_St13_Bit_iterator called 61 returned 100% blocks executed 89%
-       61: 1288:      _M_copy_aligned(const_iterator __first, const_iterator __last,
+function _ZNSt6vectorIbSaIbEE15_M_copy_alignedESt19_Bit_const_iteratorS2_St13_Bit_iterator called 80 returned 100% blocks executed 89%
+       80: 1288:      _M_copy_aligned(const_iterator __first, const_iterator __last,
         -: 1289:		      iterator __result)
         -: 1290:      {
-       61: 1291:	_Bit_type* __q = std::copy(__first._M_p, __last._M_p, __result._M_p);
-       61: 1291-block  0
-call    0 returned 61
-      122: 1292:	return std::copy(const_iterator(__last._M_p, 0), __last,
-call    0 returned 61
-call    1 returned 61
-call    2 returned 61
-branch  3 taken 61 (fallthrough)
+       80: 1291:	_Bit_type* __q = std::copy(__first._M_p, __last._M_p, __result._M_p);
+       80: 1291-block  0
+call    0 returned 80
+      160: 1292:	return std::copy(const_iterator(__last._M_p, 0), __last,
+call    0 returned 80
+call    1 returned 80
+call    2 returned 80
+branch  3 taken 80 (fallthrough)
 branch  4 taken 0 (throw)
-       61: 1292-block  0
+       80: 1292-block  0
     $$$$$: 1292-block  1
-      122: 1293:			 iterator(__q, 0));
-       61: 1293-block  0
-       61: 1293-block  1
+      160: 1293:			 iterator(__q, 0));
+       80: 1293-block  0
+       80: 1293-block  1
         -: 1294:      }
         -: 1295:
         -: 1296:      _GLIBCXX20_CONSTEXPR
         -: 1297:      void
-function _ZNSt6vectorIbSaIbEE13_M_initializeEm called 79 returned 100% blocks executed 100%
-       79: 1298:      _M_initialize(size_type __n)
+function _ZNSt6vectorIbSaIbEE13_M_initializeEm called 105 returned 100% blocks executed 100%
+      105: 1298:      _M_initialize(size_type __n)
         -: 1299:      {
-       79: 1300:	if (__n)
-       79: 1300-block  0
-branch  0 taken 79 (fallthrough)
+      105: 1300:	if (__n)
+      105: 1300-block  0
+branch  0 taken 105 (fallthrough)
 branch  1 taken 0
         -: 1301:	  {
-       79: 1302:	    _Bit_pointer __q = this->_M_allocate(__n);
-       79: 1302-block  0
-call    0 returned 79
-branch  1 taken 79 (fallthrough)
+      105: 1302:	    _Bit_pointer __q = this->_M_allocate(__n);
+      105: 1302-block  0
+call    0 returned 105
+branch  1 taken 105 (fallthrough)
 branch  2 taken 0 (throw)
-       79: 1303:	    this->_M_impl._M_end_of_storage = __q + _S_nword(__n);
-       79: 1303-block  0
-call    0 returned 79
-       79: 1304:	    iterator __start = iterator(std::__addressof(*__q), 0);
-call    0 returned 79
-call    1 returned 79
-       79: 1305:	    this->_M_impl._M_start = __start;
-       79: 1306:	    this->_M_impl._M_finish = __start + difference_type(__n);
-call    0 returned 79
+      105: 1303:	    this->_M_impl._M_end_of_storage = __q + _S_nword(__n);
+      105: 1303-block  0
+call    0 returned 105
+      105: 1304:	    iterator __start = iterator(std::__addressof(*__q), 0);
+call    0 returned 105
+call    1 returned 105
+      105: 1305:	    this->_M_impl._M_start = __start;
+      105: 1306:	    this->_M_impl._M_finish = __start + difference_type(__n);
+call    0 returned 105
         -: 1307:	  }
-       79: 1308:      }
-       79: 1308-block  0
+      105: 1308:      }
+      105: 1308-block  0
         -: 1309:
         -: 1310:      _GLIBCXX20_CONSTEXPR
         -: 1311:      void
@@ -1541,19 +1554,19 @@ call    0 returned 79
         -: 1357:      template<typename _ForwardIterator>
         -: 1358:	_GLIBCXX20_CONSTEXPR
         -: 1359:	void
-function _ZNSt6vectorIbSaIbEE19_M_initialize_rangeIPKbEEvT_S5_St20forward_iterator_tag called 5 returned 100% blocks executed 100%
-        5: 1360:	_M_initialize_range(_ForwardIterator __first, _ForwardIterator __last,
+function _ZNSt6vectorIbSaIbEE19_M_initialize_rangeIPKbEEvT_S5_St20forward_iterator_tag called 9 returned 100% blocks executed 100%
+        9: 1360:	_M_initialize_range(_ForwardIterator __first, _ForwardIterator __last,
         -: 1361:			    std::forward_iterator_tag)
         -: 1362:	{
-        5: 1363:	  const size_type __n = std::distance(__first, __last);
-        5: 1363-block  0
-call    0 returned 5
-        5: 1364:	  _M_initialize(__n);
-call    0 returned 5
-        5: 1365:	  std::copy(__first, __last, begin());
-call    0 returned 5
-call    1 returned 5
-        5: 1366:	}
+        9: 1363:	  const size_type __n = std::distance(__first, __last);
+        9: 1363-block  0
+call    0 returned 9
+        9: 1364:	  _M_initialize(__n);
+call    0 returned 9
+        9: 1365:	  std::copy(__first, __last, begin());
+call    0 returned 9
+call    1 returned 9
+        9: 1366:	}
         -: 1367:
         -: 1368:#if __cplusplus < 201103L
         -: 1369:      // _GLIBCXX_RESOLVE_LIB_DEFECTS

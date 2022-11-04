@@ -81,19 +81,19 @@
         -:   77:#endif
         -:   78:
         -:   79:      _GLIBCXX20_CONSTEXPR
-      47*:   80:      __new_allocator() _GLIBCXX_USE_NOEXCEPT { }
+      61*:   80:      __new_allocator() _GLIBCXX_USE_NOEXCEPT { }
 ------------------
 _ZNSt15__new_allocatorISt4pairIS0_IiiEiEEC2Ev:
-function _ZNSt15__new_allocatorISt4pairIS0_IiiEiEEC2Ev called 16 returned 100% blocks executed 100%
-       16:   80:      __new_allocator() _GLIBCXX_USE_NOEXCEPT { }
+function _ZNSt15__new_allocatorISt4pairIS0_IiiEiEEC2Ev called 22 returned 100% blocks executed 100%
+       22:   80:      __new_allocator() _GLIBCXX_USE_NOEXCEPT { }
 ------------------
 _ZNSt15__new_allocatorISt6vectorIbSaIbEEEC2Ev:
-function _ZNSt15__new_allocatorISt6vectorIbSaIbEEEC2Ev called 17 returned 100% blocks executed 100%
-       17:   80:      __new_allocator() _GLIBCXX_USE_NOEXCEPT { }
+function _ZNSt15__new_allocatorISt6vectorIbSaIbEEEC2Ev called 22 returned 100% blocks executed 100%
+       22:   80:      __new_allocator() _GLIBCXX_USE_NOEXCEPT { }
 ------------------
 _ZNSt15__new_allocatorISt4pairIiiEEC2Ev:
-function _ZNSt15__new_allocatorISt4pairIiiEEC2Ev called 14 returned 100% blocks executed 100%
-       14:   80:      __new_allocator() _GLIBCXX_USE_NOEXCEPT { }
+function _ZNSt15__new_allocatorISt4pairIiiEEC2Ev called 17 returned 100% blocks executed 100%
+       17:   80:      __new_allocator() _GLIBCXX_USE_NOEXCEPT { }
 ------------------
 _ZNSt15__new_allocatorIcEC2Ev:
 function _ZNSt15__new_allocatorIcEC2Ev called 0 returned 0% blocks executed 0%
@@ -101,11 +101,11 @@ function _ZNSt15__new_allocatorIcEC2Ev called 0 returned 0% blocks executed 0%
 ------------------
         -:   81:
         -:   82:      _GLIBCXX20_CONSTEXPR
-      18*:   83:      __new_allocator(const __new_allocator&) _GLIBCXX_USE_NOEXCEPT { }
+      22*:   83:      __new_allocator(const __new_allocator&) _GLIBCXX_USE_NOEXCEPT { }
 ------------------
 _ZNSt15__new_allocatorISt4pairIiiEEC2ERKS2_:
-function _ZNSt15__new_allocatorISt4pairIiiEEC2ERKS2_ called 18 returned 100% blocks executed 100%
-       18:   83:      __new_allocator(const __new_allocator&) _GLIBCXX_USE_NOEXCEPT { }
+function _ZNSt15__new_allocatorISt4pairIiiEEC2ERKS2_ called 22 returned 100% blocks executed 100%
+       22:   83:      __new_allocator(const __new_allocator&) _GLIBCXX_USE_NOEXCEPT { }
 ------------------
 _ZNSt15__new_allocatorIcEC2ERKS0_:
 function _ZNSt15__new_allocatorIcEC2ERKS0_ called 0 returned 0% blocks executed 0%
@@ -117,23 +117,23 @@ function _ZNSt15__new_allocatorIcEC2ERKS0_ called 0 returned 0% blocks executed 
         -:   87:	__new_allocator(const __new_allocator<_Tp1>&) _GLIBCXX_USE_NOEXCEPT { }
         -:   88:
         -:   89:#if __cplusplus <= 201703L
-     326*:   90:      ~__new_allocator() _GLIBCXX_USE_NOEXCEPT { }
+     435*:   90:      ~__new_allocator() _GLIBCXX_USE_NOEXCEPT { }
 ------------------
 _ZNSt15__new_allocatorImED2Ev:
-function _ZNSt15__new_allocatorImED2Ev called 219 returned 100% blocks executed 100%
-      219:   90:      ~__new_allocator() _GLIBCXX_USE_NOEXCEPT { }
+function _ZNSt15__new_allocatorImED2Ev called 290 returned 100% blocks executed 100%
+      290:   90:      ~__new_allocator() _GLIBCXX_USE_NOEXCEPT { }
 ------------------
 _ZNSt15__new_allocatorISt4pairIS0_IiiEiEED2Ev:
-function _ZNSt15__new_allocatorISt4pairIS0_IiiEiEED2Ev called 30 returned 100% blocks executed 100%
-       30:   90:      ~__new_allocator() _GLIBCXX_USE_NOEXCEPT { }
+function _ZNSt15__new_allocatorISt4pairIS0_IiiEiEED2Ev called 46 returned 100% blocks executed 100%
+       46:   90:      ~__new_allocator() _GLIBCXX_USE_NOEXCEPT { }
 ------------------
 _ZNSt15__new_allocatorISt6vectorIbSaIbEEED2Ev:
-function _ZNSt15__new_allocatorISt6vectorIbSaIbEEED2Ev called 45 returned 100% blocks executed 100%
-       45:   90:      ~__new_allocator() _GLIBCXX_USE_NOEXCEPT { }
+function _ZNSt15__new_allocatorISt6vectorIbSaIbEEED2Ev called 60 returned 100% blocks executed 100%
+       60:   90:      ~__new_allocator() _GLIBCXX_USE_NOEXCEPT { }
 ------------------
 _ZNSt15__new_allocatorISt4pairIiiEED2Ev:
-function _ZNSt15__new_allocatorISt4pairIiiEED2Ev called 32 returned 100% blocks executed 100%
-       32:   90:      ~__new_allocator() _GLIBCXX_USE_NOEXCEPT { }
+function _ZNSt15__new_allocatorISt4pairIiiEED2Ev called 39 returned 100% blocks executed 100%
+       39:   90:      ~__new_allocator() _GLIBCXX_USE_NOEXCEPT { }
 ------------------
 _ZNSt15__new_allocatorIcED2Ev:
 function _ZNSt15__new_allocatorIcED2Ev called 0 returned 0% blocks executed 0%
@@ -204,7 +204,7 @@ call    0 never executed
         -:  139:
         -:  140:      // __p is not permitted to be a null pointer.
         -:  141:      void
-      93*:  142:      deallocate(_Tp* __p, size_type __n __attribute__ ((__unused__)))
+     124*:  142:      deallocate(_Tp* __p, size_type __n __attribute__ ((__unused__)))
         -:  143:      {
         -:  144:#if __cpp_sized_deallocation
         -:  145:# define _GLIBCXX_SIZED_DEALLOC(p, n) (p), (n) * sizeof(_Tp)
@@ -220,12 +220,12 @@ call    0 never executed
         -:  155:	    return;
         -:  156:	  }
         -:  157:#endif
-      93*:  158:	_GLIBCXX_OPERATOR_DELETE(_GLIBCXX_SIZED_DEALLOC(__p, __n));
-      93*:  159:      }
+     124*:  158:	_GLIBCXX_OPERATOR_DELETE(_GLIBCXX_SIZED_DEALLOC(__p, __n));
+     124*:  159:      }
 ------------------
 _ZNSt15__new_allocatorImE10deallocateEPmm:
-function _ZNSt15__new_allocatorImE10deallocateEPmm called 79 returned 100% blocks executed 100%
-       79:  142:      deallocate(_Tp* __p, size_type __n __attribute__ ((__unused__)))
+function _ZNSt15__new_allocatorImE10deallocateEPmm called 105 returned 100% blocks executed 100%
+      105:  142:      deallocate(_Tp* __p, size_type __n __attribute__ ((__unused__)))
         -:  143:      {
         -:  144:#if __cpp_sized_deallocation
         -:  145:# define _GLIBCXX_SIZED_DEALLOC(p, n) (p), (n) * sizeof(_Tp)
@@ -241,10 +241,10 @@ function _ZNSt15__new_allocatorImE10deallocateEPmm called 79 returned 100% block
         -:  155:	    return;
         -:  156:	  }
         -:  157:#endif
-       79:  158:	_GLIBCXX_OPERATOR_DELETE(_GLIBCXX_SIZED_DEALLOC(__p, __n));
-       79:  158-block  0
-call    0 returned 79
-       79:  159:      }
+      105:  158:	_GLIBCXX_OPERATOR_DELETE(_GLIBCXX_SIZED_DEALLOC(__p, __n));
+      105:  158-block  0
+call    0 returned 105
+      105:  159:      }
 ------------------
 _ZNSt15__new_allocatorISt4pairIiiEE10deallocateEPS1_m:
 function _ZNSt15__new_allocatorISt4pairIiiEE10deallocateEPS1_m called 0 returned 0% blocks executed 0%
@@ -293,8 +293,8 @@ call    0 never executed
     #####:  159:      }
 ------------------
 _ZNSt15__new_allocatorISt6vectorIbSaIbEEE10deallocateEPS2_m:
-function _ZNSt15__new_allocatorISt6vectorIbSaIbEEE10deallocateEPS2_m called 14 returned 100% blocks executed 100%
-       14:  142:      deallocate(_Tp* __p, size_type __n __attribute__ ((__unused__)))
+function _ZNSt15__new_allocatorISt6vectorIbSaIbEEE10deallocateEPS2_m called 19 returned 100% blocks executed 100%
+       19:  142:      deallocate(_Tp* __p, size_type __n __attribute__ ((__unused__)))
         -:  143:      {
         -:  144:#if __cpp_sized_deallocation
         -:  145:# define _GLIBCXX_SIZED_DEALLOC(p, n) (p), (n) * sizeof(_Tp)
@@ -310,10 +310,10 @@ function _ZNSt15__new_allocatorISt6vectorIbSaIbEEE10deallocateEPS2_m called 14 r
         -:  155:	    return;
         -:  156:	  }
         -:  157:#endif
-       14:  158:	_GLIBCXX_OPERATOR_DELETE(_GLIBCXX_SIZED_DEALLOC(__p, __n));
-       14:  158-block  0
-call    0 returned 14
-       14:  159:      }
+       19:  158:	_GLIBCXX_OPERATOR_DELETE(_GLIBCXX_SIZED_DEALLOC(__p, __n));
+       19:  158-block  0
+call    0 returned 19
+       19:  159:      }
 ------------------
         -:  160:
         -:  161:#undef _GLIBCXX_SIZED_DEALLOC

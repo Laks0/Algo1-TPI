@@ -100,27 +100,27 @@
         -:   96:	pointer _M_end_of_storage;
         -:   97:
         -:   98:	_GLIBCXX20_CONSTEXPR
-       48:   99:	_Vector_impl_data() _GLIBCXX_NOEXCEPT
-       48:  100:	: _M_start(), _M_finish(), _M_end_of_storage()
-       48:  101:	{ }
+       62:   99:	_Vector_impl_data() _GLIBCXX_NOEXCEPT
+       62:  100:	: _M_start(), _M_finish(), _M_end_of_storage()
+       62:  101:	{ }
 ------------------
 _ZNSt12_Vector_baseISt4pairIiiESaIS1_EE17_Vector_impl_dataC2Ev:
-function _ZNSt12_Vector_baseISt4pairIiiESaIS1_EE17_Vector_impl_dataC2Ev called 14 returned 100% blocks executed 100%
-       14:   99:	_Vector_impl_data() _GLIBCXX_NOEXCEPT
-       14:  100:	: _M_start(), _M_finish(), _M_end_of_storage()
-       14:  101:	{ }
+function _ZNSt12_Vector_baseISt4pairIiiESaIS1_EE17_Vector_impl_dataC2Ev called 17 returned 100% blocks executed 100%
+       17:   99:	_Vector_impl_data() _GLIBCXX_NOEXCEPT
+       17:  100:	: _M_start(), _M_finish(), _M_end_of_storage()
+       17:  101:	{ }
 ------------------
 _ZNSt12_Vector_baseISt4pairIS0_IiiEiESaIS2_EE17_Vector_impl_dataC2Ev:
-function _ZNSt12_Vector_baseISt4pairIS0_IiiEiESaIS2_EE17_Vector_impl_dataC2Ev called 17 returned 100% blocks executed 100%
-       17:   99:	_Vector_impl_data() _GLIBCXX_NOEXCEPT
-       17:  100:	: _M_start(), _M_finish(), _M_end_of_storage()
-       17:  101:	{ }
+function _ZNSt12_Vector_baseISt4pairIS0_IiiEiESaIS2_EE17_Vector_impl_dataC2Ev called 23 returned 100% blocks executed 100%
+       23:   99:	_Vector_impl_data() _GLIBCXX_NOEXCEPT
+       23:  100:	: _M_start(), _M_finish(), _M_end_of_storage()
+       23:  101:	{ }
 ------------------
 _ZNSt12_Vector_baseISt6vectorIbSaIbEESaIS2_EE17_Vector_impl_dataC2Ev:
-function _ZNSt12_Vector_baseISt6vectorIbSaIbEESaIS2_EE17_Vector_impl_dataC2Ev called 17 returned 100% blocks executed 100%
-       17:   99:	_Vector_impl_data() _GLIBCXX_NOEXCEPT
-       17:  100:	: _M_start(), _M_finish(), _M_end_of_storage()
-       17:  101:	{ }
+function _ZNSt12_Vector_baseISt6vectorIbSaIbEESaIS2_EE17_Vector_impl_dataC2Ev called 22 returned 100% blocks executed 100%
+       22:   99:	_Vector_impl_data() _GLIBCXX_NOEXCEPT
+       22:  100:	: _M_start(), _M_finish(), _M_end_of_storage()
+       22:  101:	{ }
 ------------------
         -:  102:
         -:  103:#if __cplusplus >= 201103L
@@ -157,20 +157,20 @@ function _ZNSt12_Vector_baseISt6vectorIbSaIbEESaIS2_EE17_Vector_impl_dataC2Ev ca
         -:  134:	: public _Tp_alloc_type, public _Vector_impl_data
         -:  135:      {
         -:  136:	_GLIBCXX20_CONSTEXPR
-       13:  137:	_Vector_impl() _GLIBCXX_NOEXCEPT_IF(
+       14:  137:	_Vector_impl() _GLIBCXX_NOEXCEPT_IF(
         -:  138:	    is_nothrow_default_constructible<_Tp_alloc_type>::value)
-       13:  139:	: _Tp_alloc_type()
-       13:  140:	{ }
+       14:  139:	: _Tp_alloc_type()
+       14:  140:	{ }
 ------------------
 _ZNSt12_Vector_baseISt4pairIS0_IiiEiESaIS2_EE12_Vector_implC2Ev:
-function _ZNSt12_Vector_baseISt4pairIS0_IiiEiESaIS2_EE12_Vector_implC2Ev called 10 returned 100% blocks executed 100%
-       10:  137:	_Vector_impl() _GLIBCXX_NOEXCEPT_IF(
+function _ZNSt12_Vector_baseISt4pairIS0_IiiEiESaIS2_EE12_Vector_implC2Ev called 11 returned 100% blocks executed 100%
+       11:  137:	_Vector_impl() _GLIBCXX_NOEXCEPT_IF(
         -:  138:	    is_nothrow_default_constructible<_Tp_alloc_type>::value)
-       10:  139:	: _Tp_alloc_type()
-       10:  139-block  0
-call    0 returned 10
-call    1 returned 10
-       10:  140:	{ }
+       11:  139:	: _Tp_alloc_type()
+       11:  139-block  0
+call    0 returned 11
+call    1 returned 11
+       11:  140:	{ }
 ------------------
 _ZNSt12_Vector_baseISt6vectorIbSaIbEESaIS2_EE12_Vector_implC2Ev:
 function _ZNSt12_Vector_baseISt6vectorIbSaIbEESaIS2_EE12_Vector_implC2Ev called 3 returned 100% blocks executed 100%
@@ -184,13 +184,13 @@ call    1 returned 3
 ------------------
         -:  141:
         -:  142:	_GLIBCXX20_CONSTEXPR
-function _ZNSt12_Vector_baseISt4pairIiiESaIS1_EE12_Vector_implC2ERKS2_ called 9 returned 100% blocks executed 100%
-        9:  143:	_Vector_impl(_Tp_alloc_type const& __a) _GLIBCXX_NOEXCEPT
-        9:  144:	: _Tp_alloc_type(__a)
-        9:  144-block  0
-call    0 returned 9
-call    1 returned 9
-        9:  145:	{ }
+function _ZNSt12_Vector_baseISt4pairIiiESaIS1_EE12_Vector_implC2ERKS2_ called 11 returned 100% blocks executed 100%
+       11:  143:	_Vector_impl(_Tp_alloc_type const& __a) _GLIBCXX_NOEXCEPT
+       11:  144:	: _Tp_alloc_type(__a)
+       11:  144-block  0
+call    0 returned 11
+call    1 returned 11
+       11:  145:	{ }
         -:  146:
         -:  147:#if __cplusplus >= 201103L
         -:  148:	// Not defaulted, to enforce noexcept(true) even when
@@ -343,8 +343,8 @@ call    1 returned 9
         -:  295:
         -:  296:      _GLIBCXX20_CONSTEXPR
         -:  297:      _Tp_alloc_type&
-      32*:  298:      _M_get_Tp_allocator() _GLIBCXX_NOEXCEPT
-      32*:  299:      { return this->_M_impl; }
+      44*:  298:      _M_get_Tp_allocator() _GLIBCXX_NOEXCEPT
+      44*:  299:      { return this->_M_impl; }
 ------------------
 _ZNSt12_Vector_baseISt4pairIS0_IiiEiESaIS2_EE19_M_get_Tp_allocatorEv:
 function _ZNSt12_Vector_baseISt4pairIS0_IiiEiESaIS2_EE19_M_get_Tp_allocatorEv called 0 returned 0% blocks executed 0%
@@ -353,10 +353,10 @@ function _ZNSt12_Vector_baseISt4pairIS0_IiiEiESaIS2_EE19_M_get_Tp_allocatorEv ca
     %%%%%:  299-block  0
 ------------------
 _ZNSt12_Vector_baseISt6vectorIbSaIbEESaIS2_EE19_M_get_Tp_allocatorEv:
-function _ZNSt12_Vector_baseISt6vectorIbSaIbEESaIS2_EE19_M_get_Tp_allocatorEv called 32 returned 100% blocks executed 100%
-       32:  298:      _M_get_Tp_allocator() _GLIBCXX_NOEXCEPT
-       32:  299:      { return this->_M_impl; }
-       32:  299-block  0
+function _ZNSt12_Vector_baseISt6vectorIbSaIbEESaIS2_EE19_M_get_Tp_allocatorEv called 44 returned 100% blocks executed 100%
+       44:  298:      _M_get_Tp_allocator() _GLIBCXX_NOEXCEPT
+       44:  299:      { return this->_M_impl; }
+       44:  299-block  0
 ------------------
 _ZNSt12_Vector_baseISt4pairIiiESaIS1_EE19_M_get_Tp_allocatorEv:
 function _ZNSt12_Vector_baseISt4pairIiiESaIS1_EE19_M_get_Tp_allocatorEv called 0 returned 0% blocks executed 0%
@@ -376,13 +376,13 @@ function _ZNSt12_Vector_baseISt4pairIiiESaIS1_EE19_M_get_Tp_allocatorEv called 0
         -:  309:      { return allocator_type(_M_get_Tp_allocator()); }
         -:  310:
         -:  311:#if __cplusplus >= 201103L
-       13:  312:      _Vector_base() = default;
+       14:  312:      _Vector_base() = default;
 ------------------
 _ZNSt12_Vector_baseISt4pairIS0_IiiEiESaIS2_EEC2Ev:
-function _ZNSt12_Vector_baseISt4pairIS0_IiiEiESaIS2_EEC2Ev called 10 returned 100% blocks executed 100%
-       10:  312:      _Vector_base() = default;
-       10:  312-block  0
-call    0 returned 10
+function _ZNSt12_Vector_baseISt4pairIS0_IiiEiESaIS2_EEC2Ev called 11 returned 100% blocks executed 100%
+       11:  312:      _Vector_base() = default;
+       11:  312-block  0
+call    0 returned 11
 ------------------
 _ZNSt12_Vector_baseISt6vectorIbSaIbEESaIS2_EEC2Ev:
 function _ZNSt12_Vector_baseISt6vectorIbSaIbEESaIS2_EEC2Ev called 3 returned 100% blocks executed 100%
@@ -395,11 +395,11 @@ call    0 returned 3
         -:  315:#endif
         -:  316:
         -:  317:      _GLIBCXX20_CONSTEXPR
-function _ZNSt12_Vector_baseISt4pairIiiESaIS1_EEC2ERKS2_ called 9 returned 100% blocks executed 100%
-        9:  318:      _Vector_base(const allocator_type& __a) _GLIBCXX_NOEXCEPT
-        9:  319:      : _M_impl(__a) { }
-        9:  319-block  0
-call    0 returned 9
+function _ZNSt12_Vector_baseISt4pairIiiESaIS1_EEC2ERKS2_ called 11 returned 100% blocks executed 100%
+       11:  318:      _Vector_base(const allocator_type& __a) _GLIBCXX_NOEXCEPT
+       11:  319:      : _M_impl(__a) { }
+       11:  319-block  0
+call    0 returned 11
         -:  320:
         -:  321:      // Kept for ABI compatibility.
         -:  322:#if !_GLIBCXX_INLINE_VERSION
@@ -444,44 +444,44 @@ call    0 returned 9
         -:  361:#endif
         -:  362:
         -:  363:      _GLIBCXX20_CONSTEXPR
-       48:  364:      ~_Vector_base() _GLIBCXX_NOEXCEPT
+       62:  364:      ~_Vector_base() _GLIBCXX_NOEXCEPT
         -:  365:      {
-       48:  366:	_M_deallocate(_M_impl._M_start,
-       48:  367:		      _M_impl._M_end_of_storage - _M_impl._M_start);
-       48:  368:      }
+       62:  366:	_M_deallocate(_M_impl._M_start,
+       62:  367:		      _M_impl._M_end_of_storage - _M_impl._M_start);
+       62:  368:      }
 ------------------
 _ZNSt12_Vector_baseISt4pairIiiESaIS1_EED2Ev:
-function _ZNSt12_Vector_baseISt4pairIiiESaIS1_EED2Ev called 14 returned 100% blocks executed 100%
-       14:  364:      ~_Vector_base() _GLIBCXX_NOEXCEPT
+function _ZNSt12_Vector_baseISt4pairIiiESaIS1_EED2Ev called 17 returned 100% blocks executed 100%
+       17:  364:      ~_Vector_base() _GLIBCXX_NOEXCEPT
         -:  365:      {
-       14:  366:	_M_deallocate(_M_impl._M_start,
-       14:  367:		      _M_impl._M_end_of_storage - _M_impl._M_start);
-       14:  367-block  0
-call    0 returned 14
-       14:  368:      }
-call    0 returned 14
+       17:  366:	_M_deallocate(_M_impl._M_start,
+       17:  367:		      _M_impl._M_end_of_storage - _M_impl._M_start);
+       17:  367-block  0
+call    0 returned 17
+       17:  368:      }
+call    0 returned 17
 ------------------
 _ZNSt12_Vector_baseISt4pairIS0_IiiEiESaIS2_EED2Ev:
-function _ZNSt12_Vector_baseISt4pairIS0_IiiEiESaIS2_EED2Ev called 17 returned 100% blocks executed 100%
-       17:  364:      ~_Vector_base() _GLIBCXX_NOEXCEPT
+function _ZNSt12_Vector_baseISt4pairIS0_IiiEiESaIS2_EED2Ev called 23 returned 100% blocks executed 100%
+       23:  364:      ~_Vector_base() _GLIBCXX_NOEXCEPT
         -:  365:      {
-       17:  366:	_M_deallocate(_M_impl._M_start,
-       17:  367:		      _M_impl._M_end_of_storage - _M_impl._M_start);
-       17:  367-block  0
-call    0 returned 17
-       17:  368:      }
-call    0 returned 17
+       23:  366:	_M_deallocate(_M_impl._M_start,
+       23:  367:		      _M_impl._M_end_of_storage - _M_impl._M_start);
+       23:  367-block  0
+call    0 returned 23
+       23:  368:      }
+call    0 returned 23
 ------------------
 _ZNSt12_Vector_baseISt6vectorIbSaIbEESaIS2_EED2Ev:
-function _ZNSt12_Vector_baseISt6vectorIbSaIbEESaIS2_EED2Ev called 17 returned 100% blocks executed 100%
-       17:  364:      ~_Vector_base() _GLIBCXX_NOEXCEPT
+function _ZNSt12_Vector_baseISt6vectorIbSaIbEESaIS2_EED2Ev called 22 returned 100% blocks executed 100%
+       22:  364:      ~_Vector_base() _GLIBCXX_NOEXCEPT
         -:  365:      {
-       17:  366:	_M_deallocate(_M_impl._M_start,
-       17:  367:		      _M_impl._M_end_of_storage - _M_impl._M_start);
-       17:  367-block  0
-call    0 returned 17
-       17:  368:      }
-call    0 returned 17
+       22:  366:	_M_deallocate(_M_impl._M_start,
+       22:  367:		      _M_impl._M_end_of_storage - _M_impl._M_start);
+       22:  367-block  0
+call    0 returned 22
+       22:  368:      }
+call    0 returned 22
 ------------------
         -:  369:
         -:  370:    public:
@@ -505,12 +505,12 @@ call    2 never executed
         -:  380:
         -:  381:      _GLIBCXX20_CONSTEXPR
         -:  382:      void
-      17*:  383:      _M_deallocate(pointer __p, size_t __n)
+      22*:  383:      _M_deallocate(pointer __p, size_t __n)
         -:  384:      {
         -:  385:	typedef __gnu_cxx::__alloc_traits<_Tp_alloc_type> _Tr;
-      17*:  386:	if (__p)
-      14*:  387:	  _Tr::deallocate(_M_impl, __p, __n);
-      17*:  388:      }
+      22*:  386:	if (__p)
+      19*:  387:	  _Tr::deallocate(_M_impl, __p, __n);
+      22*:  388:      }
 ------------------
 _ZNSt12_Vector_baseISt4pairIiiESaIS1_EE13_M_deallocateEPS1_m:
 function _ZNSt12_Vector_baseISt4pairIiiESaIS1_EE13_M_deallocateEPS1_m called 0 returned 0% blocks executed 0%
@@ -541,18 +541,18 @@ call    0 never executed
     #####:  388:      }
 ------------------
 _ZNSt12_Vector_baseISt6vectorIbSaIbEESaIS2_EE13_M_deallocateEPS2_m:
-function _ZNSt12_Vector_baseISt6vectorIbSaIbEESaIS2_EE13_M_deallocateEPS2_m called 17 returned 100% blocks executed 100%
-       17:  383:      _M_deallocate(pointer __p, size_t __n)
+function _ZNSt12_Vector_baseISt6vectorIbSaIbEESaIS2_EE13_M_deallocateEPS2_m called 22 returned 100% blocks executed 100%
+       22:  383:      _M_deallocate(pointer __p, size_t __n)
         -:  384:      {
         -:  385:	typedef __gnu_cxx::__alloc_traits<_Tp_alloc_type> _Tr;
-       17:  386:	if (__p)
-       17:  386-block  0
-branch  0 taken 14 (fallthrough)
+       22:  386:	if (__p)
+       22:  386-block  0
+branch  0 taken 19 (fallthrough)
 branch  1 taken 3
-       14:  387:	  _Tr::deallocate(_M_impl, __p, __n);
-       14:  387-block  0
-call    0 returned 14
-       17:  388:      }
+       19:  387:	  _Tr::deallocate(_M_impl, __p, __n);
+       19:  387-block  0
+call    0 returned 19
+       22:  388:      }
 ------------------
         -:  389:
         -:  390:    protected:
@@ -691,13 +691,13 @@ call    0 returned 14
         -:  523:       *  @brief  Creates a %vector with no elements.
         -:  524:       */
         -:  525:#if __cplusplus >= 201103L
-       13:  526:      vector() = default;
+       14:  526:      vector() = default;
 ------------------
 _ZNSt6vectorISt4pairIS0_IiiEiESaIS2_EEC2Ev:
-function _ZNSt6vectorISt4pairIS0_IiiEiESaIS2_EEC2Ev called 10 returned 100% blocks executed 100%
-       10:  526:      vector() = default;
-       10:  526-block  0
-call    0 returned 10
+function _ZNSt6vectorISt4pairIS0_IiiEiESaIS2_EEC2Ev called 11 returned 100% blocks executed 100%
+       11:  526:      vector() = default;
+       11:  526-block  0
+call    0 returned 11
 ------------------
 _ZNSt6vectorIS_IbSaIbEESaIS1_EEC2Ev:
 function _ZNSt6vectorIS_IbSaIbEESaIS1_EEC2Ev called 3 returned 100% blocks executed 100%
@@ -851,23 +851,23 @@ call    0 returned 3
         -:  670:       *  (where N is @a __l.size()) and do no memory reallocation.
         -:  671:       */
         -:  672:      _GLIBCXX20_CONSTEXPR
-function _ZNSt6vectorISt4pairIiiESaIS1_EEC2ESt16initializer_listIS1_ERKS2_ called 9 returned 100% blocks executed 75%
-        9:  673:      vector(initializer_list<value_type> __l,
+function _ZNSt6vectorISt4pairIiiESaIS1_EEC2ESt16initializer_listIS1_ERKS2_ called 11 returned 100% blocks executed 75%
+       11:  673:      vector(initializer_list<value_type> __l,
         -:  674:	     const allocator_type& __a = allocator_type())
-        9:  675:      : _Base(__a)
-        9:  675-block  0
-call    0 returned 9
+       11:  675:      : _Base(__a)
+       11:  675-block  0
+call    0 returned 11
         -:  676:      {
-        9:  677:	_M_range_initialize(__l.begin(), __l.end(),
-call    0 returned 9
-call    1 returned 9
-branch  2 taken 9 (fallthrough)
+       11:  677:	_M_range_initialize(__l.begin(), __l.end(),
+call    0 returned 11
+call    1 returned 11
+branch  2 taken 11 (fallthrough)
 branch  3 taken 0 (throw)
-        9:  678:			    random_access_iterator_tag());
-call    0 returned 9
+       11:  678:			    random_access_iterator_tag());
+call    0 returned 11
     $$$$$:  678-block  0
-        9:  679:      }
-        9:  679-block  0
+       11:  679:      }
+       11:  679-block  0
     $$$$$:  679-block  1
 call    0 never executed
         -:  680:#endif
@@ -918,28 +918,41 @@ call    0 never executed
         -:  725:       *  responsibility.
         -:  726:       */
         -:  727:      _GLIBCXX20_CONSTEXPR
-       48:  728:      ~vector() _GLIBCXX_NOEXCEPT
+       62:  728:      ~vector() _GLIBCXX_NOEXCEPT
         -:  729:      {
-       48:  730:	std::_Destroy(this->_M_impl._M_start, this->_M_impl._M_finish,
-       48:  731:		      _M_get_Tp_allocator());
+       62:  730:	std::_Destroy(this->_M_impl._M_start, this->_M_impl._M_finish,
+       62:  731:		      _M_get_Tp_allocator());
         -:  732:	_GLIBCXX_ASAN_ANNOTATE_BEFORE_DEALLOC;
-       48:  733:      }
+       62:  733:      }
 ------------------
 _ZNSt6vectorISt4pairIS0_IiiEiESaIS2_EED2Ev:
-function _ZNSt6vectorISt4pairIS0_IiiEiESaIS2_EED2Ev called 17 returned 100% blocks executed 100%
-       17:  728:      ~vector() _GLIBCXX_NOEXCEPT
+function _ZNSt6vectorISt4pairIS0_IiiEiESaIS2_EED2Ev called 23 returned 100% blocks executed 100%
+       23:  728:      ~vector() _GLIBCXX_NOEXCEPT
         -:  729:      {
-       17:  730:	std::_Destroy(this->_M_impl._M_start, this->_M_impl._M_finish,
-call    0 returned 17
-       17:  731:		      _M_get_Tp_allocator());
-       17:  731-block  0
-call    0 returned 17
+       23:  730:	std::_Destroy(this->_M_impl._M_start, this->_M_impl._M_finish,
+call    0 returned 23
+       23:  731:		      _M_get_Tp_allocator());
+       23:  731-block  0
+call    0 returned 23
         -:  732:	_GLIBCXX_ASAN_ANNOTATE_BEFORE_DEALLOC;
-       17:  733:      }
-call    0 returned 17
+       23:  733:      }
+call    0 returned 23
 ------------------
 _ZNSt6vectorIS_IbSaIbEESaIS1_EED2Ev:
-function _ZNSt6vectorIS_IbSaIbEESaIS1_EED2Ev called 17 returned 100% blocks executed 100%
+function _ZNSt6vectorIS_IbSaIbEESaIS1_EED2Ev called 22 returned 100% blocks executed 100%
+       22:  728:      ~vector() _GLIBCXX_NOEXCEPT
+        -:  729:      {
+       22:  730:	std::_Destroy(this->_M_impl._M_start, this->_M_impl._M_finish,
+call    0 returned 22
+       22:  731:		      _M_get_Tp_allocator());
+       22:  731-block  0
+call    0 returned 22
+        -:  732:	_GLIBCXX_ASAN_ANNOTATE_BEFORE_DEALLOC;
+       22:  733:      }
+call    0 returned 22
+------------------
+_ZNSt6vectorISt4pairIiiESaIS1_EED2Ev:
+function _ZNSt6vectorISt4pairIiiESaIS1_EED2Ev called 17 returned 100% blocks executed 100%
        17:  728:      ~vector() _GLIBCXX_NOEXCEPT
         -:  729:      {
        17:  730:	std::_Destroy(this->_M_impl._M_start, this->_M_impl._M_finish,
@@ -950,19 +963,6 @@ call    0 returned 17
         -:  732:	_GLIBCXX_ASAN_ANNOTATE_BEFORE_DEALLOC;
        17:  733:      }
 call    0 returned 17
-------------------
-_ZNSt6vectorISt4pairIiiESaIS1_EED2Ev:
-function _ZNSt6vectorISt4pairIiiESaIS1_EED2Ev called 14 returned 100% blocks executed 100%
-       14:  728:      ~vector() _GLIBCXX_NOEXCEPT
-        -:  729:      {
-       14:  730:	std::_Destroy(this->_M_impl._M_start, this->_M_impl._M_finish,
-call    0 returned 14
-       14:  731:		      _M_get_Tp_allocator());
-       14:  731-block  0
-call    0 returned 14
-        -:  732:	_GLIBCXX_ASAN_ANNOTATE_BEFORE_DEALLOC;
-       14:  733:      }
-call    0 returned 14
 ------------------
         -:  734:
         -:  735:      /**
@@ -1920,26 +1920,26 @@ function _ZNKSt6vectorISt4pairIiiESaIS1_EE4sizeEv called 0 returned 0% blocks ex
         -: 1679:      template<typename _ForwardIterator>
         -: 1680:	_GLIBCXX20_CONSTEXPR
         -: 1681:	void
-function _ZNSt6vectorISt4pairIiiESaIS1_EE19_M_range_initializeIPKS1_EEvT_S7_St20forward_iterator_tag called 9 returned 100% blocks executed 100%
-        9: 1682:	_M_range_initialize(_ForwardIterator __first, _ForwardIterator __last,
+function _ZNSt6vectorISt4pairIiiESaIS1_EE19_M_range_initializeIPKS1_EEvT_S7_St20forward_iterator_tag called 11 returned 100% blocks executed 100%
+       11: 1682:	_M_range_initialize(_ForwardIterator __first, _ForwardIterator __last,
         -: 1683:			    std::forward_iterator_tag)
         -: 1684:	{
-        9: 1685:	  const size_type __n = std::distance(__first, __last);
-        9: 1685-block  0
-call    0 returned 9
+       11: 1685:	  const size_type __n = std::distance(__first, __last);
+       11: 1685-block  0
+call    0 returned 11
         -: 1686:	  this->_M_impl._M_start
-        9: 1687:	    = this->_M_allocate(_S_check_init_len(__n, _M_get_Tp_allocator()));
-call    0 returned 9
-call    1 returned 9
-call    2 returned 9
-        9: 1688:	  this->_M_impl._M_end_of_storage = this->_M_impl._M_start + __n;
-        9: 1689:	  this->_M_impl._M_finish =
-        9: 1690:	    std::__uninitialized_copy_a(__first, __last,
-call    0 returned 9
+       11: 1687:	    = this->_M_allocate(_S_check_init_len(__n, _M_get_Tp_allocator()));
+call    0 returned 11
+call    1 returned 11
+call    2 returned 11
+       11: 1688:	  this->_M_impl._M_end_of_storage = this->_M_impl._M_start + __n;
+       11: 1689:	  this->_M_impl._M_finish =
+       11: 1690:	    std::__uninitialized_copy_a(__first, __last,
+call    0 returned 11
         -: 1691:					this->_M_impl._M_start,
-        9: 1692:					_M_get_Tp_allocator());
-call    0 returned 9
-        9: 1693:	}
+       11: 1692:					_M_get_Tp_allocator());
+call    0 returned 11
+       11: 1693:	}
         -: 1694:
         -: 1695:      // Called by the first initialize_dispatch above and by the
         -: 1696:      // vector(n,value,a) constructor.
@@ -2148,22 +2148,22 @@ call    0 returned 9
         -: 1899:
         -: 1900:      // Called by constructors to check initial size.
         -: 1901:      static _GLIBCXX20_CONSTEXPR size_type
-function _ZNSt6vectorISt4pairIiiESaIS1_EE17_S_check_init_lenEmRKS2_ called 9 returned 100% blocks executed 86%
-        9: 1902:      _S_check_init_len(size_type __n, const allocator_type& __a)
+function _ZNSt6vectorISt4pairIiiESaIS1_EE17_S_check_init_lenEmRKS2_ called 11 returned 100% blocks executed 86%
+       11: 1902:      _S_check_init_len(size_type __n, const allocator_type& __a)
         -: 1903:      {
-        9: 1904:	if (__n > _S_max_size(_Tp_alloc_type(__a)))
-        9: 1904-block  0
-call    0 returned 9
-call    1 returned 9
-call    2 returned 9
+       11: 1904:	if (__n > _S_max_size(_Tp_alloc_type(__a)))
+       11: 1904-block  0
+call    0 returned 11
+call    1 returned 11
+call    2 returned 11
 branch  3 taken 0 (fallthrough)
-branch  4 taken 9
+branch  4 taken 11
     #####: 1905:	  __throw_length_error(
     %%%%%: 1905-block  0
 call    0 never executed
         -: 1906:	      __N("cannot create std::vector larger than max_size()"));
-        9: 1907:	return __n;
-        9: 1907-block  0
+       11: 1907:	return __n;
+       11: 1907-block  0
         -: 1908:      }
         -: 1909:
         -: 1910:      static _GLIBCXX20_CONSTEXPR size_type

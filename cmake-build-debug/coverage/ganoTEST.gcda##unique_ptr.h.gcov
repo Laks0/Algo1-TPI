@@ -201,10 +201,10 @@ call    2 never executed
         -:  163:		     "unique_ptr's deleter type must be a function object type"
         -:  164:		     " or an lvalue reference type" );
         -:  165:
-function _ZNSt15__uniq_ptr_implINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EEC2Ev called 17 returned 100% blocks executed 100%
-       17:  166:      __uniq_ptr_impl() = default;
-       17:  166-block  0
-call    0 returned 17
+function _ZNSt15__uniq_ptr_implINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EEC2Ev called 23 returned 100% blocks executed 100%
+       23:  166:      __uniq_ptr_impl() = default;
+       23:  166-block  0
+call    0 returned 23
         -:  167:      _GLIBCXX23_CONSTEXPR
         -:  168:      __uniq_ptr_impl(pointer __p) : _M_t() { _M_ptr() = __p; }
         -:  169:
@@ -360,12 +360,12 @@ call    0 never executed
         -:  293:
         -:  294:      /// Default constructor, creates a unique_ptr that owns nothing.
         -:  295:      template<typename _Del = _Dp, typename = _DeleterConstraint<_Del>>
-function _ZNSt10unique_ptrINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EEC2IS7_vEEv called 17 returned 100% blocks executed 100%
-       17:  296:	constexpr unique_ptr() noexcept
-       17:  297:	: _M_t()
-       17:  297-block  0
-call    0 returned 17
-       17:  298:	{ }
+function _ZNSt10unique_ptrINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt14default_deleteIS5_EEC2IS7_vEEv called 23 returned 100% blocks executed 100%
+       23:  296:	constexpr unique_ptr() noexcept
+       23:  297:	: _M_t()
+       23:  297-block  0
+call    0 returned 23
+       23:  298:	{ }
         -:  299:
         -:  300:      /** Takes ownership of a pointer.
         -:  301:       *

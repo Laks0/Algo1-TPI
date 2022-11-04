@@ -412,9 +412,9 @@
         -:  408:	                 && _PCCP::template
         -:  409:			   _ImplicitlyConvertiblePair<_U1, _U2>(),
         -:  410:                         bool>::type=true>
-function _ZNSt4pairIS_IiiEiEC2IS0_iLb1EEERKS0_RKi called 65 returned 100% blocks executed 100%
-       65:  411:      constexpr pair(const _T1& __a, const _T2& __b)
-       65:  412:      : first(__a), second(__b) { }
+function _ZNSt4pairIS_IiiEiEC2IS0_iLb1EEERKS0_RKi called 82 returned 100% blocks executed 100%
+       82:  411:      constexpr pair(const _T1& __a, const _T2& __b)
+       82:  412:      : first(__a), second(__b) { }
         -:  413:
         -:  414:      /// Construct from two const lvalues, disallowing implicit conversions.
         -:  415:       template<typename _U1 = _T1, typename _U2=_T2, typename
@@ -536,24 +536,24 @@ function _ZNSt4pairIS_IiiEiEC2IS0_iLb1EEERKS0_RKi called 65 returned 100% blocks
         -:  531:			  && _PCCP::template
         -:  532:			   _ImplicitlyMoveConvertiblePair<_U1, _U2>(),
         -:  533:                         bool>::type=true>
-       23:  534:	constexpr pair(_U1&& __x, _U2&& __y)
-       23:  535:	: first(std::forward<_U1>(__x)), second(std::forward<_U2>(__y)) { }
+       46:  534:	constexpr pair(_U1&& __x, _U2&& __y)
+       46:  535:	: first(std::forward<_U1>(__x)), second(std::forward<_U2>(__y)) { }
 ------------------
 _ZNSt4pairIiiEC2IiRiLb1EEEOT_OT0_:
-function _ZNSt4pairIiiEC2IiRiLb1EEEOT_OT0_ called 11 returned 100% blocks executed 100%
-       11:  534:	constexpr pair(_U1&& __x, _U2&& __y)
-       11:  535:	: first(std::forward<_U1>(__x)), second(std::forward<_U2>(__y)) { }
-       11:  535-block  0
-call    0 returned 11
-call    1 returned 11
+function _ZNSt4pairIiiEC2IiRiLb1EEEOT_OT0_ called 24 returned 100% blocks executed 100%
+       24:  534:	constexpr pair(_U1&& __x, _U2&& __y)
+       24:  535:	: first(std::forward<_U1>(__x)), second(std::forward<_U2>(__y)) { }
+       24:  535-block  0
+call    0 returned 24
+call    1 returned 24
 ------------------
 _ZNSt4pairIiiEC2IRiiLb1EEEOT_OT0_:
-function _ZNSt4pairIiiEC2IRiiLb1EEEOT_OT0_ called 12 returned 100% blocks executed 100%
-       12:  534:	constexpr pair(_U1&& __x, _U2&& __y)
-       12:  535:	: first(std::forward<_U1>(__x)), second(std::forward<_U2>(__y)) { }
-       12:  535-block  0
-call    0 returned 12
-call    1 returned 12
+function _ZNSt4pairIiiEC2IRiiLb1EEEOT_OT0_ called 22 returned 100% blocks executed 100%
+       22:  534:	constexpr pair(_U1&& __x, _U2&& __y)
+       22:  535:	: first(std::forward<_U1>(__x)), second(std::forward<_U2>(__y)) { }
+       22:  535-block  0
+call    0 returned 22
+call    1 returned 22
 ------------------
         -:  536:
         -:  537:      template<typename _U1, typename _U2, typename
@@ -659,37 +659,37 @@ call    1 returned 12
         -:  637:  /// Two pairs of the same type are equal iff their members are equal.
         -:  638:  template<typename _T1, typename _T2>
         -:  639:    inline _GLIBCXX_CONSTEXPR bool
-     5631:  640:    operator==(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
-     5631:  641:    { return __x.first == __y.first && __x.second == __y.second; }
+     6084:  640:    operator==(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+     6084:  641:    { return __x.first == __y.first && __x.second == __y.second; }
 ------------------
 _ZSteqISt4pairIiiEiEbRKS0_IT_T0_ES6_:
-function _ZSteqISt4pairIiiEiEbRKS0_IT_T0_ES6_ called 1618 returned 100% blocks executed 100%
-     1618:  640:    operator==(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
-     1618:  641:    { return __x.first == __y.first && __x.second == __y.second; }
-     1618:  641-block  0
-call    0 returned 1618
-branch  1 taken 120 (fallthrough)
-branch  2 taken 1498
-      120:  641-block  1
-branch  3 taken 118 (fallthrough)
-branch  4 taken 2
-      118:  641-block  2
-     1500:  641-block  3
-     1618:  641-block  4
+function _ZSteqISt4pairIiiEiEbRKS0_IT_T0_ES6_ called 1687 returned 100% blocks executed 100%
+     1687:  640:    operator==(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+     1687:  641:    { return __x.first == __y.first && __x.second == __y.second; }
+     1687:  641-block  0
+call    0 returned 1687
+branch  1 taken 141 (fallthrough)
+branch  2 taken 1546
+      141:  641-block  1
+branch  3 taken 138 (fallthrough)
+branch  4 taken 3
+      138:  641-block  2
+     1549:  641-block  3
+     1687:  641-block  4
 ------------------
 _ZSteqIiiEbRKSt4pairIT_T0_ES5_:
-function _ZSteqIiiEbRKSt4pairIT_T0_ES5_ called 4013 returned 100% blocks executed 100%
-     4013:  640:    operator==(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
-     4013:  641:    { return __x.first == __y.first && __x.second == __y.second; }
-     4013:  641-block  0
-branch  0 taken 1094 (fallthrough)
-branch  1 taken 2919
-     1094:  641-block  1
-branch  2 taken 384 (fallthrough)
-branch  3 taken 710
-      384:  641-block  2
-     3629:  641-block  3
-     4013:  641-block  4
+function _ZSteqIiiEbRKSt4pairIT_T0_ES5_ called 4397 returned 100% blocks executed 100%
+     4397:  640:    operator==(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+     4397:  641:    { return __x.first == __y.first && __x.second == __y.second; }
+     4397:  641-block  0
+branch  0 taken 1213 (fallthrough)
+branch  1 taken 3184
+     1213:  641-block  1
+branch  2 taken 428 (fallthrough)
+branch  3 taken 785
+      428:  641-block  2
+     3969:  641-block  3
+     4397:  641-block  4
 ------------------
         -:  642:
         -:  643:#if __cpp_lib_three_way_comparison && __cpp_lib_concepts

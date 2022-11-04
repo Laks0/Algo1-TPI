@@ -602,15 +602,15 @@ call    1 returned 49
         -:  565:	  second(std::forward<_U2>(__p.second)) { }
         -:  566:
         -:  567:      pair&
-function _ZNSt4pairIiiEaSERKS0_ called 8 returned 100% blocks executed 100%
-        8:  568:      operator=(__conditional_t<__and_<is_copy_assignable<_T1>,
+function _ZNSt4pairIiiEaSERKS0_ called 10 returned 100% blocks executed 100%
+       10:  568:      operator=(__conditional_t<__and_<is_copy_assignable<_T1>,
         -:  569:				       is_copy_assignable<_T2>>::value,
         -:  570:				const pair&, const __nonesuch&> __p)
         -:  571:      {
-        8:  572:	first = __p.first;
-        8:  573:	second = __p.second;
-        8:  574:	return *this;
-        8:  574-block  0
+       10:  572:	first = __p.first;
+       10:  573:	second = __p.second;
+       10:  574:	return *this;
+       10:  574-block  0
         -:  575:      }
         -:  576:
         -:  577:      pair&

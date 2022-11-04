@@ -484,6 +484,9 @@ function _ZN7testing8internal15TestFactoryBaseC2Ev called 0 returned 0% blocks e
         -:  467:template <class TestClass>
         -:  468:class TestFactoryImpl : public TestFactoryBase {
         -:  469: public:
+        2:  470:  Test* CreateTest() override { return new TestClass; }
+------------------
+_ZN7testing8internal15TestFactoryImplI27ganoTEST_todaviaNoGano_TestE10CreateTestEv:
 function _ZN7testing8internal15TestFactoryImplI27ganoTEST_todaviaNoGano_TestE10CreateTestEv called 1 returned 100% blocks executed 71%
         1:  470:  Test* CreateTest() override { return new TestClass; }
         1:  470-block  0
@@ -498,6 +501,23 @@ branch  4 never executed
 branch  5 never executed
     $$$$$:  470-block  4
 call    6 never executed
+------------------
+_ZN7testing8internal15TestFactoryImplI18ganoTEST_gano_TestE10CreateTestEv:
+function _ZN7testing8internal15TestFactoryImplI18ganoTEST_gano_TestE10CreateTestEv called 1 returned 100% blocks executed 71%
+        1:  470:  Test* CreateTest() override { return new TestClass; }
+        1:  470-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  470-block  1
+        1:  470-block  2
+    $$$$$:  470-block  3
+branch  4 never executed
+branch  5 never executed
+    $$$$$:  470-block  4
+call    6 never executed
+------------------
         -:  471:};
         -:  472:
         -:  473:#if GTEST_OS_WINDOWS
