@@ -112,168 +112,169 @@ branch  3 taken 1440
        98:   47-block  0
         -:   48:}
         -:   49:
+        -:   50:// Función para testing
 function _Z19esPermutacionJugadaRSt6vectorISt4pairIS0_IiiEiESaIS2_EES5_ called 4 returned 100% blocks executed 88%
-        4:   50:bool esPermutacionJugada(jugadas& j1, jugadas& j2) {
-        4:   51:    if (j1.size() != j2.size()) {
-        4:   51-block  0
+        4:   51:bool esPermutacionJugada(jugadas& j1, jugadas& j2) {
+        4:   52:    if (j1.size() != j2.size()) {
+        4:   52-block  0
 call    0 returned 4
 call    1 returned 4
 branch  2 taken 0 (fallthrough)
 branch  3 taken 4
-    #####:   52:        return false;
-    %%%%%:   52-block  0
-        -:   53:    }
-        -:   54:
-       53:   55:    for (int i = 0; i < j1.size(); i++) {
-        4:   55-block  0
-       49:   55-block  1
-       53:   55-block  2
+    #####:   53:        return false;
+    %%%%%:   53-block  0
+        -:   54:    }
+        -:   55:
+       53:   56:    for (int i = 0; i < j1.size(); i++) {
+        4:   56-block  0
+       49:   56-block  1
+       53:   56-block  2
 call    0 returned 53
 branch  1 taken 49
 branch  2 taken 4 (fallthrough)
-       49:   56:        if (cantidadDeAparicionesJugadas(j1, j1[i]) != cantidadDeAparicionesJugadas(j2, j1[i])) {
-       49:   56-block  0
+       49:   57:        if (cantidadDeAparicionesJugadas(j1, j1[i]) != cantidadDeAparicionesJugadas(j2, j1[i])) {
+       49:   57-block  0
 call    0 returned 49
 call    1 returned 49
 call    2 returned 49
 call    3 returned 49
 branch  4 taken 0 (fallthrough)
 branch  5 taken 49
-    #####:   57:            return false;
-    %%%%%:   57-block  0
-        -:   58:        }
-        -:   59:    }
-        4:   60:    return true;
-        4:   60-block  0
-        -:   61:}
-        -:   62:
-        -:   63:// O(n) (búsqueda lineal)
+    #####:   58:            return false;
+    %%%%%:   58-block  0
+        -:   59:        }
+        -:   60:    }
+        4:   61:    return true;
+        4:   61-block  0
+        -:   62:}
+        -:   63:
+        -:   64:// O(n) (búsqueda lineal)
 function _Z15jugadaEnJugadasRSt6vectorISt4pairIS0_IiiEiESaIS2_EES2_ called 62 returned 100% blocks executed 100%
-       62:   64:bool jugadaEnJugadas(jugadas& j, jugada jug) {
-      171:   65:    for (int i = 0; i < j.size(); i++) {
-       62:   65-block  0
-      109:   65-block  1
-      171:   65-block  2
+       62:   65:bool jugadaEnJugadas(jugadas& j, jugada jug) {
+      171:   66:    for (int i = 0; i < j.size(); i++) {
+       62:   66-block  0
+      109:   66-block  1
+      171:   66-block  2
 call    0 returned 171
 branch  1 taken 149
 branch  2 taken 22 (fallthrough)
-      149:   66:        if (j[i] == jug) {
-      149:   66-block  0
+      149:   67:        if (j[i] == jug) {
+      149:   67-block  0
 call    0 returned 149
 call    1 returned 149
 branch  2 taken 40 (fallthrough)
 branch  3 taken 109
-       40:   67:            return true;
-       40:   67-block  0
-        -:   68:        }
-        -:   69:    }
-       22:   70:    return false;
-       22:   70-block  0
-        -:   71:}
-        -:   72:
-        -:   73:// O(n) (3 veces una función de O(n), 3O(n) = O(n))
+       40:   68:            return true;
+       40:   68-block  0
+        -:   69:        }
+        -:   70:    }
+       22:   71:    return false;
+       22:   71-block  0
+        -:   72:}
+        -:   73:
+        -:   74:// O(n) (3 veces una función de O(n), 3O(n) = O(n))
 function _Z13es121VerticalRSt6vectorISt4pairIS0_IiiEiESaIS2_EES2_ called 13 returned 100% blocks executed 65%
-       13:   74:bool es121Vertical(jugadas& j, jugada jug) {
-       13:   75:    pos p = jug.first;
-       13:   76:    return jugadaEnJugadas(j, jug) && jugadaEnJugadas(j, {{p.first, p.second-1},1}) && jugadaEnJugadas(j, {{p.first, p.second+1},1});
-       13:   76-block  0
+       13:   75:bool es121Vertical(jugadas& j, jugada jug) {
+       13:   76:    pos p = jug.first;
+       13:   77:    return jugadaEnJugadas(j, jug) && jugadaEnJugadas(j, {{p.first, p.second-1},1}) && jugadaEnJugadas(j, {{p.first, p.second+1},1});
+       13:   77-block  0
 call    0 returned 13
 branch  1 taken 13 (fallthrough)
 branch  2 taken 0 (throw)
-       13:   76-block  1
+       13:   77-block  1
 branch  3 taken 13 (fallthrough)
 branch  4 taken 0
-       13:   76-block  2
+       13:   77-block  2
 call    5 returned 13
 call    6 returned 13
 call    7 returned 13
 branch  8 taken 13 (fallthrough)
 branch  9 taken 0 (throw)
-       13:   76-block  3
+       13:   77-block  3
 branch 10 taken 3 (fallthrough)
 branch 11 taken 10
-        3:   76-block  4
+        3:   77-block  4
 call   12 returned 3
 call   13 returned 3
 call   14 returned 3
 branch 15 taken 3 (fallthrough)
 branch 16 taken 0 (throw)
-        3:   76-block  5
+        3:   77-block  5
 branch 17 taken 3 (fallthrough)
 branch 18 taken 0
-        3:   76-block  6
-       10:   76-block  7
-       13:   76-block  8
-       13:   76-block  9
-    $$$$$:   76-block 10
-    $$$$$:   76-block 11
-    $$$$$:   76-block 12
-    $$$$$:   76-block 13
-    $$$$$:   76-block 14
-    $$$$$:   76-block 15
-    $$$$$:   76-block 16
-    $$$$$:   76-block 17
-        -:   77:}
+        3:   77-block  6
+       10:   77-block  7
+       13:   77-block  8
+       13:   77-block  9
+    $$$$$:   77-block 10
+    $$$$$:   77-block 11
+    $$$$$:   77-block 12
+    $$$$$:   77-block 13
+    $$$$$:   77-block 14
+    $$$$$:   77-block 15
+    $$$$$:   77-block 16
+    $$$$$:   77-block 17
+        -:   78:}
 function _Z15es121HorizontalRSt6vectorISt4pairIS0_IiiEiESaIS2_EES2_ called 15 returned 100% blocks executed 65%
-       15:   78:bool es121Horizontal(jugadas& j, jugada jug) {
-       15:   79:    pos p = jug.first;
-       15:   80:    return jugadaEnJugadas(j, jug) && jugadaEnJugadas(j, {{p.first-1, p.second},1}) && jugadaEnJugadas(j, {{p.first+1, p.second},1});
-       15:   80-block  0
+       15:   79:bool es121Horizontal(jugadas& j, jugada jug) {
+       15:   80:    pos p = jug.first;
+       15:   81:    return jugadaEnJugadas(j, jug) && jugadaEnJugadas(j, {{p.first-1, p.second},1}) && jugadaEnJugadas(j, {{p.first+1, p.second},1});
+       15:   81-block  0
 call    0 returned 15
 branch  1 taken 15 (fallthrough)
 branch  2 taken 0 (throw)
-       15:   80-block  1
+       15:   81-block  1
 branch  3 taken 15 (fallthrough)
 branch  4 taken 0
-       15:   80-block  2
+       15:   81-block  2
 call    5 returned 15
 call    6 returned 15
 call    7 returned 15
 branch  8 taken 15 (fallthrough)
 branch  9 taken 0 (throw)
-       15:   80-block  3
+       15:   81-block  3
 branch 10 taken 3 (fallthrough)
 branch 11 taken 12
-        3:   80-block  4
+        3:   81-block  4
 call   12 returned 3
 call   13 returned 3
 call   14 returned 3
 branch 15 taken 3 (fallthrough)
 branch 16 taken 0 (throw)
-        3:   80-block  5
+        3:   81-block  5
 branch 17 taken 3 (fallthrough)
 branch 18 taken 0
-        3:   80-block  6
-       12:   80-block  7
-       15:   80-block  8
-       15:   80-block  9
-    $$$$$:   80-block 10
-    $$$$$:   80-block 11
-    $$$$$:   80-block 12
-    $$$$$:   80-block 13
-    $$$$$:   80-block 14
-    $$$$$:   80-block 15
-    $$$$$:   80-block 16
-    $$$$$:   80-block 17
-        -:   81:}
-        -:   82:
-        -:   83:// O(n) (Una función en tiempo constante y dos en tiempo lineal)
+        3:   81-block  6
+       12:   81-block  7
+       15:   81-block  8
+       15:   81-block  9
+    $$$$$:   81-block 10
+    $$$$$:   81-block 11
+    $$$$$:   81-block 12
+    $$$$$:   81-block 13
+    $$$$$:   81-block 14
+    $$$$$:   81-block 15
+    $$$$$:   81-block 16
+    $$$$$:   81-block 17
+        -:   82:}
+        -:   83:
+        -:   84:// O(n) (Una función en tiempo constante y dos en tiempo lineal)
 function _Z12puedeJugarseRSt6vectorIS_IbSaIbEESaIS1_EERS_ISt4pairIiiESaIS6_EERS_IS5_IS6_iESaISA_EES6_ called 10 returned 100% blocks executed 100%
-       10:   84:bool puedeJugarse(tablero& t, banderitas& b, jugadas& j, pos p) {
-       10:   85:    return esCoordenadaValida(t, p) && !posEnBanderitas(b, p) && !posEnJugadas(j, p);
-       10:   85-block  0
+       10:   85:bool puedeJugarse(tablero& t, banderitas& b, jugadas& j, pos p) {
+       10:   86:    return esCoordenadaValida(t, p) && !posEnBanderitas(b, p) && !posEnJugadas(j, p);
+       10:   86-block  0
 call    0 returned 10
 branch  1 taken 9 (fallthrough)
 branch  2 taken 1
-        9:   85-block  1
+        9:   86-block  1
 call    3 returned 9
 branch  4 taken 5 (fallthrough)
 branch  5 taken 4
-        5:   85-block  2
+        5:   86-block  2
 call    6 returned 5
 branch  7 taken 4 (fallthrough)
 branch  8 taken 1
-        4:   85-block  3
-        6:   85-block  4
-       10:   85-block  5
-        -:   86:}
+        4:   86-block  3
+        6:   86-block  4
+       10:   86-block  5
+        -:   87:}

@@ -88,6 +88,7 @@ bool gano(tablero& t, jugadas& j) {
 /******++++**************************** EJERCICIO jugarPlus ***********+++***********************/
 // Función recursiva, una pasada es O(n + m) siendo n = |j| y m = |b|
 // Como máximo, la función se va a ejecutar una vez por cada posición en el tablero
+// Entonces si ñ es la cantidad de posiciones en el tablero, la complejidad de jugarPlus sería O(ñ*(n+m))
 void jugarPlus(tablero& t, banderitas& b, pos p, jugadas& j) {
     jugada nuevaJugada = {p, minasAdyacentes(t,p)};
     j.push_back(nuevaJugada);
@@ -102,7 +103,7 @@ void jugarPlus(tablero& t, banderitas& b, pos p, jugadas& j) {
             }
 
             if (posEnBanderitas(b, posAdyacente)) {  // O(m)
-                cambiarBanderita(t, j ,posAdyacente, b); // O(m)
+                continue;
             }
 
             jugarPlus(t, b, posAdyacente, j);
@@ -111,19 +112,18 @@ void jugarPlus(tablero& t, banderitas& b, pos p, jugadas& j) {
 }
 
 /******++++**************************** EJERCICIO sugerirAutomatico121 ***********+++***********************/
-// O(n*m) siendo m = |j| y n = |t| + |b| + |j|
-// Porque por cada jugada, se ejecutan funciones lineales sobre t b y j
+// O(m * (m + n + m)) = O(m²*n) siendo m = |j|, n = |b|
 bool sugerirAutomatico121(tablero& t, banderitas& b, jugadas& j, pos& p) {
     for (int i = 0; i < j.size(); i++) { // Se ejecuta m veces
         if (es121Horizontal(j, j[i])) { // O(m)
             pos posJugada = j[i].first;
             pos arriba = {posJugada.first, posJugada.second-1};
             pos abajo = {posJugada.first, posJugada.second+1};
-            if (puedeJugarse(t, b, j, arriba)) { // O(n)
+            if (puedeJugarse(t, b, j, arriba)) { // O(n + m)
                 p = arriba;
                 return true;
             }
-            if (puedeJugarse(t, b, j, abajo)) { // O(n)
+            if (puedeJugarse(t, b, j, abajo)) { // O(n + m)
                 p = abajo;
                 return true;
             }
@@ -132,11 +132,11 @@ bool sugerirAutomatico121(tablero& t, banderitas& b, jugadas& j, pos& p) {
             pos posJugada = j[i].first;
             pos izquierda = {posJugada.first-1, posJugada.second};
             pos derecha = {posJugada.first+1, posJugada.second};
-            if (puedeJugarse(t, b, j, derecha)) { // O(n)
+            if (puedeJugarse(t, b, j, derecha)) { // O(n + m)
                 p = derecha;
                 return true;
             }
-            if (puedeJugarse(t, b, j, izquierda)) { // O(n)
+            if (puedeJugarse(t, b, j, izquierda)) { // O(n + m)
                 p = izquierda;
                 return true;
             }

@@ -74,11 +74,11 @@ bool jugadaEnJugadas(jugadas& j, jugada jug) {
 // O(n) (3 veces una función de O(n), 3O(n) = O(n))
 bool es121Vertical(jugadas& j, jugada jug) {
     pos p = jug.first;
-    return jugadaEnJugadas(j, jug) && jugadaEnJugadas(j, {{p.first, p.second-1},1}) && jugadaEnJugadas(j, {{p.first, p.second+1},1});
+    return jug.second == 2 && jugadaEnJugadas(j, jug) && jugadaEnJugadas(j, {{p.first, p.second-1},1}) && jugadaEnJugadas(j, {{p.first, p.second+1},1});
 }
 bool es121Horizontal(jugadas& j, jugada jug) {
     pos p = jug.first;
-    return jugadaEnJugadas(j, jug) && jugadaEnJugadas(j, {{p.first-1, p.second},1}) && jugadaEnJugadas(j, {{p.first+1, p.second},1});
+    return jug.second == 2 && jugadaEnJugadas(j, jug) && jugadaEnJugadas(j, {{p.first-1, p.second},1}) && jugadaEnJugadas(j, {{p.first+1, p.second},1});
 }
 
 // O(n) (Una función en tiempo constante y dos en tiempo lineal)

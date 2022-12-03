@@ -138,3 +138,36 @@ TEST(Sugerir121, sin121) {
     bool hay = sugerirAutomatico121(t, b, j, p);
     ASSERT_FALSE(hay);
 }
+
+// Agregados de la corrección
+tablero t_101 = {
+        { cVACIA,  cVACIA, cMINA, cVACIA, cVACIA },
+        { cVACIA, cVACIA, cVACIA, cVACIA, cVACIA },
+        { cVACIA, cVACIA, cVACIA, cVACIA, cVACIA },
+        { cVACIA, cVACIA, cVACIA, cVACIA, cVACIA},
+        { cVACIA, cVACIA, cMINA, cVACIA, cVACIA },
+};
+TEST(sugerirAutomatico121TEST, patron101){
+    jugadas j = { jugada(pos(2, 2), 0),  jugada(pos(1, 2), 1), jugada(pos(3, 2), 1)};
+    banderitas b = {};
+    pos sugerido = pos(-1, -1);
+    bool resp = sugerirAutomatico121(t_101, b, j, sugerido);
+    EXPECT_FALSE(resp) ;
+    EXPECT_EQ(sugerido, pos(-1, -1));
+}
+
+tablero t_111 = {
+        { cVACIA, cVACIA, cVACIA, cVACIA, cVACIA },
+        { cVACIA, cVACIA, cVACIA, cVACIA, cVACIA },
+        { cVACIA, cMINA, cVACIA, cVACIA, cVACIA },
+        { cVACIA, cVACIA, cVACIA, cVACIA, cVACIA },
+        { cVACIA, cVACIA, cVACIA, cVACIA, cVACIA },
+};
+TEST(sugerirAutomatico121TEST, patron111){
+    jugadas j = { jugada(pos(2, 2), 1),  jugada(pos(1, 2), 1), jugada(pos(3, 2), 1)};
+    banderitas b = { pos (2, 3) };
+    pos sugerido = pos(-1, -1);
+    bool resp = sugerirAutomatico121(t_111, b, j, sugerido);
+    EXPECT_FALSE(resp) ;
+    EXPECT_EQ(sugerido, pos(-1, -1));
+}
